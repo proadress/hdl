@@ -1,23 +1,38 @@
 module testbench;
+  logic clk;  // 時脈輸入
+  logic rst;
+  logic [3:0] hours_tens;  // 小時的十位數
+  logic [3:0] hours_ones;  // 小時的個位數
+  logic [3:0] minutes_tens;  // 分鐘的十位數
+  logic [3:0] minutes_ones;  // 分鐘的個位數
+  logic day;
 
-  //logic [2:0]sel ,y;
-  //logic [3:0]a,b,s;
-  logic [3:0] a, b, s;
-  logic op;
-
-  alu uut (
-      .a (a),
-      .b (b),
-      .op(op),
-      .s (s)
+  counter_24hr cc (
+      .clk(clk),  // 時脈輸入
+      .rst(rst),
+      .hours_tens(hours_tens),  // 小時的十位數
+      .hours_ones(hours_ones),  // 小時的個位數
+      .minutes_tens(minutes_tens),  // 分鐘的十位數
+      .minutes_ones(minutes_ones),  // 分鐘的個位數
+      .day(day)
   );
 
+  always begin
+    #1 clk = ~clk;
+  end
 
   initial begin
-    // for (sel = 0; sel <= 7; sel = sel + 1)
-    //     #10;
-    #10 a = 4'h5;   b  = 4'hB;  op = 0;
-    #10 a = 4'hD;   b  = 4'h7;  op = 1;
-    #10 $stop;
+    rst = 1;
+    clk = 0;
+    day = 0;
+    hours_tens = 0;
+    hours_ones = 0;
+    minutes_tens = 0;
+    minutes_ones = 0;
+
+    #1 rst = 0;
+
+    #5000;
+    $stop;
   end
 endmodule
