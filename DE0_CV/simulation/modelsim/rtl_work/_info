@@ -1,0 +1,126 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/code/verilog/DE0_CV/simulation/modelsim
+vadder_4bit
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1695598402
+!i10b 1
+!s100 fUD0Co93;k=gc>dai=SLH0
+I6d3VnK16EPXiblVF^>c=N0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_4bit_sv_unit
+S1
+R0
+w1695597763
+8../../design/adder_4bit.sv
+F../../design/adder_4bit.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1695598402.000000
+!s107 ../../design/adder_4bit.sv|
+!s90 -reportprogress|300|../../design/adder_4bit.sv|
+!i113 1
+Z6 tCvgOpt 0
+valu
+R1
+R2
+!i10b 1
+!s100 0k1azHMe24@b0maPX_[=W1
+I8NAn7E<z_Sn]SWC]MBX4E0
+R3
+!s105 alu_sv_unit
+S1
+R0
+w1695597759
+8../../design/alu.sv
+F../../design/alu.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/alu.sv|
+!s90 -reportprogress|300|../../design/alu.sv|
+!i113 1
+R6
+vDE0_CV
+R1
+R2
+!i10b 1
+!s100 AYSgFb;^maJWHVOKgVgi?2
+IYSKZRJQaDTR_jVc8zO7<N0
+R3
+!s105 DE0_CV_sv_unit
+S1
+R0
+w1695597770
+8../../design/DE0_CV.sv
+F../../design/DE0_CV.sv
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/DE0_CV.sv|
+!s90 -reportprogress|300|../../design/DE0_CV.sv|
+!i113 1
+R6
+n@d@e0_@c@v
+vmux8to1
+R1
+R2
+!i10b 1
+!s100 :hl6XOz^9MBc78bIC50P03
+IOd9YRfaTSS<Wic_A[gQgj0
+R3
+!s105 mux8to1_sv_unit
+S1
+R0
+w1695597768
+8../../design/mux8to1.sv
+F../../design/mux8to1.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../../design/mux8to1.sv|
+!s90 -reportprogress|300|../../design/mux8to1.sv|
+!i113 1
+R6
+vtestbench
+R1
+R2
+!i10b 1
+!s100 3PGzC]Ai8;;;TYZVc@X<S1
+IXEQ?KIa9LEDXYXfm?<XPP2
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1695598250
+8../tb/testbench.sv
+F../tb/testbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../tb/testbench.sv|
+!s90 -reportprogress|300|../tb/testbench.sv|
+!i113 1
+R6

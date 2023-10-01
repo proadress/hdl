@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\code\verilog\vhdl\simulation\qsim
+vvhdl
+Z1 ILJl:[K62ZMWnclNPmH_L<0
+Z2 VJJ8PkMQl2F5UQZI_R6zMm1
+Z3 dD:\code\verilog\vhdl\simulation\qsim
+Z4 w1695599145
+Z5 8vhdl.vo
+Z6 Fvhdl.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|vhdl.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 OllV;h851h_cgJNmaA?I:3
+!s85 0
+Z11 !s108 1695599146.344000
+Z12 !s107 vhdl.vo|
+!s101 -O0
+vvhdl_vlg_check_tst
+!i10b 1
+Z13 !s100 4T<ljahPI`jcNlYHMP<Ol0
+Z14 IaEbj`8@l<m;UPUZj9Dn[f0
+Z15 V3b??QE9z_PKA4z0HUT_fW0
+R3
+R4
+Z16 8vhdl.vt
+Z17 Fvhdl.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z18 !s108 1695599146.392000
+Z19 !s107 vhdl.vt|
+Z20 !s90 -work|work|vhdl.vt|
+!s101 -O0
+R9
+vvhdl_vlg_sample_tst
+!i10b 1
+Z21 !s100 7D9L:S8@Z2fTjnXd?N`E^2
+Z22 IhlY^AK:O36:[^lPnjno<U1
+Z23 V0;Kd:FDJmd3T4VJb<=iAf2
+R3
+R4
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+vvhdl_vlg_vec_tst
+!i10b 1
+Z24 !s100 lW`KYfea`OH@aF_^XBJYT2
+Z25 I`VDVdVje`g:]8ClVGD`]>1
+Z26 V92U8^UJf8ALWac02RTmIG3
+R3
+R4
+R16
+R17
+Z27 L0 238
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
