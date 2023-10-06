@@ -1,24 +1,24 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-entity decoder2to4 is
-	port(
-			A:in std_logic;
-			B:in std_logic;
-			en:in std_logic;
-			F0,F1,F2,F3:out std_logic
+ENTITY decoder2to4 IS
+	PORT (
+		a : IN STD_LOGIC;
+		b : IN STD_LOGIC;
+		en : IN STD_LOGIC;
+		f : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
-end decoder2to4;
+END decoder2to4;
 
-architecture decoder2to4 of decoder2to4 is
-begin
-	F0 <= '1' when en = '0' and A = '0' and B = '0' else
-			'0';
-	F1 <= '1' when en = '0' and A = '0' and B = '1' else
-			'0';
-	F2 <= '1' when en = '0' and A = '1' and B = '0' else
-			'0';
-	F3 <= '1' when en = '0' and A = '1' and B = '1' else
-			'0';			
+ARCHITECTURE decoder2to4 OF decoder2to4 IS
+BEGIN
+	f(0) <= '1' WHEN en = '0' AND a = '0' AND b = '0' ELSE
+		'0';
+	f(1) <= '1' WHEN en = '0' AND a = '0' AND b = '1' ELSE
+		'0';
+	f(2) <= '1' WHEN en = '0' AND a = '1' AND b = '0' ELSE
+		'0';
+	f(3) <= '1' WHEN en = '0' AND a = '1' AND b = '1' ELSE
+		'0';
 
-end decoder2to4;	
+END decoder2to4;

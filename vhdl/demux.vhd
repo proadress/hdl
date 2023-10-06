@@ -4,20 +4,20 @@ USE ieee.std_logic_unsigned.ALL;
 
 ENTITY demux IS
 	PORT (
-		d : IN STD_LOGIC;
-		s : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-		en : STD_LOGIC;
-		f : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		D : IN STD_LOGIC;
+		S : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		EN : STD_LOGIC;
+		F : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END demux;
 
-ARCHITECTURE demux_a OF demux IS
+ARCHITECTURE demux OF demux IS
 
 BEGIN
 
-	f <= "1111" WHEN en = '1'ELSE
-		"111" & d WHEN s = "00" ELSE
-		"11" & d & '1' WHEN s = "01" ELSE
-		'1' & d & "11" WHEN s = "10" ELSE
-		d & "111";
-END demux_a;
+	F <= "111" & D WHEN S = "00" AND En = '1' ELSE
+		"11" & D & '1' WHEN S = "01" AND En = '1' ELSE
+		'1' & D & "11" WHEN S = "10" AND En = '1' ELSE
+		D & "111" WHEN S = "11" AND En = '1' ELSE
+		"1111";
+END demux;
