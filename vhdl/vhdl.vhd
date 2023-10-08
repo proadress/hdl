@@ -8,13 +8,13 @@ ENTITY vhdl IS
 		s : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		en : STD_LOGIC;
 		f : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-		p : buffer STD_LOGIC_VECTOR(3 DOWNTO 0)
+		p : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END vhdl;
 
 ARCHITECTURE vhdl_a OF vhdl IS
 BEGIN
 	u0 : ENTITY work.demux1to16
-		PORT MAP(d => d, s => s, en => en, f => f, p => p);
+		PORT MAP(d => d, s => s, en => en, f => f);
 
 END vhdl_a;
