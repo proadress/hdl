@@ -6,7 +6,7 @@ ENTITY alu IS
     PORT (
         a, b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
         c : IN STD_LOGIC;
-        fun : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+        fun : in STD_LOGIC_VECTOR(1 DOWNTO 0);
         s : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
         co : OUT STD_LOGIC
     );

@@ -4,6 +4,8 @@ entity vhdl is
     port(
         clk             : in     vl_logic;
         reset           : in     vl_logic;
-        q               : out    vl_logic_vector(2 downto 0)
+        up_down         : in     vl_logic;
+        q               : out    vl_logic_vector(4 downto 0);
+        alarm           : out    vl_logic
     );
 end vhdl;

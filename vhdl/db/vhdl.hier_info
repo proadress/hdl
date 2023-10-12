@@ -1,26 +1,39 @@
 |vhdl
-clk => random_counter:u0.clk
-reset => random_counter:u0.reset
-q[0] <= random_counter:u0.q[0]
-q[1] <= random_counter:u0.q[1]
-q[2] <= random_counter:u0.q[2]
+clk => up_down_counter_0_26_20_5:u0.clk
+reset => up_down_counter_0_26_20_5:u0.reset
+up_down => up_down_counter_0_26_20_5:u0.up_down
+q[0] <= up_down_counter_0_26_20_5:u0.q[0]
+q[1] <= up_down_counter_0_26_20_5:u0.q[1]
+q[2] <= up_down_counter_0_26_20_5:u0.q[2]
+q[3] <= up_down_counter_0_26_20_5:u0.q[3]
+q[4] <= up_down_counter_0_26_20_5:u0.q[4]
+alarm <= up_down_counter_0_26_20_5:u0.alarm
 
 
-|vhdl|random_counter:u0
-clk => reg[0].CLK
-clk => reg[1].CLK
-clk => reg[2].CLK
-clk => reg[3].CLK
-clk => reg[4].CLK
-clk => reg[5].CLK
-reset => reg[0].PRESET
-reset => reg[1].ACLR
-reset => reg[2].ACLR
-reset => reg[3].ACLR
-reset => reg[4].ACLR
-reset => reg[5].ACLR
-q[0] <= reg[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= reg[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= reg[2].DB_MAX_OUTPUT_PORT_TYPE
+|vhdl|up_down_counter_0_26_20_5:u0
+clk => a.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+reset => cnt[0].PRESET
+reset => cnt[1].ACLR
+reset => cnt[2].ACLR
+reset => cnt[3].ACLR
+reset => cnt[4].ACLR
+reset => a.ENA
+up_down => cnt.OUTPUTSELECT
+up_down => cnt.OUTPUTSELECT
+up_down => cnt.OUTPUTSELECT
+up_down => cnt.OUTPUTSELECT
+up_down => cnt.OUTPUTSELECT
+up_down => a.OUTPUTSELECT
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+alarm <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
