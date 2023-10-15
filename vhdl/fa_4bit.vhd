@@ -4,27 +4,59 @@ USE ieee.std_logic_unsigned.ALL;
 
 ENTITY FA_4bit IS
 	PORT (
-		A, B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		Ci : IN STD_LOGIC;
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		C : IN STD_LOGIC;
 		S : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 		Co : OUT STD_LOGIC
 	);
 END FA_4bit;
 
 ARCHITECTURE FA_4bit OF FA_4bit IS
-	SIGNAL C1, C2, C3 : STD_LOGIC;
+
+	COMPONENT FA_1bit IS
+		PORT (
+			A : IN STD_LOGIC;
+			B : IN STD_LOGIC;
+			C : IN STD_LOGIC;
+			S : OUT STD_LOGIC;
+			Co : OUT STD_LOGIC
+		);
+	END COMPONENT;
+
+	SIGNAL c1, c2, c3 : STD_LOGIC;
 
 BEGIN
 
-	S(0) <= A(0) XOR B(0) XOR Ci;
-	C1 <= (A(0) AND B(0)) OR (B(0) AND Ci) OR (Ci AND A(0));
+	U1 : FA_1bit PORT MAP(
+		A => A(0),
+		B => B(0),
+		C => C,
+		S => S(0),
+		Co => c1
+	);
 
-	S(1) <= A(1) XOR B(1) XOR C1;
-	C2 <= (A(1) AND B(1)) OR (B(1) AND C1) OR (C1 AND A(1));
+	U2 : FA_1bit PORT MAP(
+		A => A(1),
+		B => B(1),
+		C => c1,
+		S => S(1),
+		Co => c2
+	);
 
-	S(2) <= A(2) XOR B(2) XOR C2;
-	C3 <= (A(2) AND B(2)) OR (B(2) AND C2) OR (C2 AND A(2));
+	U3 : FA_1bit PORT MAP(
+		A => A(2),
+		B => B(2),
+		C => c2,
+		S => S(2),
+		Co => c3
+	);
 
-	S(3) <= A(3) XOR B(3) XOR C3;
-	Co <= (A(3) AND B(3)) OR (B(3) AND C3) OR (C3 AND A(3));
+	U4 : FA_1bit PORT MAP(
+		A => A(3),
+		B => B(3),
+		C => c3,
+		S => S(3),
+		Co => Co
+	);
 END FA_4bit;
