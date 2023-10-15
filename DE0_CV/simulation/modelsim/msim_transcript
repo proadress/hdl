@@ -10,141 +10,326 @@
 # Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+D:/code/verilog/DE0_CV/design {D:/code/verilog/DE0_CV/design/adder_4bit.sv}
+# vlog -sv -work work +incdir+D:/code/hdl/DE0_CV/design {D:/code/hdl/DE0_CV/design/adder_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:51 on Oct 02,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/code/verilog/DE0_CV/design" D:/code/verilog/DE0_CV/design/adder_4bit.sv 
+# Start time: 23:08:34 on Oct 15,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/code/hdl/DE0_CV/design" D:/code/hdl/DE0_CV/design/adder_4bit.sv 
 # -- Compiling module adder_4bit
 # 
 # Top level modules:
 # 	adder_4bit
-# End time: 02:43:51 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:34 on Oct 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/code/verilog/DE0_CV/design {D:/code/verilog/DE0_CV/design/DE0_CV.sv}
+# vlog -sv -work work +incdir+D:/code/hdl/DE0_CV/design {D:/code/hdl/DE0_CV/design/DE0_CV.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:52 on Oct 02,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/code/verilog/DE0_CV/design" D:/code/verilog/DE0_CV/design/DE0_CV.sv 
+# Start time: 23:08:34 on Oct 15,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/code/hdl/DE0_CV/design" D:/code/hdl/DE0_CV/design/DE0_CV.sv 
 # -- Compiling module DE0_CV
 # 
 # Top level modules:
 # 	DE0_CV
-# End time: 02:43:52 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:34 on Oct 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 do compile.do
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:56 on Oct 02,2023
+# Start time: 23:08:43 on Oct 15,2023
 # vlog -reportprogress 300 ../tb/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 02:43:56 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:43 on Oct 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:57 on Oct 02,2023
+# Start time: 23:08:43 on Oct 15,2023
 # vlog -reportprogress 300 ../../design/adder_4bit.sv 
 # -- Compiling module adder_4bit
 # 
 # Top level modules:
 # 	adder_4bit
-# End time: 02:43:57 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:43 on Oct 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:57 on Oct 02,2023
+# Start time: 23:08:43 on Oct 15,2023
 # vlog -reportprogress 300 ../../design/mux8to1.sv 
 # -- Compiling module mux8to1
 # 
 # Top level modules:
 # 	mux8to1
-# End time: 02:43:57 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:43 on Oct 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:57 on Oct 02,2023
+# Start time: 23:08:43 on Oct 15,2023
 # vlog -reportprogress 300 ../../design/DE0_CV.sv 
 # -- Compiling module DE0_CV
 # 
 # Top level modules:
 # 	DE0_CV
-# End time: 02:43:57 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:43 on Oct 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:57 on Oct 02,2023
+# Start time: 23:08:43 on Oct 15,2023
 # vlog -reportprogress 300 ../../design/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 02:43:57 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:43 on Oct 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:57 on Oct 02,2023
+# Start time: 23:08:43 on Oct 15,2023
 # vlog -reportprogress 300 ../../design/counter_4bit.sv 
 # -- Compiling module counter_4bit
 # 
 # Top level modules:
 # 	counter_4bit
-# End time: 02:43:57 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:44 on Oct 15,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:43:58 on Oct 02,2023
+# Start time: 23:08:44 on Oct 15,2023
 # vlog -reportprogress 300 ../../design/counter_24hr.sv 
 # -- Compiling module counter_24hr
 # 
 # Top level modules:
 # 	counter_24hr
-# End time: 02:43:58 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:08:44 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:08:44 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/counter_register.sv 
+# -- Compiling module counter_register
+# 
+# Top level modules:
+# 	counter_register
+# End time: 23:08:44 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:08:44 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/fsm_ryg.sv 
+# -- Compiling module fsm
+# 
+# Top level modules:
+# 	fsm
+# End time: 23:08:44 on Oct 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.testbench 
-# Start time: 02:43:58 on Oct 02,2023
+# Start time: 23:08:44 on Oct 15,2023
 # Loading sv_std.std
 # Loading work.testbench
-# Loading work.counter_24hr
+# ** Error: (vsim-3033) ../tb/testbench.sv(6): Instantiation of 'fsm_ryg' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: ../tb/testbench.sv
+#         Searched libraries:
+#             D:/code/hdl/DE0_CV/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim.do PAUSED at line 1
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:40 on Oct 15,2023
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 23:09:40 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:40 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/adder_4bit.sv 
+# -- Compiling module adder_4bit
+# 
+# Top level modules:
+# 	adder_4bit
+# End time: 23:09:40 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:40 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/mux8to1.sv 
+# -- Compiling module mux8to1
+# 
+# Top level modules:
+# 	mux8to1
+# End time: 23:09:40 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:40 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 23:09:40 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:40 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 23:09:40 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:41 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/counter_4bit.sv 
+# -- Compiling module counter_4bit
+# 
+# Top level modules:
+# 	counter_4bit
+# End time: 23:09:41 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:41 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/counter_24hr.sv 
+# -- Compiling module counter_24hr
+# 
+# Top level modules:
+# 	counter_24hr
+# End time: 23:09:41 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:41 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/counter_register.sv 
+# -- Compiling module counter_register
+# 
+# Top level modules:
+# 	counter_register
+# End time: 23:09:41 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:09:41 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/fsm_ryg.sv 
+# -- Compiling module fsm_ryg
+# 
+# Top level modules:
+# 	fsm_ryg
+# End time: 23:09:41 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 23:08:44 on Oct 15,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.fsm_ryg
 # Loading work.counter_4bit
-# ** Warning: (vsim-3017) ../tb/testbench.sv(10): [TFMPC] - Too few port connections. Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc File: ../../design/counter_24hr.sv
-# ** Warning: (vsim-3722) ../tb/testbench.sv(10): [TFMPC] - Missing connection for port 'ex'.
-# ** Warning: (vsim-3015) ../../design/counter_24hr.sv(15): [PCDPC] - Port size (4) does not match connection size (32) for port 'limit'. The port definition is at: ../../design/counter_4bit.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc/mo File: ../../design/counter_4bit.sv
-# ** Warning: (vsim-3015) ../../design/counter_24hr.sv(22): [PCDPC] - Port size (4) does not match connection size (32) for port 'limit'. The port definition is at: ../../design/counter_4bit.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc/mt File: ../../design/counter_4bit.sv
-# ** Warning: (vsim-3015) ../../design/counter_24hr.sv(36): [PCDPC] - Port size (4) does not match connection size (32) for port 'limit'. The port definition is at: ../../design/counter_4bit.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc/ht File: ../../design/counter_4bit.sv
-# ** Warning: (vsim-3839) ../../design/counter_24hr.sv(49): Variable '/testbench/cc/minutes_ones', driven via a port connection, is multiply driven. See ../../design/counter_24hr.sv(15).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc File: ../../design/counter_24hr.sv
-# ** Warning: (vsim-3839) ../../design/counter_24hr.sv(48): Variable '/testbench/cc/minutes_tens', driven via a port connection, is multiply driven. See ../../design/counter_24hr.sv(22).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc File: ../../design/counter_24hr.sv
-# ** Warning: (vsim-3839) ../../design/counter_24hr.sv(47): Variable '/testbench/cc/hours_ones', driven via a port connection, is multiply driven. See ../../design/counter_24hr.sv(29).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc File: ../../design/counter_24hr.sv
-# ** Warning: (vsim-3839) ../../design/counter_24hr.sv(46): Variable '/testbench/cc/hours_tens', driven via a port connection, is multiply driven. See ../../design/counter_24hr.sv(36).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc File: ../../design/counter_24hr.sv
-# ** Warning: (vsim-3839) ../../design/counter_24hr.sv(45): Variable '/testbench/cc/c', driven via a port connection, is multiply driven. See ../../design/counter_24hr.sv(15).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/cc File: ../../design/counter_24hr.sv
-# ** Warning: (vsim-3839) ../tb/testbench.sv(31): Variable '/testbench/minutes_ones', driven via a port connection, is multiply driven. See ../tb/testbench.sv(10).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: ../tb/testbench.sv
-# ** Warning: (vsim-3839) ../tb/testbench.sv(30): Variable '/testbench/minutes_tens', driven via a port connection, is multiply driven. See ../tb/testbench.sv(10).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: ../tb/testbench.sv
-# ** Warning: (vsim-3839) ../tb/testbench.sv(29): Variable '/testbench/hours_ones', driven via a port connection, is multiply driven. See ../tb/testbench.sv(10).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: ../tb/testbench.sv
-# ** Warning: (vsim-3839) ../tb/testbench.sv(28): Variable '/testbench/hours_tens', driven via a port connection, is multiply driven. See ../tb/testbench.sv(10).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: ../tb/testbench.sv
-# ** Warning: (vsim-3839) ../tb/testbench.sv(27): Variable '/testbench/day', driven via a port connection, is multiply driven. See ../tb/testbench.sv(10).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: ../tb/testbench.sv
 # .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Cloud s  Hostname: CLOUD  ProcessID: 20360
-#           Attempting to use alternate WLF file "./wlft9xm7ft".
+#           Attempting to use alternate WLF file "./wlftx5e774".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft9xm7ft
-# ** Note: $stop    : ../tb/testbench.sv(36)
-#    Time: 5001 ps  Iteration: 0  Instance: /testbench
-# Break in Module testbench at ../tb/testbench.sv line 36
+#           Using alternate file: ./wlftx5e774
+# ** Note: $stop    : ../tb/testbench.sv(25)
+#    Time: 101 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 25
 add wave -position end  sim:/testbench/clk
 add wave -position end  sim:/testbench/rst
-add wave -position end  sim:/testbench/hours_tens
-add wave -position end  sim:/testbench/hours_ones
-add wave -position end  sim:/testbench/minutes_tens
-add wave -position end  sim:/testbench/minutes_ones
-add wave -position end  sim:/testbench/day
-# End time: 02:44:21 on Oct 02,2023, Elapsed time: 0:00:23
-# Errors: 0, Warnings: 17
+add wave -position end  sim:/testbench/r
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/g
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:49 on Oct 15,2023
+# vlog -reportprogress 300 ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 23:10:49 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:49 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/adder_4bit.sv 
+# -- Compiling module adder_4bit
+# 
+# Top level modules:
+# 	adder_4bit
+# End time: 23:10:49 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:49 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/mux8to1.sv 
+# -- Compiling module mux8to1
+# 
+# Top level modules:
+# 	mux8to1
+# End time: 23:10:49 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:49 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 23:10:49 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:49 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 23:10:49 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:50 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/counter_4bit.sv 
+# -- Compiling module counter_4bit
+# 
+# Top level modules:
+# 	counter_4bit
+# End time: 23:10:50 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:50 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/counter_24hr.sv 
+# -- Compiling module counter_24hr
+# 
+# Top level modules:
+# 	counter_24hr
+# End time: 23:10:50 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:50 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/counter_register.sv 
+# -- Compiling module counter_register
+# 
+# Top level modules:
+# 	counter_register
+# End time: 23:10:50 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:10:50 on Oct 15,2023
+# vlog -reportprogress 300 ../../design/fsm_ryg.sv 
+# -- Compiling module fsm_ryg
+# 
+# Top level modules:
+# 	fsm_ryg
+# End time: 23:10:50 on Oct 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:10:53 on Oct 15,2023, Elapsed time: 0:02:09
+# Errors: 1, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 23:10:53 on Oct 15,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.fsm_ryg
+# Loading work.counter_4bit
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Cloud s  Hostname: CLOUD  ProcessID: 20360
+#           Attempting to use alternate WLF file "./wlftkqssx9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkqssx9
+# ** Note: $stop    : ../tb/testbench.sv(25)
+#    Time: 101 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 25
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/r
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/g
+# End time: 23:16:03 on Oct 15,2023, Elapsed time: 0:05:10
+# Errors: 0, Warnings: 2

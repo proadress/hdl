@@ -10,6 +10,8 @@ vlog ../../design/DE0_CV.sv
 vlog ../../design/alu.sv
 vlog ../../design/counter_4bit.sv
 vlog ../../design/counter_24hr.sv
+vlog ../../design/counter_register.sv
+vlog ../../design/fsm_ryg.sv
 # ------------------------------------------------------------
 do sim.do
    

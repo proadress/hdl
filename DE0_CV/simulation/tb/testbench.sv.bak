@@ -1,17 +1,12 @@
 module testbench;
-  logic clk;
+  logic clk;  // 時脈輸入
   logic rst;
-  logic ci;
-  logic co;
-  logic [3:0] limit;
-  logic [3:0] count;
+  logic [4:0] load_w;
 
-  counter_4bit dut (
-      .clk(clk),
+  counter_register c (
+      .clk(clk),  // 時脈輸入
       .rst(rst),
-      .limit(limit),
-      .co(co),
-      .count(count)
+      .load_w(load_w)
   );
 
   always begin
@@ -19,14 +14,13 @@ module testbench;
   end
 
   initial begin
-    clk   = 0;
-    rst   = 1;
-    count = 4'b0000;
-    limit = 5;
+    rst = 1;
+    clk = 0;
+    load_w = 4'b0;
 
     #1 rst = 0;
 
-    #100;
+    #20;
     $stop;
   end
 endmodule
