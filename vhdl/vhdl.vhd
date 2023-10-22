@@ -6,13 +6,13 @@ ENTITY vhdl IS
 	PORT (
 		clk : IN STD_LOGIC;
 		rst : IN STD_LOGIC;
-		s1, s2, s3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		q : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END vhdl;
 
 ARCHITECTURE vhdl_a OF vhdl IS
 BEGIN
-	u0 : ENTITY work.counter_123to201
-		PORT MAP(clk => clk, rst => rst, s1 => s1, s2 => s2, s3 => s3);
+	u0 : ENTITY work.shift_reg_control
+		PORT MAP(clk => clk, reset => rst, q => q);
 
 END vhdl_a;

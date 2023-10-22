@@ -3,9 +3,7 @@ use verilog.vl_types.all;
 entity vhdl is
     port(
         clk             : in     vl_logic;
-        reset           : in     vl_logic;
-        up_down         : in     vl_logic;
-        q               : out    vl_logic_vector(4 downto 0);
-        alarm           : out    vl_logic
+        rst             : in     vl_logic;
+        q               : out    vl_logic_vector(7 downto 0)
     );
 end vhdl;
