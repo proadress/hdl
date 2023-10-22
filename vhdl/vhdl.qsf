@@ -50,6 +50,16 @@ set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/code/hdl/vhdl/Waveform.vwf"
+set_global_assignment -name VHDL_FILE shift_reg.vhd
+set_global_assignment -name VHDL_FILE FA_1bit.vhd
+set_global_assignment -name VHDL_FILE FA_10bit.vhd
+set_global_assignment -name VHDL_FILE fa4bit.vhd
+set_global_assignment -name VHDL_FILE dowm_counter.vhd
+set_global_assignment -name VHDL_FILE decoder_3to8.vhd
+set_global_assignment -name VHDL_FILE counter_decoder.vhd
+set_global_assignment -name VHDL_FILE counter_123to201.vhd
+set_global_assignment -name VHDL_FILE bcd_0to9.vhd
 set_global_assignment -name VHDL_FILE up_down_counter_0_26_20_5.vhd
 set_global_assignment -name VHDL_FILE "up_down_counter_0_12 copy.vhd"
 set_global_assignment -name VHDL_FILE ounter.vhd
@@ -69,4 +79,3 @@ set_global_assignment -name VHDL_FILE demux.vhd
 set_global_assignment -name VHDL_FILE decoder_5_32.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/code/hdl/vhdl/Waveform.vwf"

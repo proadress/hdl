@@ -1,4 +1,4 @@
-module counter_4bit (
+module counter_8bit (
     input logic clk,
     input logic rst,
     input logic load,

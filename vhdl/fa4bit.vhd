@@ -2,16 +2,16 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.ALL;
 
-ENTITY FA_4bit IS
+ENTITY fa4bit IS
 	PORT (
 		A, B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		Ci : IN STD_LOGIC;
 		S : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 		Co : OUT STD_LOGIC
 	);
-END FA_4bit;
+END fa4bit;
 
-ARCHITECTURE FA_4bit OF FA_4bit IS
+ARCHITECTURE fa4bit OF FA4bit IS
 	SIGNAL C1, C2, C3 : STD_LOGIC;
 
 BEGIN
@@ -27,4 +27,4 @@ BEGIN
 
 	S(3) <= A(3) XOR B(3) XOR C3;
 	Co <= (A(3) AND B(3)) OR (B(3) AND C3) OR (C3 AND A(3));
-END FA_4bit;
+END fa4bit;
