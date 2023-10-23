@@ -1,6 +1,9 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -divider {TOP LEVEL INPUTS}
+
+
+
 add wave -noupdate -divider cpu
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {33 ps} 0}

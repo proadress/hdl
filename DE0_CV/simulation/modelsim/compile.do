@@ -15,5 +15,7 @@ vlog ../../design/counter_register.sv
 vlog ../../design/counter_register2.sv
 vlog ../../design/fsm_ryg.sv
 vlog ../../design/pipeline.sv
+vlog ../../design/pc1.sv
+vlog ../../design/ROM.sv
 # ------------------------------------------------------------
 do sim.do

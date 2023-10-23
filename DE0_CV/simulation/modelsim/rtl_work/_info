@@ -7,10 +7,10 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/code/hdl/DE0_CV/simulation/modelsim
+Z0 dC:/Users/A610/Desktop/hdl/DE0_CV/simulation/modelsim
 vadder_4bit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1697979057
+Z2 !s110 1698032153
 !i10b 1
 !s100 fUD0Co93;k=gc>dai=SLH0
 I6d3VnK16EPXiblVF^>c=N0
@@ -18,19 +18,19 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 adder_4bit_sv_unit
 S1
 R0
-w1696181059
+Z4 w1698028738
 8../../design/adder_4bit.sv
 F../../design/adder_4bit.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1697979057.000000
+Z6 !s108 1698032153.000000
 !s107 ../../design/adder_4bit.sv|
 !s90 -reportprogress|300|../../design/adder_4bit.sv|
 !i113 1
-Z6 tCvgOpt 0
+Z7 tCvgOpt 0
 valu
 R1
 R2
@@ -41,22 +41,22 @@ R3
 !s105 alu_sv_unit
 S1
 R0
-w1695597759
+R4
 8../../design/alu.sv
 F../../design/alu.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 ../../design/alu.sv|
 !s90 -reportprogress|300|../../design/alu.sv|
 !i113 1
-R6
+R7
 vcounter_24hr
 R1
-Z7 !s110 1697979058
+R2
 !i10b 1
 !s100 7VcLcTzL_MC[b=bPQA3i:1
 ICeeSLA2@az6JDFYSLH8zg1
@@ -64,19 +64,19 @@ R3
 !s105 counter_24hr_sv_unit
 S1
 R0
-w1696185349
+R4
 8../../design/counter_24hr.sv
 F../../design/counter_24hr.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-Z8 !s108 1697979058.000000
+R6
 !s107 ../../design/counter_24hr.sv|
 !s90 -reportprogress|300|../../design/counter_24hr.sv|
 !i113 1
-R6
+R7
 vcounter_4bit
 R1
 R2
@@ -87,22 +87,22 @@ R3
 !s105 counter_4bit_sv_unit
 S1
 R0
-w1697381450
+R4
 8../../design/counter_4bit.sv
 F../../design/counter_4bit.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 ../../design/counter_4bit.sv|
 !s90 -reportprogress|300|../../design/counter_4bit.sv|
 !i113 1
-R6
+R7
 vcounter_8bit
 R1
-R7
+R2
 !i10b 1
 !s100 ^IA05d<;Ua>Fm[EcLCdJz3
 IF2;4fb5V;H]n;W:Z6T2Jc2
@@ -110,22 +110,22 @@ R3
 !s105 counter_8bit_sv_unit
 S1
 R0
-w1697977771
+R4
 8../../design/counter_8bit.sv
 F../../design/counter_8bit.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 ../../design/counter_8bit.sv|
 !s90 -reportprogress|300|../../design/counter_8bit.sv|
 !i113 1
-R6
+R7
 vcounter_register
 R1
-R7
+R2
 !i10b 1
 !s100 WW5:C`@;GQjWk5KcfZN<S0
 IF[5Aec8ZWA5BjkkeUnIP51
@@ -133,22 +133,22 @@ R3
 !s105 counter_register_sv_unit
 S1
 R0
-w1697380608
+R4
 8../../design/counter_register.sv
 F../../design/counter_register.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 ../../design/counter_register.sv|
 !s90 -reportprogress|300|../../design/counter_register.sv|
 !i113 1
-R6
+R7
 vcounter_register2
 R1
-R7
+R2
 !i10b 1
 !s100 4G3hY1[UgcDL3lcN30H6:2
 IQdFfiKbWmYK^jZ5CD5bbF1
@@ -156,19 +156,19 @@ R3
 !s105 counter_register2_sv_unit
 S1
 R0
-w1697976513
+R4
 8../../design/counter_register2.sv
 F../../design/counter_register2.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 ../../design/counter_register2.sv|
 !s90 -reportprogress|300|../../design/counter_register2.sv|
 !i113 1
-R6
+R7
 vDE0_CV
 R1
 R2
@@ -179,23 +179,23 @@ R3
 !s105 DE0_CV_sv_unit
 S1
 R0
-w1697977253
+R4
 8../../design/DE0_CV.sv
 F../../design/DE0_CV.sv
 L0 6
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 ../../design/DE0_CV.sv|
 !s90 -reportprogress|300|../../design/DE0_CV.sv|
 !i113 1
-R6
+R7
 n@d@e0_@c@v
 vfsm_ryg
 R1
-R7
+R2
 !i10b 1
 !s100 [LWKSfaX47K2Geo]O`^c@1
 I_SPd]N;Bh6UW@cFU_k9FM1
@@ -203,19 +203,19 @@ R3
 !s105 fsm_ryg_sv_unit
 S1
 R0
-w1697382711
+R4
 8../../design/fsm_ryg.sv
 F../../design/fsm_ryg.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 ../../design/fsm_ryg.sv|
 !s90 -reportprogress|300|../../design/fsm_ryg.sv|
 !i113 1
-R6
+R7
 vmux8to1
 R1
 R2
@@ -226,22 +226,45 @@ R3
 !s105 mux8to1_sv_unit
 S1
 R0
-w1695597768
+R4
 8../../design/mux8to1.sv
 F../../design/mux8to1.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 ../../design/mux8to1.sv|
 !s90 -reportprogress|300|../../design/mux8to1.sv|
 !i113 1
+R7
+vpc1
+R1
+R2
+!i10b 1
+!s100 ;mU55ahJP1I;17z:6c_EP2
+IjAdneYN`X`I_:<n^j8iMA2
+R3
+!s105 pc1_sv_unit
+S1
+R0
+w1698032149
+8../../design/pc1.sv
+F../../design/pc1.sv
+L0 1
+R5
+r1
+!s85 0
+31
 R6
+!s107 ../../design/pc1.sv|
+!s90 -reportprogress|300|../../design/pc1.sv|
+!i113 1
+R7
 vpipeline
 R1
-R7
+R2
 !i10b 1
 !s100 0273]_z[mR9@oRiJRkhOD0
 Iz5]lFk5^>VE?25KSN7PLE1
@@ -249,39 +272,63 @@ R3
 !s105 pipeline_sv_unit
 S1
 R0
-w1697979051
+R4
 8../../design/pipeline.sv
 F../../design/pipeline.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 ../../design/pipeline.sv|
 !s90 -reportprogress|300|../../design/pipeline.sv|
 !i113 1
-R6
+R7
+vROM
+R1
+!s110 1698032154
+!i10b 1
+!s100 Rhl1zQ4TL710oE7fKaG=E3
+I`YVX;8aoHLf46Z^258Hob3
+R3
+!s105 ROM_sv_unit
+S1
+R0
+w1698029015
+8../../design/ROM.sv
+F../../design/ROM.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1698032154.000000
+!s107 ../../design/ROM.sv|
+!s90 -reportprogress|300|../../design/ROM.sv|
+!i113 1
+R7
+n@r@o@m
 vtestbench
 R1
 R2
 !i10b 1
-!s100 X1Um]MGLR4`KAoUH5=fBJ3
-IokekFQnQo3i8>GnL==jSn0
+!s100 YR;06gf2KP6G]iIe@=BXe3
+IA^O9fN:fOhlE>V06cOIn^1
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1697978933
+w1698031661
 8../tb/testbench.sv
 F../tb/testbench.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 ../tb/testbench.sv|
 !s90 -reportprogress|300|../tb/testbench.sv|
 !i113 1
-R6
+R7
