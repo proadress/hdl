@@ -1,5 +1,5 @@
 Analysis & Elaboration report for DE0_CV
-Mon Oct 23 11:34:56 2023
+Mon Oct 30 09:03:39 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Oct 23 11:34:56 2023       ;
+; Analysis & Elaboration Status ; Successful - Mon Oct 30 09:03:39 2023       ;
 ; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                 ; DE0_CV                                      ;
 ; Top-level Entity Name         ; DE0_CV                                      ;
@@ -189,7 +189,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Oct 23 11:34:52 2023
+    Info: Processing started: Mon Oct 30 09:03:35 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_CV -c DE0_CV --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -273,9 +273,9 @@ Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity
 Info (144001): Generated suppressed messages file C:/Users/A610/Desktop/hdl/DE0_CV/DE0_CV.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 43 warnings
     Info: Peak virtual memory: 4778 megabytes
-    Info: Processing ended: Mon Oct 23 11:34:56 2023
+    Info: Processing ended: Mon Oct 30 09:03:39 2023
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +--------------------------------------------+

@@ -1,0 +1,1414 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE0_CV_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/A610/Desktop/mi/mid_A/design {C:/Users/A610/Desktop/mi/mid_A/design/DE0_CV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:08 on Oct 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/A610/Desktop/mi/mid_A/design" C:/Users/A610/Desktop/mi/mid_A/design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:09:08 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:14 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:09:14 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:14 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:09:14 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:14 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:09:14 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:09:14 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:09:14 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:09:14 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(6): [TFMPC] - Too few port connections. Expected 18, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Error: (vsim-3063) ../tb/testbench.sv(6): Port 'a' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Error: (vsim-3063) ../tb/testbench.sv(6): Port 'b' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Error: (vsim-3063) ../tb/testbench.sv(6): Port 'c' not found in the connected module (6th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Error: (vsim-3063) ../tb/testbench.sv(6): Port 'd' not found in the connected module (7th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'load_reg'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'load_ad'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'load_w'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'a_q'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'b_q'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'c_q'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'd_q'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'x'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'y'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'pss'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'Rom_data_out'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 's'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'ad_q'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'bc_q'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(6): [TFMPC] - Missing connection for port 'cnt'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim.do PAUSED at line 1
+DO compile.do
+# invalid command name "DO"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:13:40 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:13:40 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:13:40 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:13:40 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:13:40 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:13:40 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:13:40 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:13:40 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:09:14 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(37)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 37
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:45 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:21:45 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:45 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:21:45 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:45 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:21:45 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:21:45 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:21:45 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:21:45 on Oct 30,2023, Elapsed time: 0:12:31
+# Errors: 7, Warnings: 16
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:21:45 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3015) ../../design/top.sv(35): [PCDPC] - Port size (4) does not match connection size (5) for port 'Rom_addr_in'. The port definition is at: ../../design/Program_Rom.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1/cp1 File: ../../design/Program_Rom.sv
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(37)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 37
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:23:43 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:23:43 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:23:43 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:23:43 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:23:43 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:23:43 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:23:44 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:23:44 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:23:44 on Oct 30,2023, Elapsed time: 0:01:59
+# Errors: 3, Warnings: 1
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:23:44 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3015) ../../design/top.sv(35): [PCDPC] - Port size (4) does not match connection size (5) for port 'Rom_addr_in'. The port definition is at: ../../design/Program_Rom.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1/cp1 File: ../../design/Program_Rom.sv
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(37)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 37
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:24:55 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:24:55 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:24:55 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:24:55 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:24:55 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:24:55 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:24:55 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:24:55 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:24:56 on Oct 30,2023, Elapsed time: 0:01:12
+# Errors: 3, Warnings: 1
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:24:56 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3015) ../../design/top.sv(35): [PCDPC] - Port size (4) does not match connection size (5) for port 'Rom_addr_in'. The port definition is at: ../../design/Program_Rom.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1/cp1 File: ../../design/Program_Rom.sv
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(37)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 37
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:35:37 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:35:37 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:35:37 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:35:37 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:35:37 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:35:37 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:35:37 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:35:37 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:35:38 on Oct 30,2023, Elapsed time: 0:10:42
+# Errors: 3, Warnings: 1
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:35:38 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(9): [TFMPC] - Too few port connections. Expected 19, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'PC_q'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(37)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 37
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:32 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:37:32 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:32 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:37:33 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:33 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:37:33 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:37:33 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:37:33 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:37:33 on Oct 30,2023, Elapsed time: 0:01:55
+# Errors: 3, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:37:33 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(9): [TFMPC] - Too few port connections. Expected 19, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'PC_q'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(37)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 37
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:40:25 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:40:25 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:40:25 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:40:26 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:40:26 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:40:26 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:40:26 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:40:26 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:40:26 on Oct 30,2023, Elapsed time: 0:02:53
+# Errors: 3, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:40:26 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(9): [TFMPC] - Too few port connections. Expected 19, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'PC_q'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(37)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 37
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:41:09 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:41:09 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:41:09 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:41:09 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:41:09 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:41:09 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:41:09 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:41:09 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:41:10 on Oct 30,2023, Elapsed time: 0:00:44
+# Errors: 3, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:41:10 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(9): [TFMPC] - Too few port connections. Expected 19, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'PC_q'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(37)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 37
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:53:59 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:53:59 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:53:59 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:53:59 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error: ../../design/top.sv(40): (vlog-2730) Undefined variable: 'sel'.
+# End time: 10:53:59 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:54:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:54:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:54:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:54:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:54:17 on Oct 30,2023, Elapsed time: 0:13:07
+# Errors: 7, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:54:17 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(9): [TFMPC] - Too few port connections. Expected 20, found 19.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'PC_q'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(38)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 38
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_bc
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:28 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:56:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:28 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 10:56:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:28 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 10:56:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:56:28 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(43): (vlog-2182) 'x' might be read before written in always_comb or always @* block.
+# ** Warning: ../../design/top.sv(43): (vlog-2182) 'y' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	top
+# End time: 10:56:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 10:56:29 on Oct 30,2023, Elapsed time: 0:02:12
+# Errors: 3, Warnings: 4
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 10:56:29 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(9): [TFMPC] - Too few port connections. Expected 20, found 19.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'PC_q'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(38)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 38
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/rst
+add wave -position end  sim:/testbench/w_q
+add wave -position end  sim:/testbench/s
+add wave -position end  sim:/testbench/ad_q
+add wave -position end  sim:/testbench/bc_q
+add wave -position end  sim:/testbench/cnt
+add wave -position end  sim:/testbench/a_q
+add wave -position end  sim:/testbench/b_q
+add wave -position end  sim:/testbench/c_q
+add wave -position end  sim:/testbench/d_q
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/y
+add wave -position end  sim:/testbench/pss
+add wave -position end  sim:/testbench/load_reg
+add wave -position end  sim:/testbench/load_ad
+add wave -position end  sim:/testbench/load_bc
+add wave -position end  sim:/testbench/load_w
+add wave -position end  sim:/testbench/Rom_data_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:01:19 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:01:19 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:01:19 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:01:19 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:01:19 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:01:19 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:01:19 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(43): (vlog-2182) 'x' might be read before written in always_comb or always @* block.
+# ** Warning: ../../design/top.sv(43): (vlog-2182) 'y' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	top
+# End time: 11:01:19 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 11:01:21 on Oct 30,2023, Elapsed time: 0:04:52
+# Errors: 3, Warnings: 4
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 11:01:22 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(9): [TFMPC] - Too few port connections. Expected 20, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'load_reg'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'load_ad'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'load_bc'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'load_w'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'PC_q'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(34)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 34
+add wave -position 5  sim:/testbench/Rom_out
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:05:45 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:05:45 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:05:45 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:05:45 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:05:45 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:05:45 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:05:45 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(43): (vlog-2182) 'x' might be read before written in always_comb or always @* block.
+# ** Warning: ../../design/top.sv(43): (vlog-2182) 'y' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	top
+# End time: 11:05:45 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 11:05:45 on Oct 30,2023, Elapsed time: 0:04:23
+# Errors: 3, Warnings: 8
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 11:05:45 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# ** Warning: (vsim-3017) ../tb/testbench.sv(9): [TFMPC] - Too few port connections. Expected 20, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/top1 File: ../../design/top.sv
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'load_reg'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'load_ad'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'load_bc'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'load_w'.
+# ** Warning: (vsim-3722) ../tb/testbench.sv(9): [TFMPC] - Missing connection for port 'PC_q'.
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/Rom_out'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Note: $stop    : ../tb/testbench.sv(34)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 34
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:36 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:08:36 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:36 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:08:36 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:36 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:08:36 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:08:36 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error: ../../design/top.sv(67): (vlog-2730) Undefined variable: 'Rom_data_out'.
+# End time: 11:08:36 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:11 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:09:11 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:11 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:09:11 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:11 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:09:11 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:11 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(30): (vlog-2182) 'x' might be read before written in always_comb or always @* block.
+# ** Warning: ../../design/top.sv(30): (vlog-2182) 'y' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	top
+# End time: 11:09:11 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 11:09:13 on Oct 30,2023, Elapsed time: 0:03:28
+# Errors: 7, Warnings: 8
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 11:09:13 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:52 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:10:52 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:52 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:10:52 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:52 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:10:52 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:52 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(30): (vlog-2182) 'x' might be read before written in always_comb or always @* block.
+# ** Warning: ../../design/top.sv(30): (vlog-2182) 'y' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	top
+# End time: 11:10:52 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 11:10:53 on Oct 30,2023, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 11:10:53 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:14:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:14:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:14:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error: ../../design/top.sv(66): (vlog-2730) Undefined variable: 'pss'.
+# End time: 11:14:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:32 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:14:33 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:33 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:14:33 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:33 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:14:33 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:33 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(30): (vlog-2182) 'x' might be read before written in always_comb or always @* block.
+# ** Warning: ../../design/top.sv(30): (vlog-2182) 'y' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	top
+# End time: 11:14:33 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# End time: 11:14:33 on Oct 30,2023, Elapsed time: 0:03:40
+# Errors: 4, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 11:14:33 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:21:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:21:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:21:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:13 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error: ../../design/top.sv(35): (vlog-2730) Undefined variable: 'ad'.
+# ** Error: ../../design/top.sv(36): (vlog-2730) Undefined variable: 'bc'.
+# ** Error: ../../design/top.sv(79): (vlog-2730) Undefined variable: 'ad'.
+# ** Error: ../../design/top.sv(81): (vlog-2730) Undefined variable: 'bc'.
+# End time: 11:21:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:32 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:21:32 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:32 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:21:32 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:32 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:21:32 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:32 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error (suppressible): (vlog-7033) ../../design/top.sv(66): Variable 'PC_q' driven in a combinational block, may not be driven by any other process. See ../../design/top.sv(30).
+# End time: 11:21:32 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:57 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:21:57 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:57 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:21:57 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:57 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:21:57 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:21:57 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error (suppressible): (vlog-7033) ../../design/top.sv(66): Variable 'PC_q' driven in a combinational block, may not be driven by any other process. See ../../design/top.sv(30).
+# End time: 11:21:57 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:22:30 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:22:30 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:22:30 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:22:30 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:22:30 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:22:30 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:22:30 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 11:22:30 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:22:31 on Oct 30,2023, Elapsed time: 0:07:58
+# Errors: 13, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 11:22:31 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.doc
+# Cannot open macro file: compile.doc
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:25:28 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 11:25:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:25:28 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 11:25:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:25:28 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 11:25:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:25:28 on Oct 30,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 11:25:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:25:28 on Oct 30,2023, Elapsed time: 0:02:57
+# Errors: 1, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 11:25:28 on Oct 30,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 520 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+# End time: 11:28:17 on Oct 30,2023, Elapsed time: 0:02:49
+# Errors: 0, Warnings: 0
