@@ -1,5 +1,5 @@
 EDA Netlist Writer report for vhdl
-Mon Oct 23 01:45:36 2023
+Thu Nov 02 21:48:41 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Oct 23 01:45:36 2023 ;
+; EDA Netlist Writer Status ; Successful - Thu Nov 02 21:48:41 2023 ;
 ; Revision Name             ; vhdl                                  ;
 ; Top-level Entity Name     ; vhdl                                  ;
 ; Family                    ; Cyclone IV GX                         ;
@@ -80,12 +80,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 23 01:45:36 2023
+    Info: Processing started: Thu Nov 02 21:48:41 2023
 Info: Command: quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog vhdl -c vhdl
 Info (204019): Generated file vhdl.vo in folder "D:/code/hdl/vhdl/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4564 megabytes
-    Info: Processing ended: Mon Oct 23 01:45:36 2023
+    Info: Processing ended: Thu Nov 02 21:48:41 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

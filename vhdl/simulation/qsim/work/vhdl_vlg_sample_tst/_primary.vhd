@@ -4,6 +4,7 @@ entity vhdl_vlg_sample_tst is
     port(
         clk             : in     vl_logic;
         rst             : in     vl_logic;
+        updown          : in     vl_logic;
         sampler_tx      : out    vl_logic
     );
 end vhdl_vlg_sample_tst;
