@@ -3,7 +3,7 @@ module top (
     rst,
     output logic [7:0] w_q
 );
-  logic [7:0] ir_out, alu_q, w_q;
+  logic [7:0] alu_q;
   logic [10:0] PC_q, mar_q;
   logic [13:0] prog_data, ir_q;
   logic load_pc, load_mar, load_ir, load_w;
@@ -18,16 +18,6 @@ module top (
     t6
   } state_s;
   state_s ps, ns;
-
-  typedef enum {
-    MOVLW,
-    ADDLW,
-    SUBLW,
-    ANDLW,
-    IORLW,
-    XORLW
-  } op_s;
-  op_s op;
 
 
 
@@ -50,8 +40,17 @@ module top (
     else if (load_ir) ir_q = prog_data;
   end
 
+  always_ff @(posedge clk) begin
+    if (rst) w_q = 0;
+    else if (load_w) w_q = alu_q;
+  end
+
 
   always_comb begin
+    load_ir  = 0;
+    load_mar = 0;
+    load_pc  = 0;
+    load_w   = 0;
     case (ps)
       t0: ns = t1;
       t1: begin
@@ -80,13 +79,13 @@ module top (
   end
 
   always_comb begin
-    case (op)
-      MOVLW: alu_q = ir_q[7:0];
-      ADDLW: alu_q = ir_q[7:0] + w_q;
-      SUBLW: alu_q = ir_q[7:0] - w_q;
-      ANDLW: alu_q = ir_q[7:0] & w_q;
-      IORLW: alu_q = ir_q[7:0] | w_q;
-      XORLW: alu_q = ir_q[7:0] ^ w_q;
+    case (ir_q[13:8])
+      6'b110000: alu_q = ir_q[7:0];
+      6'b111110: alu_q = ir_q[7:0] + w_q;
+      6'b111100: alu_q = ir_q[7:0] - w_q;
+      6'b111001: alu_q = ir_q[7:0] & w_q;
+      6'b111000: alu_q = ir_q[7:0] | w_q;
+      6'b111010: alu_q = ir_q[7:0] ^ w_q;
       default alu_q = ir_q[7:0] + w_q;
     endcase
   end

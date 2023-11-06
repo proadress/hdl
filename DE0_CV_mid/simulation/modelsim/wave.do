@@ -6,7 +6,8 @@ add wave -noupdate /testbench/clk
 add wave -noupdate /testbench/rst
 add wave -noupdate -radix unsigned /testbench/w_q
 add wave -noupdate -radix unsigned /testbench/top1/ps
-add wave -noupdate -radix hexadecimal /testbench/top1/Rom_out
+add wave -noupdate -radix hexadecimal /testbench/top1/prog_data
+add wave -noupdate -radix hexadecimal /testbench/top1/ir_q
 add wave -noupdate -radix unsigned /testbench/top1/a_q
 add wave -noupdate -radix unsigned /testbench/top1/b_q
 add wave -noupdate -radix unsigned /testbench/top1/c_q

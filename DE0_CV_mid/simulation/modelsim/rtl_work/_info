@@ -7,14 +7,14 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/LAB601/Downloads/DE0_CV/simulation/modelsim
+Z0 dC:/Users/A610/Desktop/hdl/DE0_CV_mid/simulation/modelsim
 vadder_4bit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1694148976
+!s110 1699241696
 !i10b 1
 !s100 HFKgC;ik<lf^?n8YiP4nJ3
 IeWHe?81nO3S];9BCi;:;11
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 adder_4bit_sv_unit
 S1
 R0
@@ -22,22 +22,22 @@ w1694148767
 8../../design/adder_4bit.sv
 F../../design/adder_4bit.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1694148976.000000
+!s108 1699241696.000000
 !s107 ../../design/adder_4bit.sv|
 !s90 -reportprogress|300|../../design/adder_4bit.sv|
 !i113 1
-Z6 tCvgOpt 0
+Z4 tCvgOpt 0
 vDE0_CV
 R1
-R2
+Z5 !s110 1699242451
 !i10b 1
 !s100 AYSgFb;^maJWHVOKgVgi?2
-IYSKZRJQaDTR_jVc8zO7<N0
-R3
+I5el1`nbMg2=Y`W5kgPzzH2
+R2
 !s105 DE0_CV_sv_unit
 S1
 R0
@@ -45,36 +45,87 @@ w1694148872
 8../../design/DE0_CV.sv
 F../../design/DE0_CV.sv
 L0 6
-R4
+R3
 r1
 !s85 0
 31
-R5
+Z6 !s108 1699242451.000000
 !s107 ../../design/DE0_CV.sv|
-!s90 -reportprogress|300|../../design/DE0_CV.sv|
+!s90 -reportprogress|300|-sv|../../design/DE0_CV.sv|
 !i113 1
-R6
+o-sv
+R4
 n@d@e0_@c@v
+vProgram_Rom
+R1
+R5
+!i10b 1
+!s100 ziP8<MK]VSGNc?^Dz<@mT0
+I]ha3GF22ASkOSXL3hEFlE0
+R2
+!s105 Program_Rom_sv_unit
+S1
+R0
+w1699239494
+8../../design/Program_Rom.sv
+F../../design/Program_Rom.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R6
+!s107 ../../design/Program_Rom.sv|
+!s90 -reportprogress|300|-sv|../../design/Program_Rom.sv|
+!i113 1
+o-sv
+R4
+n@program_@rom
 vtestbench
 R1
-R2
+R5
 !i10b 1
-!s100 9U>locJO5SbR64Id_LRfm1
-IP8C^XBj9=FJHdZndOKiKQ3
-R3
+!s100 l1TDYHohW5K9mRanY<B`Z2
+I54Y5_?gf[E6<BghSAN89k3
+R2
 !s105 testbench_sv_unit
 S1
 R0
-w1694148935
+w1699242448
 8../tb/testbench.sv
 F../tb/testbench.sv
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
+!s108 1699242450.000000
 !s107 ../tb/testbench.sv|
-!s90 -reportprogress|300|../tb/testbench.sv|
+!s90 -reportprogress|300|-sv|../tb/testbench.sv|
 !i113 1
+o-sv
+R4
+vtop
+R1
+R5
+!i10b 1
+!s100 YB3VkE?3k_9`20MZfbGXM2
+IEIR5onmJ>b:PTPm19Pzk=1
+R2
+!s105 top_sv_unit
+S1
+R0
+w1699242420
+8../../design/top.sv
+F../../design/top.sv
+L0 1
+R3
+r1
+!s85 0
+31
 R6
+!s107 ../../design/top.sv|
+!s90 -reportprogress|300|-sv|../../design/top.sv|
+!i113 1
+o-sv
+R4

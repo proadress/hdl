@@ -1,23 +1,21 @@
 module testbench;
+  logic clk, rst;
+  logic [7:0] w_q;
 
 
-	logic [3:0]a,b,s;
-	
+  top top1 (
+      .clk(clk),
+      .rst(rst),
+      .w_q(w_q)
+  );  //期中考電路
 
-adder_4bit a1(
-	.a(a),
-	.b(b),
-	.s(s)
-	);
 
-	
-	initial begin
+  always #5 clk = ~clk;
 
-		#10 a = 5; 		b = 3;
-		#10 a = 1; 		b = 1;
-		#10 a = 2; 		b = 8;
-		#10 a = 7; 		b = 7;
-		#10 a = 6; 		b = 6;
-		#1000 $stop;
-	end
+  initial begin
+    clk = 0;
+    rst = 1;
+    #20 rst = 0;
+    #400 $stop;
+  end
 endmodule
