@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
 
-// DATE "11/06/2023 11:50:26"
+// DATE "11/06/2023 12:15:57"
 
 // 
 // Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -3615,7 +3615,7 @@ dffeas \top1|ps[2] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -3658,7 +3658,7 @@ dffeas \top1|ps[0] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -3701,7 +3701,7 @@ dffeas \top1|ps[1] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -3716,7 +3716,7 @@ defparam \top1|ps[1] .power_up = "low";
 // Location: LABCELL_X6_Y14_N54
 cyclonev_lcell_comb \top1|PC_q[2]~0 (
 // Equation(s):
-// \top1|PC_q[2]~0_combout  = ( \top1|ps [0] & ( \KEY[1]~input_o  ) ) # ( !\top1|ps [0] & ( ((\top1|ps [1] & !\top1|ps [2])) # (\KEY[1]~input_o ) ) )
+// \top1|PC_q[2]~0_combout  = ( \top1|ps [0] & ( !\KEY[1]~input_o  ) ) # ( !\top1|ps [0] & ( (!\KEY[1]~input_o ) # ((\top1|ps [1] & !\top1|ps [2])) ) )
 
 	.dataa(!\top1|ps [1]),
 	.datab(!\top1|ps [2]),
@@ -3733,7 +3733,7 @@ cyclonev_lcell_comb \top1|PC_q[2]~0 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|PC_q[2]~0 .extended_lut = "off";
-defparam \top1|PC_q[2]~0 .lut_mask = 64'h4F4F4F4F0F0F0F0F;
+defparam \top1|PC_q[2]~0 .lut_mask = 64'hF4F4F4F4F0F0F0F0;
 defparam \top1|PC_q[2]~0 .shared_arith = "off";
 // synopsys translate_on
 
@@ -3744,7 +3744,7 @@ dffeas \top1|PC_q[0] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -3788,7 +3788,7 @@ dffeas \top1|PC_q[1] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -3803,7 +3803,7 @@ defparam \top1|PC_q[1] .power_up = "low";
 // Location: LABCELL_X6_Y14_N57
 cyclonev_lcell_comb \top1|mar_q[10]~0 (
 // Equation(s):
-// \top1|mar_q[10]~0_combout  = ( \top1|ps [0] & ( ((!\top1|ps [1] & !\top1|ps [2])) # (\KEY[1]~input_o ) ) ) # ( !\top1|ps [0] & ( \KEY[1]~input_o  ) )
+// \top1|mar_q[10]~0_combout  = ( \top1|ps [0] & ( (!\KEY[1]~input_o ) # ((!\top1|ps [1] & !\top1|ps [2])) ) ) # ( !\top1|ps [0] & ( !\KEY[1]~input_o  ) )
 
 	.dataa(!\top1|ps [1]),
 	.datab(!\top1|ps [2]),
@@ -3820,7 +3820,7 @@ cyclonev_lcell_comb \top1|mar_q[10]~0 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|mar_q[10]~0 .extended_lut = "off";
-defparam \top1|mar_q[10]~0 .lut_mask = 64'h0F0F0F0F8F8F8F8F;
+defparam \top1|mar_q[10]~0 .lut_mask = 64'hF0F0F0F0F8F8F8F8;
 defparam \top1|mar_q[10]~0 .shared_arith = "off";
 // synopsys translate_on
 
@@ -3831,7 +3831,7 @@ dffeas \top1|mar_q[1] (
 	.asdata(\top1|PC_q [1]),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(vcc),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -3875,7 +3875,7 @@ dffeas \top1|PC_q[2] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -3919,7 +3919,7 @@ dffeas \top1|PC_q[3] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -3963,7 +3963,7 @@ dffeas \top1|PC_q[4] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -4006,7 +4006,7 @@ dffeas \top1|mar_q[4] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4025,7 +4025,7 @@ dffeas \top1|mar_q[2] (
 	.asdata(\top1|PC_q [2]),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(vcc),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4044,7 +4044,7 @@ dffeas \top1|mar_q[3] (
 	.asdata(\top1|PC_q [3]),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(vcc),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4112,7 +4112,7 @@ dffeas \top1|PC_q[5] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -4156,7 +4156,7 @@ dffeas \top1|PC_q[6] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -4200,7 +4200,7 @@ dffeas \top1|PC_q[7] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -4219,7 +4219,7 @@ dffeas \top1|mar_q[7] (
 	.asdata(\top1|PC_q [7]),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(vcc),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4263,7 +4263,7 @@ dffeas \top1|PC_q[8] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -4307,7 +4307,7 @@ dffeas \top1|PC_q[9] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -4350,7 +4350,7 @@ dffeas \top1|PC_q[10] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|PC_q[2]~0_combout ),
 	.devclrn(devclrn),
@@ -4393,7 +4393,7 @@ dffeas \top1|mar_q[10] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4436,7 +4436,7 @@ dffeas \top1|mar_q[8] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4455,7 +4455,7 @@ dffeas \top1|mar_q[6] (
 	.asdata(\top1|PC_q [6]),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(vcc),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4474,7 +4474,7 @@ dffeas \top1|mar_q[9] (
 	.asdata(\top1|PC_q [9]),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(vcc),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4517,7 +4517,7 @@ dffeas \top1|mar_q[5] (
 	.asdata(\top1|PC_q [5]),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(vcc),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4536,7 +4536,7 @@ dffeas \top1|mar_q[0] (
 	.asdata(\top1|PC_q [0]),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(vcc),
 	.ena(\top1|mar_q[10]~0_combout ),
 	.devclrn(devclrn),
@@ -4551,7 +4551,7 @@ defparam \top1|mar_q[0] .power_up = "low";
 // Location: LABCELL_X6_Y14_N6
 cyclonev_lcell_comb \top1|ir_q~0 (
 // Equation(s):
-// \top1|ir_q~0_combout  = ( !\top1|mar_q [5] & ( \top1|mar_q [0] & ( (!\top1|mar_q [1] & (\top1|PC|Equal0~1_combout  & (\top1|PC|Equal0~0_combout  & !\KEY[1]~input_o ))) ) ) )
+// \top1|ir_q~0_combout  = ( !\top1|mar_q [5] & ( \top1|mar_q [0] & ( (!\top1|mar_q [1] & (\top1|PC|Equal0~1_combout  & (\top1|PC|Equal0~0_combout  & \KEY[1]~input_o ))) ) ) )
 
 	.dataa(!\top1|mar_q [1]),
 	.datab(!\top1|PC|Equal0~1_combout ),
@@ -4568,14 +4568,14 @@ cyclonev_lcell_comb \top1|ir_q~0 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|ir_q~0 .extended_lut = "off";
-defparam \top1|ir_q~0 .lut_mask = 64'h0000000002000000;
+defparam \top1|ir_q~0 .lut_mask = 64'h0000000000020000;
 defparam \top1|ir_q~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X6_Y14_N42
 cyclonev_lcell_comb \top1|ir_q[12]~1 (
 // Equation(s):
-// \top1|ir_q[12]~1_combout  = ( \top1|ps [0] & ( ((\top1|ps [1] & !\top1|ps [2])) # (\KEY[1]~input_o ) ) ) # ( !\top1|ps [0] & ( \KEY[1]~input_o  ) )
+// \top1|ir_q[12]~1_combout  = ( \top1|ps [0] & ( (!\KEY[1]~input_o ) # ((\top1|ps [1] & !\top1|ps [2])) ) ) # ( !\top1|ps [0] & ( !\KEY[1]~input_o  ) )
 
 	.dataa(!\top1|ps [1]),
 	.datab(!\top1|ps [2]),
@@ -4592,7 +4592,7 @@ cyclonev_lcell_comb \top1|ir_q[12]~1 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|ir_q[12]~1 .extended_lut = "off";
-defparam \top1|ir_q[12]~1 .lut_mask = 64'h0F0F0F0F4F4F4F4F;
+defparam \top1|ir_q[12]~1 .lut_mask = 64'hF0F0F0F0F4F4F4F4;
 defparam \top1|ir_q[12]~1 .shared_arith = "off";
 // synopsys translate_on
 
@@ -4646,7 +4646,7 @@ dffeas \top1|ir_q[12] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|ir_q[12]~1_combout ),
 	.devclrn(devclrn),
@@ -4689,7 +4689,7 @@ dffeas \top1|ir_q[0] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|ir_q[12]~1_combout ),
 	.devclrn(devclrn),
@@ -4753,7 +4753,7 @@ defparam \top1|w_q~0 .shared_arith = "off";
 // Location: LABCELL_X6_Y14_N45
 cyclonev_lcell_comb \top1|w_q[1]~1 (
 // Equation(s):
-// \top1|w_q[1]~1_combout  = ( \KEY[1]~input_o  ) # ( !\KEY[1]~input_o  & ( (!\top1|ps [1] & (\top1|ps [2] & !\top1|ps [0])) ) )
+// \top1|w_q[1]~1_combout  = ( \KEY[1]~input_o  & ( (!\top1|ps [1] & (\top1|ps [2] & !\top1|ps [0])) ) ) # ( !\KEY[1]~input_o  )
 
 	.dataa(!\top1|ps [1]),
 	.datab(!\top1|ps [2]),
@@ -4770,7 +4770,7 @@ cyclonev_lcell_comb \top1|w_q[1]~1 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|w_q[1]~1 .extended_lut = "off";
-defparam \top1|w_q[1]~1 .lut_mask = 64'h20202020FFFFFFFF;
+defparam \top1|w_q[1]~1 .lut_mask = 64'hFFFFFFFF20202020;
 defparam \top1|w_q[1]~1 .shared_arith = "off";
 // synopsys translate_on
 
@@ -4781,7 +4781,7 @@ dffeas \top1|w_q[0] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|w_q[1]~1_combout ),
 	.devclrn(devclrn),
@@ -4825,7 +4825,7 @@ dffeas \top1|ir_q[1] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|ir_q[12]~1_combout ),
 	.devclrn(devclrn),
@@ -4893,7 +4893,7 @@ dffeas \top1|w_q[1] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|w_q[1]~1_combout ),
 	.devclrn(devclrn),
@@ -4908,7 +4908,7 @@ defparam \top1|w_q[1] .power_up = "low";
 // Location: LABCELL_X6_Y14_N18
 cyclonev_lcell_comb \top1|ir_q~2 (
 // Equation(s):
-// \top1|ir_q~2_combout  = ( !\top1|mar_q [5] & ( \top1|mar_q [0] & ( (\top1|mar_q [1] & (\top1|PC|Equal0~1_combout  & (\top1|PC|Equal0~0_combout  & !\KEY[1]~input_o ))) ) ) )
+// \top1|ir_q~2_combout  = ( !\top1|mar_q [5] & ( \top1|mar_q [0] & ( (\top1|mar_q [1] & (\top1|PC|Equal0~1_combout  & (\top1|PC|Equal0~0_combout  & \KEY[1]~input_o ))) ) ) )
 
 	.dataa(!\top1|mar_q [1]),
 	.datab(!\top1|PC|Equal0~1_combout ),
@@ -4925,7 +4925,7 @@ cyclonev_lcell_comb \top1|ir_q~2 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|ir_q~2 .extended_lut = "off";
-defparam \top1|ir_q~2 .lut_mask = 64'h0000000001000000;
+defparam \top1|ir_q~2 .lut_mask = 64'h0000000000010000;
 defparam \top1|ir_q~2 .shared_arith = "off";
 // synopsys translate_on
 
@@ -5004,7 +5004,7 @@ dffeas \top1|w_q[2] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\KEY[1]~input_o ),
+	.sclr(!\KEY[1]~input_o ),
 	.sload(gnd),
 	.ena(\top1|w_q[1]~1_combout ),
 	.devclrn(devclrn),
@@ -5044,7 +5044,7 @@ defparam \top1|Add1~13 .shared_arith = "off";
 // Location: LABCELL_X6_Y15_N15
 cyclonev_lcell_comb \top1|w_q~4 (
 // Equation(s):
-// \top1|w_q~4_combout  = ( \top1|ir_q [10] & ( (!\KEY[1]~input_o  & \top1|Add1~13_sumout ) ) ) # ( !\top1|ir_q [10] & ( (!\KEY[1]~input_o  & (!\top1|ir_q [12] & \top1|Add1~13_sumout )) ) )
+// \top1|w_q~4_combout  = ( \top1|ir_q [10] & ( (\KEY[1]~input_o  & \top1|Add1~13_sumout ) ) ) # ( !\top1|ir_q [10] & ( (\KEY[1]~input_o  & (!\top1|ir_q [12] & \top1|Add1~13_sumout )) ) )
 
 	.dataa(!\KEY[1]~input_o ),
 	.datab(!\top1|ir_q [12]),
@@ -5061,7 +5061,7 @@ cyclonev_lcell_comb \top1|w_q~4 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|w_q~4 .extended_lut = "off";
-defparam \top1|w_q~4 .lut_mask = 64'h080808080A0A0A0A;
+defparam \top1|w_q~4 .lut_mask = 64'h0404040405050505;
 defparam \top1|w_q~4 .shared_arith = "off";
 // synopsys translate_on
 
@@ -5112,7 +5112,7 @@ defparam \top1|Add1~17 .shared_arith = "off";
 // Location: LABCELL_X6_Y15_N21
 cyclonev_lcell_comb \top1|w_q~5 (
 // Equation(s):
-// \top1|w_q~5_combout  = ( \top1|ir_q [10] & ( (!\KEY[1]~input_o  & \top1|Add1~17_sumout ) ) ) # ( !\top1|ir_q [10] & ( (!\KEY[1]~input_o  & (!\top1|ir_q [12] & \top1|Add1~17_sumout )) ) )
+// \top1|w_q~5_combout  = ( \top1|ir_q [10] & ( (\KEY[1]~input_o  & \top1|Add1~17_sumout ) ) ) # ( !\top1|ir_q [10] & ( (\KEY[1]~input_o  & (!\top1|ir_q [12] & \top1|Add1~17_sumout )) ) )
 
 	.dataa(!\KEY[1]~input_o ),
 	.datab(!\top1|ir_q [12]),
@@ -5129,7 +5129,7 @@ cyclonev_lcell_comb \top1|w_q~5 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|w_q~5 .extended_lut = "off";
-defparam \top1|w_q~5 .lut_mask = 64'h080808080A0A0A0A;
+defparam \top1|w_q~5 .lut_mask = 64'h0404040405050505;
 defparam \top1|w_q~5 .shared_arith = "off";
 // synopsys translate_on
 
@@ -5180,7 +5180,7 @@ defparam \top1|Add1~21 .shared_arith = "off";
 // Location: LABCELL_X6_Y15_N3
 cyclonev_lcell_comb \top1|w_q~6 (
 // Equation(s):
-// \top1|w_q~6_combout  = ( \top1|ir_q [10] & ( (\top1|Add1~21_sumout  & !\KEY[1]~input_o ) ) ) # ( !\top1|ir_q [10] & ( (!\top1|ir_q [12] & (\top1|Add1~21_sumout  & !\KEY[1]~input_o )) ) )
+// \top1|w_q~6_combout  = ( \top1|ir_q [10] & ( (\top1|Add1~21_sumout  & \KEY[1]~input_o ) ) ) # ( !\top1|ir_q [10] & ( (!\top1|ir_q [12] & (\top1|Add1~21_sumout  & \KEY[1]~input_o )) ) )
 
 	.dataa(gnd),
 	.datab(!\top1|ir_q [12]),
@@ -5197,7 +5197,7 @@ cyclonev_lcell_comb \top1|w_q~6 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|w_q~6 .extended_lut = "off";
-defparam \top1|w_q~6 .lut_mask = 64'h0C000C000F000F00;
+defparam \top1|w_q~6 .lut_mask = 64'h000C000C000F000F;
 defparam \top1|w_q~6 .shared_arith = "off";
 // synopsys translate_on
 
@@ -5248,7 +5248,7 @@ defparam \top1|Add1~25 .shared_arith = "off";
 // Location: LABCELL_X6_Y15_N12
 cyclonev_lcell_comb \top1|w_q~7 (
 // Equation(s):
-// \top1|w_q~7_combout  = ( \top1|ir_q [10] & ( (!\KEY[1]~input_o  & \top1|Add1~25_sumout ) ) ) # ( !\top1|ir_q [10] & ( (!\KEY[1]~input_o  & (!\top1|ir_q [12] & \top1|Add1~25_sumout )) ) )
+// \top1|w_q~7_combout  = ( \top1|ir_q [10] & ( (\KEY[1]~input_o  & \top1|Add1~25_sumout ) ) ) # ( !\top1|ir_q [10] & ( (\KEY[1]~input_o  & (!\top1|ir_q [12] & \top1|Add1~25_sumout )) ) )
 
 	.dataa(!\KEY[1]~input_o ),
 	.datab(!\top1|ir_q [12]),
@@ -5265,7 +5265,7 @@ cyclonev_lcell_comb \top1|w_q~7 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|w_q~7 .extended_lut = "off";
-defparam \top1|w_q~7 .lut_mask = 64'h080808080A0A0A0A;
+defparam \top1|w_q~7 .lut_mask = 64'h0404040405050505;
 defparam \top1|w_q~7 .shared_arith = "off";
 // synopsys translate_on
 
@@ -5315,7 +5315,7 @@ defparam \top1|Add1~29 .shared_arith = "off";
 // Location: LABCELL_X6_Y15_N18
 cyclonev_lcell_comb \top1|w_q~8 (
 // Equation(s):
-// \top1|w_q~8_combout  = ( \top1|ir_q [10] & ( (!\KEY[1]~input_o  & \top1|Add1~29_sumout ) ) ) # ( !\top1|ir_q [10] & ( (!\KEY[1]~input_o  & (!\top1|ir_q [12] & \top1|Add1~29_sumout )) ) )
+// \top1|w_q~8_combout  = ( \top1|ir_q [10] & ( (\KEY[1]~input_o  & \top1|Add1~29_sumout ) ) ) # ( !\top1|ir_q [10] & ( (\KEY[1]~input_o  & (!\top1|ir_q [12] & \top1|Add1~29_sumout )) ) )
 
 	.dataa(!\KEY[1]~input_o ),
 	.datab(!\top1|ir_q [12]),
@@ -5332,7 +5332,7 @@ cyclonev_lcell_comb \top1|w_q~8 (
 	.shareout());
 // synopsys translate_off
 defparam \top1|w_q~8 .extended_lut = "off";
-defparam \top1|w_q~8 .lut_mask = 64'h080808080A0A0A0A;
+defparam \top1|w_q~8 .lut_mask = 64'h0404040405050505;
 defparam \top1|w_q~8 .shared_arith = "off";
 // synopsys translate_on
 

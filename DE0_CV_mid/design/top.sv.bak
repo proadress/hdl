@@ -26,23 +26,23 @@ module top (
       .Rom_addr_in (mar_q)
   );
   always_ff @(posedge clk) begin
-    if (rst) PC_q <= #1 0;
-    else if (load_pc) PC_q <= #1 PC_q + 1;
+    if (rst) PC_q = 0;
+    else if (load_pc) PC_q = PC_q + 1;
   end
 
   always_ff @(posedge clk) begin
-    if (rst) mar_q <= #1 0;
-    else if (load_mar) mar_q <= #1 PC_q;
+    if (rst) mar_q = 0;
+    else if (load_mar) mar_q = PC_q;
   end
 
   always_ff @(posedge clk) begin
-    if (rst) ir_q <= #1 0;
-    else if (load_ir) ir_q <= #1 prog_data;
+    if (rst) ir_q = 0;
+    else if (load_ir) ir_q = prog_data;
   end
 
   always_ff @(posedge clk) begin
-    if (rst) w_q <= #1 0;
-    else if (load_w) w_q <= #1 alu_q;
+    if (rst) w_q = 0;
+    else if (load_w) w_q = alu_q;
   end
 
 

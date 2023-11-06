@@ -1,5 +1,5 @@
 Fitter report for DE0_CV
-Mon Nov 06 11:50:14 2023
+Mon Nov 06 12:15:49 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Nov 06 11:50:14 2023       ;
+; Fitter Status                   ; Successful - Mon Nov 06 12:15:49 2023       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; DE0_CV                                      ;
 ; Top-level Entity Name           ; DE0_CV                                      ;
@@ -157,9 +157,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processor 3            ;   0.3%      ;
-;     Processor 4            ;   0.3%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
 ;     Processors 5-12        ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -2110,12 +2110,12 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.33 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.34 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (169064): Following 98 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin CLOCK4_50 has a permanently disabled output enable File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 12
     Info (169065): Pin DRAM_DQ[0] has a permanently disabled output enable File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 21
@@ -2217,10 +2217,10 @@ Warning (169064): Following 98 pins have no output enable or a GND or VCC output
     Info (169065): Pin GPIO_1[35] has a permanently disabled output enable File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 68
 Info (144001): Generated suppressed messages file C:/Users/A610/Desktop/hdl/DE0_CV_mid/DE0_CV.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 7051 megabytes
-    Info: Processing ended: Mon Nov 06 11:50:15 2023
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:01:04
+    Info: Peak virtual memory: 7050 megabytes
+    Info: Processing ended: Mon Nov 06 12:15:49 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:01:03
 
 
 +----------------------------+
