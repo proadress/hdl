@@ -10,72 +10,118 @@
 # Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:18:15 on Nov 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design" C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv 
+# -- Compiling module single_port_ram_128x8
+# 
+# Top level modules:
+# 	single_port_ram_128x8
+# End time: 12:18:15 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:05:01 on Nov 06,2023
+# Start time: 12:18:15 on Nov 13,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design" C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv 
 # -- Compiling module top
-# 
-# Top level modules:
-# 	top
-# End time: 12:05:01 on Nov 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/Program_Rom.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:05:01 on Nov 06,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design" C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/Program_Rom.sv 
-# -- Compiling module Program_Rom
-# 
-# Top level modules:
-# 	Program_Rom
-# End time: 12:05:01 on Nov 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-do c
-# Cannot open macro file: c
+# ** Error: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv(33): (vlog-2730) Undefined variable: 'ram_en'.
+# ** Error: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv(71): (vlog-2730) Undefined variable: 'COMF'.
+# ** Warning: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv(89): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# End time: 12:18:15 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./DE0_CV_run_msim_rtl_verilog.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv}"
 do compile.do
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:05:12 on Nov 06,2023
+# Start time: 12:18:23 on Nov 13,2023
 # vlog -reportprogress 300 -sv ../tb/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 12:05:12 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 12:18:23 on Nov 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:05:12 on Nov 06,2023
+# Start time: 12:18:23 on Nov 13,2023
 # vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
 # -- Compiling module DE0_CV
 # 
 # Top level modules:
 # 	DE0_CV
-# End time: 12:05:12 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 12:18:23 on Nov 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:05:12 on Nov 06,2023
+# Start time: 12:18:23 on Nov 13,2023
 # vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
 # -- Compiling module Program_Rom
 # 
 # Top level modules:
 # 	Program_Rom
-# End time: 12:05:12 on Nov 06,2023, Elapsed time: 0:00:00
+# End time: 12:18:23 on Nov 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:05:12 on Nov 06,2023
+# Start time: 12:18:23 on Nov 13,2023
 # vlog -reportprogress 300 -sv ../../design/top.sv 
 # -- Compiling module top
+# ** Error: ../../design/top.sv(33): (vlog-2730) Undefined variable: 'ram_en'.
+# ** Error: ../../design/top.sv(71): (vlog-2730) Undefined variable: 'COMF'.
+# ** Warning: ../../design/top.sv(89): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# End time: 12:18:23 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:19:08 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:19:08 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:19:08 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:19:08 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:19:08 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:19:08 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:19:08 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(89): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	top
-# End time: 12:05:12 on Nov 06,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 12:19:08 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
 # vsim -voptargs="+acc" work.testbench 
-# Start time: 12:05:12 on Nov 06,2023
+# Start time: 12:19:08 on Nov 13,2023
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.top
 # Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
 # .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
 # ** Error: (vish-4014) No objects found matching '/testbench/top1/a_q'.
 # Executing ONERROR command at macro ./wave.do line 11
@@ -96,5 +142,828 @@ do compile.do
 # ** Note: $stop    : ../tb/testbench.sv(19)
 #    Time: 420 ps  Iteration: 0  Instance: /testbench
 # Break in Module testbench at ../tb/testbench.sv line 19
-# End time: 12:05:42 on Nov 06,2023, Elapsed time: 0:00:30
-# Errors: 24, Warnings: 0
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:21:41 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:21:41 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:21:41 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:21:41 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:21:41 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:21:41 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:21:41 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(89): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	top
+# End time: 12:21:41 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 12:21:42 on Nov 13,2023, Elapsed time: 0:02:34
+# Errors: 24, Warnings: 1
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:21:42 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:24:21 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:24:21 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:24:21 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:24:21 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:24:21 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:24:21 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:24:21 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(89): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	top
+# End time: 12:24:21 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 12:24:21 on Nov 13,2023, Elapsed time: 0:02:39
+# Errors: 3, Warnings: 1
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:24:21 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:27:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:27:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:27:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error: ../../design/top.sv(50): (vlog-2730) Undefined variable: 'MOVLW'.
+# ** Warning: ../../design/top.sv(93): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# End time: 12:27:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:52 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:27:52 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:52 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:27:52 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:52 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:27:52 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:27:52 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(93): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	top
+# End time: 12:27:52 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 12:27:53 on Nov 13,2023, Elapsed time: 0:03:32
+# Errors: 7, Warnings: 2
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:27:53 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:47 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:28:47 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:47 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:28:47 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:47 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:28:47 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:47 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Warning: ../../design/top.sv(93): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	top
+# End time: 12:28:47 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# End time: 12:28:47 on Nov 13,2023, Elapsed time: 0:00:54
+# Errors: 3, Warnings: 1
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:28:47 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:55 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:29:55 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:55 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:29:55 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:55 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:29:55 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:55 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:29:55 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:29:56 on Nov 13,2023, Elapsed time: 0:01:09
+# Errors: 3, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:29:56 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:01 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:31:01 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:01 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:31:01 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:01 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:31:01 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:01 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:31:01 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:31:01 on Nov 13,2023, Elapsed time: 0:01:05
+# Errors: 3, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:31:01 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:57 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:31:57 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:57 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:31:57 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:57 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:31:57 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:57 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:31:57 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:31:58 on Nov 13,2023, Elapsed time: 0:00:57
+# Errors: 3, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:31:58 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:32:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:32:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:32:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:32:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:32:38 on Nov 13,2023, Elapsed time: 0:00:40
+# Errors: 3, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:32:38 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:33:01 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:33:01 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:33:01 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:33:01 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:33:01 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:33:01 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:33:01 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:33:01 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:33:01 on Nov 13,2023, Elapsed time: 0:00:23
+# Errors: 3, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:33:01 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:32 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:34:32 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:32 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:34:32 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:32 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:34:32 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:32 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:34:32 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:34:33 on Nov 13,2023, Elapsed time: 0:01:32
+# Errors: 3, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:34:33 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.doc
+# Cannot open macro file: compile.doc
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:35:14 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:35:14 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:35:14 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:35:14 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:35:14 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:35:14 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:35:15 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:35:15 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:35:15 on Nov 13,2023, Elapsed time: 0:00:42
+# Errors: 4, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:35:15 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/ADDLW'.
+# Executing ONERROR command at macro ./wave.do line 18
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:10 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:37:10 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:10 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:37:10 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:10 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:37:10 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:37:10 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:37:10 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:37:11 on Nov 13,2023, Elapsed time: 0:01:56
+# Errors: 6, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:37:11 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '/testbench/top1/cnt'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:38:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:38:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:38:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:38:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:38:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:38:37 on Nov 13,2023, Elapsed time: 0:01:26
+# Errors: 3, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:38:37 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:39:36 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:39:36 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:39:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:39:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:39:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:39:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:39:37 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:39:37 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:39:37 on Nov 13,2023, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:39:37 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:42:12 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 12:42:12 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:42:12 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 12:42:12 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:42:12 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 12:42:12 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:42:12 on Nov 13,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:42:12 on Nov 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:42:13 on Nov 13,2023, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 12:42:13 on Nov 13,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 420 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+# End time: 12:44:08 on Nov 13,2023, Elapsed time: 0:01:55
+# Errors: 0, Warnings: 0

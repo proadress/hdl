@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_CV
-Mon Nov 06 12:15:34 2023
+Mon Nov 13 12:44:49 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -13,12 +13,18 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Registers Added for RAM Pass-Through Logic
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0|altsyncram_sji1:auto_generated
+ 15. Parameter Settings for Inferred Entity Instance: top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +51,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 06 12:15:34 2023       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 13 12:44:49 2023       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; DE0_CV                                      ;
 ; Top-level Entity Name           ; DE0_CV                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 38                                          ;
+; Total registers                 ; 61                                          ;
 ; Total pins                      ; 206                                         ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
+; Total block memory bits         ; 512                                         ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -168,15 +174,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
-; design/top.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv         ;         ;
-; design/Program_Rom.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/Program_Rom.sv ;         ;
-; design/DE0_CV.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv      ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; design/single_port_ram_128x8.sv  ; yes             ; User SystemVerilog HDL File  ; C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv         ;         ;
+; design/top.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv                           ;         ;
+; design/Program_Rom.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/Program_Rom.sv                   ;         ;
+; design/DE0_CV.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv                        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_sji1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/A610/Desktop/hdl/DE0_CV_mid/db/altsyncram_sji1.tdf                  ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -184,52 +201,79 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 23           ;
+; Estimate of Logic utilization (ALMs needed) ; 62           ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 41           ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 2            ;
-;     -- 5 input functions                    ; 2            ;
-;     -- 4 input functions                    ; 16           ;
-;     -- <=3 input functions                  ; 21           ;
+; Combinational ALUT usage for logic          ; 92           ;
+;     -- 7 input functions                    ; 2            ;
+;     -- 6 input functions                    ; 27           ;
+;     -- 5 input functions                    ; 17           ;
+;     -- 4 input functions                    ; 20           ;
+;     -- <=3 input functions                  ; 26           ;
 ;                                             ;              ;
-; Dedicated logic registers                   ; 38           ;
+; Dedicated logic registers                   ; 61           ;
 ;                                             ;              ;
 ; I/O pins                                    ; 206          ;
+; Total MLAB memory bits                      ; 0            ;
+; Total block memory bits                     ; 512          ;
 ;                                             ;              ;
 ; Total DSP Blocks                            ; 0            ;
 ;                                             ;              ;
-; Maximum fan-out node                        ; KEY[1]~input ;
-; Maximum fan-out                             ; 42           ;
-; Total fan-out                               ; 598          ;
-; Average fan-out                             ; 1.02         ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 69           ;
+; Total fan-out                               ; 1027         ;
+; Average fan-out                             ; 1.53         ;
 +---------------------------------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+-------------+--------------+
-; |DE0_CV                    ; 41 (0)              ; 38 (0)                    ; 0                 ; 0          ; 206  ; 0            ; |DE0_CV                         ; DE0_CV      ; work         ;
-;    |top:top1|              ; 41 (36)             ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |DE0_CV|top:top1                ; top         ; work         ;
-;       |Program_Rom:PC|     ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE0_CV|top:top1|Program_Rom:PC ; Program_Rom ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Entity Name           ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |DE0_CV                                      ; 92 (1)              ; 61 (0)                    ; 512               ; 0          ; 206  ; 0            ; |DE0_CV                                                                                        ; DE0_CV                ; work         ;
+;    |top:top1|                                ; 91 (78)             ; 61 (44)                   ; 512               ; 0          ; 0    ; 0            ; |DE0_CV|top:top1                                                                               ; top                   ; work         ;
+;       |Program_Rom:PC|                       ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE0_CV|top:top1|Program_Rom:PC                                                                ; Program_Rom           ; work         ;
+;       |single_port_ram_128x8:ram|            ; 3 (3)               ; 17 (17)                   ; 512               ; 0          ; 0    ; 0            ; |DE0_CV|top:top1|single_port_ram_128x8:ram                                                     ; single_port_ram_128x8 ; work         ;
+;          |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 512               ; 0          ; 0    ; 0            ; |DE0_CV|top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0                                ; altsyncram            ; work         ;
+;             |altsyncram_sji1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 512               ; 0          ; 0    ; 0            ; |DE0_CV|top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0|altsyncram_sji1:auto_generated ; altsyncram_sji1       ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; top:top1|ps[3..31]                     ; Stuck at GND due to stuck port data_in ;
-; top:top1|ir_q[4..8]                    ; Merged with top:top1|ir_q[3]           ;
-; top:top1|ir_q[13]                      ; Merged with top:top1|ir_q[12]          ;
-; top:top1|ir_q[9,11]                    ; Merged with top:top1|ir_q[10]          ;
-; top:top1|ir_q[3]                       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 38 ;                                        ;
-+----------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                      ;
++---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0|altsyncram_sji1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 8            ; 128          ; 8            ; 1024 ; None ;
++---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++------------------------------------------------------------------+----------------------------------------+
+; Register name                                                    ; Reason for Removal                     ;
++------------------------------------------------------------------+----------------------------------------+
+; top:top1|ps[3..31]                                               ; Stuck at GND due to stuck port data_in ;
+; top:top1|ir_q[4,6]                                               ; Merged with top:top1|ir_q[3]           ;
+; top:top1|ir_q[3]                                                 ; Stuck at GND due to stuck port data_in ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[7..10,13,14] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 38                           ;                                        ;
++------------------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                             ;
++------------------+---------------------------+----------------------------------------------------------+
+; Register name    ; Reason for Removal        ; Registers Removed due to This Register                   ;
++------------------+---------------------------+----------------------------------------------------------+
+; top:top1|ir_q[3] ; Stuck at GND              ; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[7],  ;
+;                  ; due to stuck port data_in ; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[8],  ;
+;                  ;                           ; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[9],  ;
+;                  ;                           ; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[10], ;
+;                  ;                           ; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[13], ;
+;                  ;                           ; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[14]  ;
++------------------+---------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -237,27 +281,155 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 38    ;
-; Number of registers using Synchronous Clear  ; 31    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 61    ;
+; Number of registers using Synchronous Clear  ; 36    ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 35    ;
+; Number of registers using Clock Enable       ; 36    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE0_CV|top:top1|mar_q[10] ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE0_CV|top:top1|PC_q[2]   ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE0_CV|top:top1|ir_q[12]  ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE0_CV|top:top1|w_q[5]    ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE0_CV|top:top1|w_q[1]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                                             ;
++---------------------------------------------------------+----------------------------------------------+
+; Register Name                                           ; RAM Name                                     ;
++---------------------------------------------------------+----------------------------------------------+
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[0]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[1]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[2]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[3]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[4]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[5]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[6]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[7]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[8]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[9]  ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[10] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[11] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[12] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[13] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[14] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[15] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[16] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[17] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[18] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[19] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[20] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[21] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
+; top:top1|single_port_ram_128x8:ram|ram_rtl_0_bypass[22] ; top:top1|single_port_ram_128x8:ram|ram_rtl_0 ;
++---------------------------------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |DE0_CV|top:top1|mar_q[8]    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_CV|top:top1|ir_q[11]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE0_CV|top:top1|w_q[6]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE0_CV|top:top1|PC_q[6]     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE0_CV|top:top1|PC_q[7]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE0_CV|top:top1|ir_q        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DE0_CV|top:top1|mux1_out[3] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE0_CV|top:top1|mux1_out[0] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE0_CV|top:top1|ram_en      ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |DE0_CV|top:top1|Selector7   ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE0_CV|top:top1|op.1000     ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DE0_CV|top:top1|op.0111     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Source assignments for top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0|altsyncram_sji1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                              ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                               ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0 ;
++------------------------------------+----------------------+----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                         ;
++------------------------------------+----------------------+----------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                      ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                      ;
+; WIDTH_A                            ; 8                    ; Untyped                                      ;
+; WIDTHAD_A                          ; 7                    ; Untyped                                      ;
+; NUMWORDS_A                         ; 128                  ; Untyped                                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; WIDTH_B                            ; 8                    ; Untyped                                      ;
+; WIDTHAD_B                          ; 7                    ; Untyped                                      ;
+; NUMWORDS_B                         ; 128                  ; Untyped                                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                      ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                      ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                      ;
+; CBXI_PARAMETER                     ; altsyncram_sji1      ; Untyped                                      ;
++------------------------------------+----------------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                    ;
++-------------------------------------------+---------------------------------------------------------+
+; Name                                      ; Value                                                   ;
++-------------------------------------------+---------------------------------------------------------+
+; Number of entity instances                ; 1                                                       ;
+; Entity Instance                           ; top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                               ;
+;     -- WIDTH_A                            ; 8                                                       ;
+;     -- NUMWORDS_A                         ; 128                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
+;     -- WIDTH_B                            ; 8                                                       ;
+;     -- NUMWORDS_B                         ; 128                                                     ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ;
++-------------------------------------------+---------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -265,26 +437,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 38                          ;
-;     ENA               ; 7                           ;
-;     ENA SCLR          ; 28                          ;
+; arriav_ff             ; 61                          ;
+;     ENA               ; 3                           ;
+;     ENA SCLR          ; 25                          ;
+;     ENA SCLR SLD      ; 8                           ;
 ;     SCLR              ; 3                           ;
+;     plain             ; 22                          ;
 ; arriav_io_obuf        ; 98                          ;
-; arriav_lcell_comb     ; 42                          ;
+; arriav_lcell_comb     ; 92                          ;
 ;     arith             ; 19                          ;
 ;         1 data inputs ; 11                          ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 3                           ;
-;     normal            ; 23                          ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 7                           ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 71                          ;
 ;         0 data inputs ; 1                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 13                          ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 19                          ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 27                          ;
 ; boundary_port         ; 206                         ;
+; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.70                        ;
-; Average LUT depth     ; 0.94                        ;
+; Max LUT depth         ; 5.70                        ;
+; Average LUT depth     ; 2.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -303,10 +481,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Nov 06 12:15:30 2023
+    Info: Processing started: Mon Nov 13 12:44:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_CV -c DE0_CV
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file design/single_port_ram_128x8.sv
+    Info (12023): Found entity 1: single_port_ram_128x8 File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file design/top.sv
     Info (12023): Found entity 1: top File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file design/program_rom.sv
@@ -340,8 +520,46 @@ Warning (10034): Output port "SD_CLK" at DE0_CV.sv(49) has no driver File: C:/Us
 Warning (10034): Output port "VGA_HS" at DE0_CV.sv(59) has no driver File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 59
 Warning (10034): Output port "VGA_VS" at DE0_CV.sv(61) has no driver File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 61
 Info (12128): Elaborating entity "top" for hierarchy "top:top1" File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 86
-Warning (10230): Verilog HDL assignment warning at top.sv(30): truncated value with size 32 to match size of target (11) File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv Line: 30
-Info (12128): Elaborating entity "Program_Rom" for hierarchy "top:top1|Program_Rom:PC" File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at top.sv(113): truncated value with size 32 to match size of target (11) File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv Line: 113
+Warning (10230): Verilog HDL assignment warning at top.sv(145): truncated value with size 32 to match size of target (8) File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv Line: 145
+Warning (10230): Verilog HDL assignment warning at top.sv(146): truncated value with size 32 to match size of target (8) File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv Line: 146
+Info (12128): Elaborating entity "Program_Rom" for hierarchy "top:top1|Program_Rom:PC" File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv Line: 129
+Info (12128): Elaborating entity "single_port_ram_128x8" for hierarchy "top:top1|single_port_ram_128x8:ram" File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv Line: 159
+Warning (276020): Inferred RAM node "top:top1|single_port_ram_128x8:ram|ram_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "top:top1|single_port_ram_128x8:ram|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 128
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "128"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_sji1.tdf
+    Info (12023): Found entity 1: altsyncram_sji1 File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/db/altsyncram_sji1.tdf Line: 28
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "CLOCK4_50" has no driver File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 12
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 21
@@ -525,6 +743,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 60
     Warning (13410): Pin "VGA_VS" is stuck at GND File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 61
 Info (286030): Timing-Driven Synthesis is running
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "top:top1|single_port_ram_128x8:ram|altsyncram:ram_rtl_0|altsyncram_sji1:auto_generated|ALTSYNCRAM" File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/db/altsyncram_sji1.tdf Line: 38
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 16 input pin(s) that do not drive logic
@@ -544,15 +763,16 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 54
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 54
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv Line: 54
-Info (21057): Implemented 258 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 346 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 90 output pins
     Info (21060): Implemented 98 bidirectional pins
-    Info (21061): Implemented 52 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 224 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Mon Nov 06 12:15:34 2023
-    Info: Elapsed time: 00:00:04
+    Info (21061): Implemented 132 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 227 warnings
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Mon Nov 13 12:44:49 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:12
 
 

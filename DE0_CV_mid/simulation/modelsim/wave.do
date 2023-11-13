@@ -8,14 +8,15 @@ add wave -noupdate -radix unsigned /testbench/w_q
 add wave -noupdate -radix unsigned /testbench/top1/ps
 add wave -noupdate -radix hexadecimal /testbench/top1/prog_data
 add wave -noupdate -radix hexadecimal /testbench/top1/ir_q
-add wave -noupdate -radix unsigned /testbench/top1/a_q
-add wave -noupdate -radix unsigned /testbench/top1/b_q
-add wave -noupdate -radix unsigned /testbench/top1/c_q
-add wave -noupdate -radix unsigned /testbench/top1/d_q
-add wave -noupdate -radix unsigned /testbench/top1/x
-add wave -noupdate -radix unsigned /testbench/top1/y
-add wave -noupdate -radix unsigned /testbench/top1/s
-add wave -noupdate -radix unsigned /testbench/top1/cnt
+add wave -noupdate -radix hexadecimal /testbench/top1/ram_out
+add wave -noupdate -radix unsigned /testbench/top1/op
+add wave -noupdate -radix binary /testbench/top1/CLRF
+add wave -noupdate -radix binary /testbench/top1/CLRW
+add wave -noupdate -radix binary /testbench/top1/MOVLW
+add wave -noupdate -radix binary /testbench/top1/ADDWF
+add wave -noupdate -radix binary /testbench/top1/ADDLW
+add wave -noupdate -radix binary /testbench/top1/GOTO
+
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {139 ps} 0}
 quietly wave cursor active 1
