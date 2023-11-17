@@ -27,5 +27,5 @@
 # Loading work.vhdl_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : vhdl.vt(331)
+# ** Note: $finish    : vhdl.vt(285)
 #    Time: 1 us  Iteration: 0  Instance: /vhdl_vlg_vec_tst/tb_out

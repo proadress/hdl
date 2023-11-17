@@ -267,6 +267,7 @@ w_q[7] <= w_q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DE0_CV|top:top1|Program_Rom:PC
+<<<<<<< Updated upstream
 Rom_data_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 Rom_data_out[1] <= data.DB_MAX_OUTPUT_PORT_TYPE
 Rom_data_out[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
@@ -281,6 +282,22 @@ Rom_data_out[10] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 Rom_data_out[11] <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
 Rom_data_out[12] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 Rom_data_out[13] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+Rom_data_out[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[3] <= data.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[4] <= data.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[5] <= data.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[7] <= data.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[8] <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[9] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[10] <= data.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[11] <= data.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[12] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+Rom_data_out[13] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> Stashed changes
 Rom_addr_in[0] => Equal0.IN21
 Rom_addr_in[0] => Equal1.IN21
 Rom_addr_in[0] => Equal2.IN21
@@ -288,7 +305,10 @@ Rom_addr_in[0] => Equal3.IN21
 Rom_addr_in[0] => Equal4.IN21
 Rom_addr_in[0] => Equal5.IN21
 Rom_addr_in[0] => Equal6.IN21
+<<<<<<< Updated upstream
 Rom_addr_in[0] => Equal7.IN21
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[1] => Equal0.IN20
 Rom_addr_in[1] => Equal1.IN20
 Rom_addr_in[1] => Equal2.IN20
@@ -296,7 +316,10 @@ Rom_addr_in[1] => Equal3.IN20
 Rom_addr_in[1] => Equal4.IN20
 Rom_addr_in[1] => Equal5.IN20
 Rom_addr_in[1] => Equal6.IN20
+<<<<<<< Updated upstream
 Rom_addr_in[1] => Equal7.IN20
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[2] => Equal0.IN19
 Rom_addr_in[2] => Equal1.IN19
 Rom_addr_in[2] => Equal2.IN19
@@ -304,7 +327,10 @@ Rom_addr_in[2] => Equal3.IN19
 Rom_addr_in[2] => Equal4.IN19
 Rom_addr_in[2] => Equal5.IN19
 Rom_addr_in[2] => Equal6.IN19
+<<<<<<< Updated upstream
 Rom_addr_in[2] => Equal7.IN19
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[3] => Equal0.IN18
 Rom_addr_in[3] => Equal1.IN18
 Rom_addr_in[3] => Equal2.IN18
@@ -312,7 +338,10 @@ Rom_addr_in[3] => Equal3.IN18
 Rom_addr_in[3] => Equal4.IN18
 Rom_addr_in[3] => Equal5.IN18
 Rom_addr_in[3] => Equal6.IN18
+<<<<<<< Updated upstream
 Rom_addr_in[3] => Equal7.IN18
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[4] => Equal0.IN17
 Rom_addr_in[4] => Equal1.IN17
 Rom_addr_in[4] => Equal2.IN17
@@ -320,7 +349,10 @@ Rom_addr_in[4] => Equal3.IN17
 Rom_addr_in[4] => Equal4.IN17
 Rom_addr_in[4] => Equal5.IN17
 Rom_addr_in[4] => Equal6.IN17
+<<<<<<< Updated upstream
 Rom_addr_in[4] => Equal7.IN17
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[5] => Equal0.IN16
 Rom_addr_in[5] => Equal1.IN16
 Rom_addr_in[5] => Equal2.IN16
@@ -328,7 +360,10 @@ Rom_addr_in[5] => Equal3.IN16
 Rom_addr_in[5] => Equal4.IN16
 Rom_addr_in[5] => Equal5.IN16
 Rom_addr_in[5] => Equal6.IN16
+<<<<<<< Updated upstream
 Rom_addr_in[5] => Equal7.IN16
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[6] => Equal0.IN15
 Rom_addr_in[6] => Equal1.IN15
 Rom_addr_in[6] => Equal2.IN15
@@ -336,7 +371,10 @@ Rom_addr_in[6] => Equal3.IN15
 Rom_addr_in[6] => Equal4.IN15
 Rom_addr_in[6] => Equal5.IN15
 Rom_addr_in[6] => Equal6.IN15
+<<<<<<< Updated upstream
 Rom_addr_in[6] => Equal7.IN15
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[7] => Equal0.IN14
 Rom_addr_in[7] => Equal1.IN14
 Rom_addr_in[7] => Equal2.IN14
@@ -344,7 +382,10 @@ Rom_addr_in[7] => Equal3.IN14
 Rom_addr_in[7] => Equal4.IN14
 Rom_addr_in[7] => Equal5.IN14
 Rom_addr_in[7] => Equal6.IN14
+<<<<<<< Updated upstream
 Rom_addr_in[7] => Equal7.IN14
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[8] => Equal0.IN13
 Rom_addr_in[8] => Equal1.IN13
 Rom_addr_in[8] => Equal2.IN13
@@ -352,7 +393,10 @@ Rom_addr_in[8] => Equal3.IN13
 Rom_addr_in[8] => Equal4.IN13
 Rom_addr_in[8] => Equal5.IN13
 Rom_addr_in[8] => Equal6.IN13
+<<<<<<< Updated upstream
 Rom_addr_in[8] => Equal7.IN13
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[9] => Equal0.IN12
 Rom_addr_in[9] => Equal1.IN12
 Rom_addr_in[9] => Equal2.IN12
@@ -360,7 +404,10 @@ Rom_addr_in[9] => Equal3.IN12
 Rom_addr_in[9] => Equal4.IN12
 Rom_addr_in[9] => Equal5.IN12
 Rom_addr_in[9] => Equal6.IN12
+<<<<<<< Updated upstream
 Rom_addr_in[9] => Equal7.IN12
+=======
+>>>>>>> Stashed changes
 Rom_addr_in[10] => Equal0.IN11
 Rom_addr_in[10] => Equal1.IN11
 Rom_addr_in[10] => Equal2.IN11
@@ -368,6 +415,7 @@ Rom_addr_in[10] => Equal3.IN11
 Rom_addr_in[10] => Equal4.IN11
 Rom_addr_in[10] => Equal5.IN11
 Rom_addr_in[10] => Equal6.IN11
+<<<<<<< Updated upstream
 Rom_addr_in[10] => Equal7.IN11
 
 
@@ -436,5 +484,7 @@ q[4] <= ram.DATAOUT4
 q[5] <= ram.DATAOUT5
 q[6] <= ram.DATAOUT6
 q[7] <= ram.DATAOUT7
+=======
+>>>>>>> Stashed changes
 
 

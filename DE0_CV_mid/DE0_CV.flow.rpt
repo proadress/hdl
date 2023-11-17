@@ -1,5 +1,9 @@
 Flow report for DE0_CV
+<<<<<<< Updated upstream
 Mon Nov 13 12:45:23 2023
+=======
+Sun Nov 12 21:17:04 2023
+>>>>>>> Stashed changes
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -38,6 +42,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 
+<<<<<<< Updated upstream
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
@@ -61,6 +66,26 @@ https://fpgasoftware.intel.com/eula.
 ; Total PLLs                      ; 0 / 4 ( 0 % )                               ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
+=======
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Successful - Sun Nov 12 21:17:04 2023       ;
+; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name               ; DE0_CV                                      ;
+; Top-level Entity Name       ; DE0_CV                                      ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CEBA4F23C7                                 ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
+>>>>>>> Stashed changes
 
 
 +-----------------------------------------+
@@ -68,7 +93,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< Updated upstream
 ; Start date & time ; 11/13/2023 12:44:44 ;
+=======
+; Start date & time ; 11/12/2023 21:16:55 ;
+>>>>>>> Stashed changes
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_CV              ;
 +-------------------+---------------------+
@@ -79,7 +108,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+<<<<<<< Updated upstream
 ; COMPILER_SIGNATURE_ID               ; 136714583853535.169985068412916        ; --            ; --          ; --             ;
+=======
+; COMPILER_SIGNATURE_ID               ; 125783849586223.169979501523616        ; --            ; --          ; --             ;
+>>>>>>> Stashed changes
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -92,6 +125,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
+<<<<<<< Updated upstream
 +--------------------------------------------------------------------------------------------------------------------------+
 ; Flow Elapsed Time                                                                                                        ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
@@ -104,29 +138,31 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4758 MB             ; 00:00:01                           ;
 ; Total                ; 00:00:36     ; --                      ; --                  ; 00:02:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+=======
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4771 MB             ; 00:00:12                           ;
+; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:12                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+>>>>>>> Stashed changes
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; A610-07          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; A610-07          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; A610-07          ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; A610-07          ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; A610-07          ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; cloud            ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off DE0_CV -c DE0_CV
-quartus_fit --read_settings_files=off --write_settings_files=off DE0_CV -c DE0_CV
-quartus_asm --read_settings_files=off --write_settings_files=off DE0_CV -c DE0_CV
-quartus_sta DE0_CV -c DE0_CV
-quartus_eda --read_settings_files=off --write_settings_files=off DE0_CV -c DE0_CV
+quartus_map --read_settings_files=on --write_settings_files=off DE0_CV -c DE0_CV --analysis_and_elaboration
 
 
 

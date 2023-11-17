@@ -109,44 +109,15 @@ module top (
 
   //sel_PC
   always_comb begin
-    if (sel_pc) PC_next <= #1 ir_q[10:0];
-    else PC_next <= #1 PC_q + 1;
-  end
-  //PC
-  always_ff @(posedge clk) begin
-    if (rst) PC_q <= #1 0;
-    else if (load_pc) PC_q <= #1 PC_next;
-  end
-  //MAR
-  always_ff @(posedge clk) begin
-    if (rst) mar_q <= #1 0;
-    else if (load_mar) mar_q <= #1 PC_q;
-  end
-  //ROM
-  Program_Rom PC (
-      .Rom_data_out(prog_data),
-      .Rom_addr_in (mar_q)
-  );
-  //IR
-  always_ff @(posedge clk) begin
-    if (rst) ir_q <= #1 0;
-    else if (load_ir) ir_q <= #1 prog_data;
-  end
+    case (ir_q[13:8])
+      6'b110000: alu_q = ir_q[7:0];
+      6'b111110: alu_q = ir_q[7:0] + w_q;
+      6'b111100: alu_q = ir_q[7:0] - w_q;
+      6'b111001: alu_q = ir_q[7:0] & w_q;
+      6'b111000: alu_q = ir_q[7:0] | w_q;
+      6'b111010: alu_q = ir_q[7:0] ^ w_q;
+      default alu_q = ir_q[7:0] + w_q;
 
-  //ALU
-  always_comb begin
-    case (op)
-      0: alu_q = mux1_out + w_q;
-      1: alu_q = mux1_out - w_q;
-      2: alu_q = mux1_out & w_q;
-      3: alu_q = mux1_out | w_q;
-      4: alu_q = mux1_out ^ w_q;
-      5: alu_q = mux1_out;
-      6: alu_q = mux1_out + 1;
-      7: alu_q = mux1_out - 1;
-      8: alu_q = 0;
-      9: alu_q = ~mux1_out;
-      default alu_q = mux1_out + w_q;
     endcase
   end
   //RAM

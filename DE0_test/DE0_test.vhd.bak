@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity DE0_test is
+	port(
+			SW:in std_logic_vector(9 downto 0);
+			BOT:in std_logic_vector(2 downto 0);
+			LED:out std_logic_vector(9 downto 0)
+			);
+end DE0_test;
+
+architecture DE0_test of DE0_test is
+begin
+
+	LED <= "1111111111" when BOT(0) = '0' else
+			 "1010101010" when BOT(1) = '0' else
+			 "0101010101" when BOT(2) = '0' else
+			SW;	
+
+end DE0_test;
+
+			
+	

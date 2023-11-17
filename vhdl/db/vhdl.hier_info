@@ -1,96 +1,45 @@
 |vhdl
-clk => counter_8bit:u0.clk
-rst => counter_8bit:u0.rst
-updown => counter_8bit:u0.updown
-s[0] <= counter_8bit:u0.s[0]
-s[1] <= counter_8bit:u0.s[1]
-s[2] <= counter_8bit:u0.s[2]
-s[3] <= counter_8bit:u0.s[3]
-s[4] <= counter_8bit:u0.s[4]
-s[5] <= counter_8bit:u0.s[5]
-s[6] <= counter_8bit:u0.s[6]
-s[7] <= counter_8bit:u0.s[7]
-co1 <= counter_8bit:u0.co1
-co2 <= counter_8bit:u0.co2
+clk => graytobinaryconverter:u0.clk
+rst => graytobinaryconverter:u0.rst
+gray_input[0] => graytobinaryconverter:u0.gray_input[0]
+gray_input[1] => graytobinaryconverter:u0.gray_input[1]
+gray_input[2] => graytobinaryconverter:u0.gray_input[2]
+gray_input[3] => graytobinaryconverter:u0.gray_input[3]
+binary_output[0] <= graytobinaryconverter:u0.binary_output[0]
+binary_output[1] <= graytobinaryconverter:u0.binary_output[1]
+binary_output[2] <= graytobinaryconverter:u0.binary_output[2]
+binary_output[3] <= graytobinaryconverter:u0.binary_output[3]
+binary_outputp[0] <= graytobinaryconverter:u0.binary_outputp[0]
+binary_outputp[1] <= graytobinaryconverter:u0.binary_outputp[1]
+binary_outputp[2] <= graytobinaryconverter:u0.binary_outputp[2]
+binary_outputp[3] <= graytobinaryconverter:u0.binary_outputp[3]
 
 
-|vhdl|counter_8bit:u0
-clk => counter_4bit:counter_4bit_inst1.clk
-rst => counter_4bit:counter_4bit_inst1.rst
-rst => counter_4bit:counter_4bit_inst2.rst
-updown => counter_4bit:counter_4bit_inst1.updown
-updown => counter_4bit:counter_4bit_inst2.updown
-s[0] <= counter_4bit:counter_4bit_inst1.s[0]
-s[1] <= counter_4bit:counter_4bit_inst1.s[1]
-s[2] <= counter_4bit:counter_4bit_inst1.s[2]
-s[3] <= counter_4bit:counter_4bit_inst1.s[3]
-s[4] <= counter_4bit:counter_4bit_inst2.s[0]
-s[5] <= counter_4bit:counter_4bit_inst2.s[1]
-s[6] <= counter_4bit:counter_4bit_inst2.s[2]
-s[7] <= counter_4bit:counter_4bit_inst2.s[3]
-co1 <= counter_4bit:counter_4bit_inst1.co
-co2 <= counter_4bit:counter_4bit_inst2.co
-
-
-|vhdl|counter_8bit:u0|counter_4bit:counter_4bit_inst1
-clk => c.CLK
-clk => reg[0].CLK
-clk => reg[1].CLK
-clk => reg[2].CLK
-clk => reg[3].CLK
-rst => c.ACLR
-rst => reg[0].ACLR
-rst => reg[1].ACLR
-rst => reg[2].ACLR
-rst => reg[3].ACLR
-updown => reg.OUTPUTSELECT
-updown => reg.OUTPUTSELECT
-updown => reg.OUTPUTSELECT
-updown => reg.OUTPUTSELECT
-updown => c.OUTPUTSELECT
-max[0] => Equal0.IN3
-max[0] => reg.DATAB
-max[1] => Equal0.IN2
-max[1] => reg.DATAB
-max[2] => Equal0.IN1
-max[2] => reg.DATAB
-max[3] => Equal0.IN0
-max[3] => reg.DATAB
-s[0] <= reg[0].DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= reg[1].DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= reg[2].DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= reg[3].DB_MAX_OUTPUT_PORT_TYPE
-co <= c.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vhdl|counter_8bit:u0|counter_4bit:counter_4bit_inst2
-clk => c.CLK
-clk => reg[0].CLK
-clk => reg[1].CLK
-clk => reg[2].CLK
-clk => reg[3].CLK
-rst => c.ACLR
-rst => reg[0].ACLR
-rst => reg[1].ACLR
-rst => reg[2].ACLR
-rst => reg[3].ACLR
-updown => reg.OUTPUTSELECT
-updown => reg.OUTPUTSELECT
-updown => reg.OUTPUTSELECT
-updown => reg.OUTPUTSELECT
-updown => c.OUTPUTSELECT
-max[0] => Equal0.IN3
-max[0] => reg.DATAB
-max[1] => Equal0.IN2
-max[1] => reg.DATAB
-max[2] => Equal0.IN1
-max[2] => reg.DATAB
-max[3] => Equal0.IN0
-max[3] => reg.DATAB
-s[0] <= reg[0].DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= reg[1].DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= reg[2].DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= reg[3].DB_MAX_OUTPUT_PORT_TYPE
-co <= c.DB_MAX_OUTPUT_PORT_TYPE
+|vhdl|GrayToBinaryConverter:u0
+clk => binaryp[0].CLK
+clk => binaryp[1].CLK
+clk => binaryp[2].CLK
+clk => binaryp[3].CLK
+clk => binary[0].CLK
+clk => binary[1].CLK
+clk => binary[2].CLK
+clk => binary[3].CLK
+rst => binary.OUTPUTSELECT
+rst => binary.OUTPUTSELECT
+rst => binary.OUTPUTSELECT
+gray_input[0] => binary.IN0
+gray_input[1] => binary.IN1
+gray_input[1] => binary.IN0
+gray_input[2] => binary.IN1
+gray_input[2] => binary.IN0
+gray_input[3] => binary.IN1
+binary_output[0] <= binary[0].DB_MAX_OUTPUT_PORT_TYPE
+binary_output[1] <= binary[1].DB_MAX_OUTPUT_PORT_TYPE
+binary_output[2] <= binary[2].DB_MAX_OUTPUT_PORT_TYPE
+binary_output[3] <= binary[3].DB_MAX_OUTPUT_PORT_TYPE
+binary_outputp[0] <= binaryp[0].DB_MAX_OUTPUT_PORT_TYPE
+binary_outputp[1] <= binaryp[1].DB_MAX_OUTPUT_PORT_TYPE
+binary_outputp[2] <= binaryp[2].DB_MAX_OUTPUT_PORT_TYPE
+binary_outputp[3] <= binaryp[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
