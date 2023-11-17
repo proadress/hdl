@@ -1,6 +1,6 @@
 Analysis & Synthesis report for DE0_test
-Fri Nov 03 15:08:38 2023
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Nov 17 17:42:16 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -13,10 +13,11 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 03 15:08:38 2023           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 17 17:42:16 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE0_test                                        ;
-; Top-level Entity Name              ; DE0_test                                        ;
+; Top-level Entity Name              ; pwm                                             ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 67                                              ;
-;     Total combinational functions  ; 67                                              ;
-;     Dedicated logic registers      ; 30                                              ;
-; Total registers                    ; 30                                              ;
-; Total pins                         ; 31                                              ;
+; Total logic elements               ; 528                                             ;
+;     Total combinational functions  ; 528                                             ;
+;     Dedicated logic registers      ; 142                                             ;
+; Total registers                    ; 142                                             ;
+; Total pins                         ; 21                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; DE0_test           ; DE0_test           ;
+; Top-level entity name                                                      ; pwm                ; DE0_test           ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,43 +158,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                           ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path    ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
-; DE0_test.vhd                     ; yes             ; User VHDL File  ; C:/altera/DE0_test/DE0_test.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                      ;
++----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path               ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
+; pwm.vhd                          ; yes             ; User VHDL File  ; C:/Users/A610/Desktop/hdl/DE0_test/pwm.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 67        ;
-;                                             ;           ;
-; Total combinational functions               ; 67        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 27        ;
-;     -- 3 input functions                    ; 13        ;
-;     -- <=2 input functions                  ; 27        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 42        ;
-;     -- arithmetic mode                      ; 25        ;
-;                                             ;           ;
-; Total registers                             ; 30        ;
-;     -- Dedicated logic registers            ; 30        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 31        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 26        ;
-; Total fan-out                               ; 311       ;
-; Average fan-out                             ; 1.96      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 528     ;
+;                                             ;         ;
+; Total combinational functions               ; 528     ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 176     ;
+;     -- 3 input functions                    ; 100     ;
+;     -- <=2 input functions                  ; 252     ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 231     ;
+;     -- arithmetic mode                      ; 297     ;
+;                                             ;         ;
+; Total registers                             ; 142     ;
+;     -- Dedicated logic registers            ; 142     ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 21      ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+; Maximum fan-out node                        ; cnt[14] ;
+; Maximum fan-out                             ; 101     ;
+; Total fan-out                               ; 1799    ;
+; Average fan-out                             ; 2.53    ;
++---------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -201,9 +202,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |DE0_test                  ; 67 (67)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |DE0_test           ; work         ;
+; |pwm                       ; 528 (528)         ; 142 (142)    ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |pwm                ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; cnt[21,22]                            ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -211,10 +222,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 30    ;
+; Total registers                              ; 142   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -226,8 +237,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DE0_test|LED              ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |DE0_test|HEX              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |pwm|up[1]                 ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[0][9]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[1][9]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[2][9]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[3][8]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[4][8]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[5][9]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[6][9]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[7][9]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[8][9]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pwm|sww[9][8]             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -244,26 +264,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 03 15:08:36 2023
+    Info: Processing started: Fri Nov 17 17:42:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_test -c DE0_test
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file pwm.vhd
+    Info (12022): Found design unit 1: pwm-pwm
+    Info (12023): Found entity 1: pwm
 Info (12021): Found 2 design units, including 1 entities, in source file de0_test.vhd
     Info (12022): Found design unit 1: DE0_test-DE0_test
     Info (12023): Found entity 1: DE0_test
-Info (12127): Elaborating entity "DE0_test" for the top level hierarchy
+Info (12127): Elaborating entity "pwm" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 67 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 394 megabytes
-    Info: Processing ended: Fri Nov 03 15:08:38 2023
-    Info: Elapsed time: 00:00:02
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sw[0]"
+    Warning (15610): No output dependent on input pin "sw[1]"
+    Warning (15610): No output dependent on input pin "sw[2]"
+    Warning (15610): No output dependent on input pin "sw[3]"
+    Warning (15610): No output dependent on input pin "sw[4]"
+    Warning (15610): No output dependent on input pin "sw[5]"
+    Warning (15610): No output dependent on input pin "sw[6]"
+    Warning (15610): No output dependent on input pin "sw[7]"
+    Warning (15610): No output dependent on input pin "sw[8]"
+    Warning (15610): No output dependent on input pin "sw[9]"
+Info (21057): Implemented 549 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 528 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4642 megabytes
+    Info: Processing ended: Fri Nov 17 17:42:16 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
