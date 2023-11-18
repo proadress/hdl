@@ -1,5 +1,5 @@
 Assembler report for DE0_test
-Fri Nov 17 17:42:23 2023
+Sun Nov 19 01:08:45 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/A610/Desktop/hdl/DE0_test/output_files/DE0_test.sof
+  5. Assembler Device Options: D:/code/hdl/DE0_test/output_files/DE0_test.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Nov 17 17:42:23 2023 ;
+; Assembler Status      ; Successful - Sun Nov 19 01:08:45 2023 ;
 ; Revision Name         ; DE0_test                              ;
 ; Top-level Entity Name ; pwm                                   ;
 ; Family                ; Cyclone III                           ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------+
-; Assembler Generated Files                                    ;
-+--------------------------------------------------------------+
-; File Name                                                    ;
-+--------------------------------------------------------------+
-; C:/Users/A610/Desktop/hdl/DE0_test/output_files/DE0_test.sof ;
-+--------------------------------------------------------------+
++------------------------------------------------+
+; Assembler Generated Files                      ;
++------------------------------------------------+
+; File Name                                      ;
++------------------------------------------------+
+; D:/code/hdl/DE0_test/output_files/DE0_test.sof ;
++------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/A610/Desktop/hdl/DE0_test/output_files/DE0_test.sof ;
-+----------------+-----------------------------------------------------------------------+
-; Option         ; Setting                                                               ;
-+----------------+-----------------------------------------------------------------------+
-; Device         ; EP3C16F484C6                                                          ;
-; JTAG usercode  ; 0x00106763                                                            ;
-; Checksum       ; 0x00106763                                                            ;
-+----------------+-----------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Assembler Device Options: D:/code/hdl/DE0_test/output_files/DE0_test.sof ;
++----------------+---------------------------------------------------------+
+; Option         ; Setting                                                 ;
++----------------+---------------------------------------------------------+
+; Device         ; EP3C16F484C6                                            ;
+; JTAG usercode  ; 0x00104712                                              ;
+; Checksum       ; 0x00104712                                              ;
++----------------+---------------------------------------------------------+
 
 
 +--------------------+
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 17 17:42:22 2023
+    Info: Processing started: Sun Nov 19 01:08:45 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE0_test -c DE0_test
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4555 megabytes
-    Info: Processing ended: Fri Nov 17 17:42:23 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4544 megabytes
+    Info: Processing ended: Sun Nov 19 01:08:45 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

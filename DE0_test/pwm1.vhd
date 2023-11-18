@@ -1,17 +1,17 @@
-LIBRARY IEteEE;
+LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-ENTITY pwm IS
+ENTITY pwm1 IS
     PORT (
         clk : IN STD_LOGIC;
-        sw : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+        sw : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
         led : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
     );
-END pwm;
+END pwm1;
 
-ARCHITECTURE pwm OF pwm IS
+ARCHITECTURE pwm1 OF pwm1 IS
     SIGNAL cnt : STD_LOGIC_VECTOR(20 DOWNTO 0);
     SIGNAL cnt1 : STD_LOGIC_VECTOR(9 DOWNTO 0);
     SIGNAL clk1 : STD_LOGIC;
@@ -38,9 +38,9 @@ BEGIN
     BEGIN
         IF rising_edge(clk2) THEN
             IF sw2 = "1111111111"THEN
-                upp = '1';
+                upp <= '0';
             ELSIF sw2 = "0000000000"THEN
-                upp = '0';
+                upp <= '1';
             ELSE
                 IF upp = '1' THEN
                     sw2 <= sw2 + 1;
@@ -51,7 +51,8 @@ BEGIN
         END IF;
     END PROCESS;
 
-    led <= '1111111111' WHEN cnt1 < sw2 ELSE
-        '0000000000';
+    led <= "1111111111" WHEN cnt < sw2 ELSE
+        "0000000000";
+    sw <= sw2;
 
-END pwm;
+END pwm1;
