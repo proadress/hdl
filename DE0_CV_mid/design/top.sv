@@ -8,7 +8,7 @@ module top (
   logic [13:0] prog_data, ir_q;
   logic load_pc, load_mar, load_ir, load_w, sel_pc, d, sel_alu, ram_en;
   logic [3:0] op;
-  logic GOTO, ADDWF, ANDWF, CLRF, CLRW, COMF, DECF, MOVLW, ADDLW;
+  logic GOTO, ADDWF, ANDWF, CLRF, CLRW, COMF, DECF, MOVLW, ADDLW, SUBLW, ANDLW, IORLW, XORLW;
 
   typedef enum {
     t0,
@@ -20,6 +20,12 @@ module top (
     t6
   } state_s;
   state_s ps, ns;
+
+  //ROM
+  Program_Rom rom (
+      .Rom_addr_in (mar_q),
+      .Rom_data_out(prog_data)
+  );
 
   always_comb begin
     load_ir = 0;
@@ -52,7 +58,19 @@ module top (
           load_w = 1;
         end else if (ADDLW) begin
           op = 0;
-          load_pc = 1;
+          load_w = 1;
+        end else if (SUBLW) begin
+          op = 1;
+          load_w = 1;
+        end else if (ANDLW) begin
+          op = 2;
+          load_w = 1;
+        end else if (IORLW) begin
+          op = 3;
+          load_w = 1;
+        end else if (XORLW) begin
+          op = 4;
+          load_w = 1;
         end else if (GOTO) begin
           sel_pc  = 1;
           load_pc = 1;
@@ -68,9 +86,7 @@ module top (
           else load_w = 1;
         end else if (CLRF) begin
           op = 8;
-          sel_alu = 1;
-          if (d) ram_en = 1;
-          else load_w = 1;
+          ram_en = 1;
         end else if (CLRW) begin
           op = 8;
           load_w = 1;
@@ -91,6 +107,10 @@ module top (
 
   assign MOVLW = ir_q[13:8] == 6'b110000;
   assign ADDLW = ir_q[13:8] == 6'b111110;
+  assign SUBLW = ir_q[13:8] == 6'b111100;
+  assign ANDLW = ir_q[13:8] == 6'b111001;
+  assign IORLW = ir_q[13:8] == 6'b111000;
+  assign XORLW = ir_q[13:8] == 6'b111010;
 
   assign GOTO = ir_q[13:11] == 3'b101;
   assign ADDWF = ir_q[13:8] == 6'b000111;
@@ -100,24 +120,25 @@ module top (
   assign COMF = ir_q[13:8] == 6'b001001;
   assign DECF = ir_q[13:8] == 6'b000011;
   assign d = ir_q[7];
-
   //clk
   always_ff @(posedge clk) begin
     if (rst) ps <= #1 t0;
     else ps <= #1 ns;
   end
-
   //sel_PC
   always_comb begin
-    case (ir_q[13:8])
-      6'b110000: alu_q = ir_q[7:0];
-      6'b111110: alu_q = ir_q[7:0] + w_q;
-      6'b111100: alu_q = ir_q[7:0] - w_q;
-      6'b111001: alu_q = ir_q[7:0] & w_q;
-      6'b111000: alu_q = ir_q[7:0] | w_q;
-      6'b111010: alu_q = ir_q[7:0] ^ w_q;
-      default alu_q = ir_q[7:0] + w_q;
-
+    case (op)
+      0: alu_q = mux1_out + w_q;
+      1: alu_q = mux1_out - w_q;
+      2: alu_q = mux1_out & w_q;
+      3: alu_q = mux1_out | w_q;
+      4: alu_q = mux1_out ^ w_q;
+      5: alu_q = mux1_out;
+      6: alu_q = mux1_out + 1;
+      7: alu_q = mux1_out - 1;
+      8: alu_q = 0;
+      9: alu_q = ~mux1_out;
+      default alu_q = mux1_out + w_q;
     endcase
   end
   //RAM
@@ -133,12 +154,24 @@ module top (
     if (sel_alu) mux1_out <= #1 ram_out;
     else mux1_out <= #1 ir_q[7:0];
   end
+  //PC
+  always_ff @(posedge clk) begin
+    if (rst) PC_q = 0;
+    else if (load_pc) PC_q = PC_q + 1;
+  end
+  //MAR
+  always_ff @(posedge clk) begin
+    if (rst) mar_q = 0;
+    else if (load_mar) mar_q = PC_q;
+  end
+  //IR
+  always_ff @(posedge clk) begin
+    if (rst) ir_q = 0;
+    else if (load_ir) ir_q = prog_data;
+  end
   //W
   always_ff @(posedge clk) begin
     if (rst) w_q <= #1 0;
     else if (load_w) w_q <= #1 alu_q;
   end
-
-
-
 endmodule

@@ -4,7 +4,7 @@ add wave -noupdate -divider {TOP LEVEL INPUTS}
 add wave -noupdate -divider cpu
 add wave -noupdate /testbench/clk
 add wave -noupdate /testbench/rst
-add wave -noupdate -radix hexadecimal /testbench/w_q
+add wave -noupdate -radix unsigned /testbench/w_q
 add wave -noupdate -radix unsigned /testbench/top1/ps
 add wave -noupdate -radix hexadecimal /testbench/top1/prog_data
 add wave -noupdate -radix hexadecimal /testbench/top1/ir_q

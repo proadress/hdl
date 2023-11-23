@@ -1,9 +1,5 @@
 Flow report for DE0_CV
-<<<<<<< Updated upstream
-Mon Nov 13 12:45:23 2023
-=======
-Sun Nov 12 21:17:04 2023
->>>>>>> Stashed changes
+Sun Nov 19 01:48:45 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -42,35 +38,10 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-<<<<<<< Updated upstream
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Nov 13 12:45:23 2023       ;
-; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
-; Revision Name                   ; DE0_CV                                      ;
-; Top-level Entity Name           ; DE0_CV                                      ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CEBA4F23C7                                 ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 59 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 61                                          ;
-; Total pins                      ; 206 / 224 ( 92 % )                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 512 / 3,153,920 ( < 1 % )                   ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 4 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
-=======
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sun Nov 12 21:17:04 2023       ;
+; Flow Status                 ; Successful - Sun Nov 19 01:48:45 2023       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; DE0_CV                                      ;
 ; Top-level Entity Name       ; DE0_CV                                      ;
@@ -85,7 +56,6 @@ https://fpgasoftware.intel.com/eula.
 ; Total PLLs                  ; N/A until Partition Merge                   ;
 ; Total DLLs                  ; N/A until Partition Merge                   ;
 +-----------------------------+---------------------------------------------+
->>>>>>> Stashed changes
 
 
 +-----------------------------------------+
@@ -93,11 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-<<<<<<< Updated upstream
-; Start date & time ; 11/13/2023 12:44:44 ;
-=======
-; Start date & time ; 11/12/2023 21:16:55 ;
->>>>>>> Stashed changes
+; Start date & time ; 11/19/2023 01:48:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_CV              ;
 +-------------------+---------------------+
@@ -108,11 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-<<<<<<< Updated upstream
-; COMPILER_SIGNATURE_ID               ; 136714583853535.169985068412916        ; --            ; --          ; --             ;
-=======
-; COMPILER_SIGNATURE_ID               ; 125783849586223.169979501523616        ; --            ; --          ; --             ;
->>>>>>> Stashed changes
+; COMPILER_SIGNATURE_ID               ; 39908811424968.170032971804548         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -125,29 +87,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
-<<<<<<< Updated upstream
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4850 MB             ; 00:00:12                           ;
-; Fitter               ; 00:00:22     ; 1.0                     ; 7065 MB             ; 00:01:45                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4829 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 5204 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4758 MB             ; 00:00:01                           ;
-; Total                ; 00:00:36     ; --                      ; --                  ; 00:02:04                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-=======
 +----------------------------------------------------------------------------------------------------------------------------+
 ; Flow Elapsed Time                                                                                                          ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4771 MB             ; 00:00:12                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Elaboration ; 00:00:07     ; 1.0                     ; 4773 MB             ; 00:00:09                           ;
+; Total                  ; 00:00:07     ; --                      ; --                  ; 00:00:09                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
->>>>>>> Stashed changes
 
 
 +--------------------------------------------------------------------------------------+
