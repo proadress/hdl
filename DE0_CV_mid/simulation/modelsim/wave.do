@@ -4,18 +4,8 @@ add wave -noupdate -divider {TOP LEVEL INPUTS}
 add wave -noupdate -divider cpu
 add wave -noupdate /testbench/clk
 add wave -noupdate /testbench/rst
-add wave -noupdate -radix unsigned /testbench/w_q
-add wave -noupdate -radix unsigned /testbench/top1/ps
-add wave -noupdate -radix hexadecimal /testbench/top1/prog_data
-add wave -noupdate -radix hexadecimal /testbench/top1/ir_q
-add wave -noupdate -radix hexadecimal /testbench/top1/ram_out
-add wave -noupdate -radix unsigned /testbench/top1/op
-add wave -noupdate -radix binary /testbench/top1/CLRF
-add wave -noupdate -radix binary /testbench/top1/CLRW
-add wave -noupdate -radix binary /testbench/top1/MOVLW
-add wave -noupdate -radix binary /testbench/top1/ADDWF
-add wave -noupdate -radix binary /testbench/top1/ADDLW
-add wave -noupdate -radix binary /testbench/top1/GOTO
+add wave -noupdate -radix hexadecimal /testbench/w_q
+add wave -noupdate -radix hexadecimal /testbench/top1/ram/ram
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {139 ps} 0}
