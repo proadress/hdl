@@ -5,7 +5,7 @@ module adder_4bit(
 	);
 	
 	always_comb
-	begin
+		begin
 	 s = a + b;
 	end
 	

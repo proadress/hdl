@@ -3,10 +3,10 @@ module top (
     rst,
     output logic [7:0] w_q
 );
-  logic [7:0] alu_q, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus;
+  logic [7:0] alu_out, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus;
   logic [10:0] PC_q, mar_q, PC_next;
   logic [13:0] prog_data, ir_q;
-  logic load_pc, load_mar, load_ir, load_w, sel_pc, d, sel_alu, ram_en, sel_bit, sel_bus;
+  logic load_pc, load_mar, load_ir, load_w, sel_pc, d, sel_alu, ram_en, sel_bit, sel_bus,btfsc_btfss_skip_bit,btfsc_skip_bit,btfss_skip_bit,alu_zero;
   logic [3:0] op;
   logic
       GOTO,
@@ -29,7 +29,11 @@ module top (
       SUBWF,
       XORWF,
       BCF,
-      BSF;
+      BSF,
+      BTFSC,
+      BTFSS,
+      DECFSZ,
+      INCFSZ;
   logic [1:0] sel_RAM_mux;
 
   typedef enum {
@@ -60,6 +64,7 @@ module top (
     sel_pc = 0;
     ram_en = 0;
     sel_bus = 0;
+    sel_RAM_mux = 0;
     case (ps)
       t0: ns = t1;
       t1: begin
@@ -159,14 +164,46 @@ module top (
             ram_en  = 1;
             sel_bus = 0;
           end else load_w = 1;
+        end else if(BCF) begin
+          sel_alu = 1;
+          sel_RAM_mux = 1;
+          op[3:0] = 5;
+          sel_bus = 0;
+          ram_en = 1;
+        end else if (BSF) begin
+          sel_alu = 1;
+          sel_RAM_mux = 2;
+          op[3:0] = 5;
+          sel_bus = 0;
+          ram_en = 1;
+        end else if (BTFSC | BTFSS) begin
+          if(btfsc_btfss_skip_bit)begin
+            load_pc = 1;
+            sel_pc = 0;
+          end
+        end else if (DECFSZ) begin
+          sel_alu = 1;
+          op[3:0] = 7;
+          if (alu_zero) begin
+            load_pc = 1;
+            sel_pc = 0;
+          end
+          if (d) begin
+            ram_en  = 1;
+            sel_bus = 0;
+          end else load_w = 1;
+        end else if (INCFSZ) begin
+          sel_alu = 1;
+          op[3:0] = 6;
+          if (alu_zero) begin
+            load_pc = 1;
+            sel_pc = 0;
+          end
+          if (d) begin
+            ram_en  = 1;
+            sel_bus = 0;
+          end else load_w = 1;
         end
-        //        else if(BCF) begin
-        //          sel_alu = 1;
-        //          sel_RAM_mux = 2;
-        //          op[3:0] = 5;
-        //          sel_b
-        //          end else if (BSF) begin
-        //            end
       end
       t5: ns = t6;
       t6: ns = t1;
@@ -196,8 +233,22 @@ module top (
   assign SUBWF = ir_q[13:8] == 6'b000010;
   assign XORWF = ir_q[13:8] == 6'b000110;
 
+  assign BCF = ir_q[13:10] == 4'b0100;
+  assign BSF = ir_q[13:10] == 4'b0101;
+  assign BCFSC = ir_q[13:10] == 4'b0110;
+  assign BSFSS = ir_q[13:10] == 4'b0111;
+  assign DECFSZ = ir_q[13:8] == 6'b001011;
+  assign INCFSZ = ir_q[13:8] == 6'b001111;
+
+
+
 
   assign sel_bit = ir_q[9:7];
+  assign btfsc_skip_bit = ram_out[ir_q[9:7]]==0;
+  assign btfss_skip_bit = ram_out[ir_q[9:7]]==1;
+  assign btfsc_btfss_skip_bit = (BTFSC&btfsc_skip_bit)|(BTFSS&btfss_skip_bit);
+  assign alu_zero = alu_out==0;
+
   //clk
   always_ff @(posedge clk) begin
     if (rst) ps <= #1 t0;
@@ -206,23 +257,23 @@ module top (
   //sel_PC
   always_comb begin
     case (op)
-      0: alu_q = mux1_out + w_q;
-      1: alu_q = mux1_out - w_q;
-      2: alu_q = mux1_out & w_q;
-      3: alu_q = mux1_out | w_q;
-      4: alu_q = mux1_out ^ w_q;
-      5: alu_q = mux1_out;
-      6: alu_q = mux1_out + 1;
-      7: alu_q = mux1_out - 1;
-      8: alu_q = 0;
-      9: alu_q = ~mux1_out;
-      default alu_q = mux1_out + w_q;
+      0: alu_out = mux1_out + w_q;
+      1: alu_out = mux1_out - w_q;
+      2: alu_out = mux1_out & w_q;
+      3: alu_out = mux1_out | w_q;
+      4: alu_out = mux1_out ^ w_q;
+      5: alu_out = mux1_out;
+      6: alu_out = mux1_out + 1;
+      7: alu_out = mux1_out - 1;
+      8: alu_out = 0;
+      9: alu_out = ~mux1_out;
+      default alu_out = mux1_out + w_q;
     endcase
   end
   //sel_bus
   always_comb begin
     if (sel_bus) databus <= #1 w_q;
-    else databus <= #1 alu_q;
+    else databus <= #1 alu_out;
   end
   //RAM
   single_port_ram_128x8 ram (
@@ -234,7 +285,7 @@ module top (
   );
   //sel_alu
   always_comb begin
-    if (sel_alu) mux1_out <= #1 ram_out;
+    if (sel_alu) mux1_out <= #1 RAM_mux;
     else mux1_out <= #1 ir_q[7:0];
   end
   //PC
@@ -255,7 +306,7 @@ module top (
   //W
   always_ff @(posedge clk) begin
     if (rst) w_q <= #1 0;
-    else if (load_w) w_q <= #1 alu_q;
+    else if (load_w) w_q <= #1 alu_out;
   end
   //ram mux
   always_comb begin
@@ -265,30 +316,30 @@ module top (
       2: RAM_mux = bsf_mux;
     endcase
   end
-  // //BCF
-  // always_comb begin
-  //   case (sel_bit)
-  //   3'b000:bcf_mux = ram_out & 8'b1111_1110;
-  //   3'b001:bcf_mux = ram_out & 8'b1111_1101;
-  //   3'b010:bcf_mux = ram_out & 8'b1111_1011;
-  //   3'b011:bcf_mux = ram_out & 8'b1111_0111;
-  //   3'b100:bcf_mux = ram_out & 8'b1110_1111;
-  //   3'b101:bcf_mux = ram_out & 8'b1101_1111;
-  //   3'b110:bcf_mux = ram_out & 8'b1011_1111;
-  //   3'b111:bcf_mux = ram_out & 8'b0111_1111;
-  //   endcase
-  // end
-  // //BCF
-  // always_comb begin
-  //   case (sel_bit)
-  //   3'b001:bsf_mux = ram_out | 8'b0000_0010;
-  //   3'b000:bsf_mux = ram_out | 8'b0000_0001;
-  //   3'b010:bsf_mux = ram_out | 8'b0000_0100;
-  //   3'b011:bsf_mux = ram_out | 8'b0000_1000;
-  //   3'b100:bsf_mux = ram_out | 8'b0001_0000;
-  //   3'b101:bsf_mux = ram_out | 8'b0010_0000;
-  //   3'b110:bsf_mux = ram_out | 8'b0100_0000;
-  //   3'b111:bsf_mux = ram_out | 8'b1000_0000;
-  //   endcase
-  // end
+  //BCF
+  always_comb begin
+    case (sel_bit)
+    3'b000:bcf_mux = ram_out & 8'b1111_1110;
+    3'b001:bcf_mux = ram_out & 8'b1111_1101;
+    3'b010:bcf_mux = ram_out & 8'b1111_1011;
+    3'b011:bcf_mux = ram_out & 8'b1111_0111;
+    3'b100:bcf_mux = ram_out & 8'b1110_1111;
+    3'b101:bcf_mux = ram_out & 8'b1101_1111;
+    3'b110:bcf_mux = ram_out & 8'b1011_1111;
+    3'b111:bcf_mux = ram_out & 8'b0111_1111;
+    endcase
+  end
+  //BSF
+  always_comb begin
+    case (sel_bit)
+    3'b001:bsf_mux = ram_out | 8'b0000_0010;
+    3'b000:bsf_mux = ram_out | 8'b0000_0001;
+    3'b010:bsf_mux = ram_out | 8'b0000_0100;
+    3'b011:bsf_mux = ram_out | 8'b0000_1000;
+    3'b100:bsf_mux = ram_out | 8'b0001_0000;
+    3'b101:bsf_mux = ram_out | 8'b0010_0000;
+    3'b110:bsf_mux = ram_out | 8'b0100_0000;
+    3'b111:bsf_mux = ram_out | 8'b1000_0000;
+    endcase
+  end
 endmodule

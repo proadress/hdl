@@ -83,7 +83,7 @@ module DE0_CV (
   top top1 (
       .clk(KEY[0]),
       .rst(~KEY[1]),
-      .w_q(LEDR[7:0])
+      .w_q(LEDR[7:0])                                                                                               
   );
 
 endmodule
