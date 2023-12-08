@@ -1,0 +1,64 @@
+-- top.vhd --
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use work.commonConstants.all;
+
+entity CPU_TEST is port(
+    clk, reset: in STD_LOGIC;
+    mem_enX, mem_rwX : out std_logic;
+    aBusX : out std_logic_vector(adrLength-1 downto 0);
+    dBusX : out std_logic_vector(wordSize-1 downto 0);
+    pcX, iarX : out std_logic_vector(adrLength-1 downto 0);
+    iregX, accX, aluX : out std_logic_vector(wordSize-1 downto 0);
+	 tX           :out std_logic_vector(2 downto 0);
+	 M30:out std_logic_vector(wordSize-1 downto 0);
+	 M31   :out std_logic_vector(wordSize-1 downto 0)
+	 );
+end CPU_TEST;
+
+architecture CPU_TEST of CPU_TEST is
+
+--component ram port (
+--    reset, en, r_w: in STD_LOGIC;
+--    aBus: in STD_LOGIC_VECTOR(adrLength-1 downto 0);
+--    dBus: inout STD_LOGIC_VECTOR(wordSize-1 downto 0)
+--);
+--end component;
+
+component ram1 port (
+    reset, en, r_w: in STD_LOGIC;
+    aBus: in STD_LOGIC_VECTOR(adrLength-1 downto 0);
+    dBus: inout STD_LOGIC_VECTOR(wordSize-1 downto 0);
+	 M30:out std_logic_vector(wordSize-1 downto 0);
+	 M31   :out std_logic_vector(wordSize-1 downto 0)
+);
+end component;
+
+component cpu port (
+    clk, reset:    in  STD_LOGIC;
+    m_en, m_rw: out STD_LOGIC;        
+    aBus:    out STD_LOGIC_VECTOR(adrLength-1 downto 0);
+    dBus:    inout STD_LOGIC_VECTOR(wordSize-1 downto 0);
+    pcX, iarX : out std_logic_vector(wordSize-1 downto 0);
+    iregX, accX, aluX : out std_logic_vector(wordSize-1 downto 0);
+	 tX           :out std_logic_vector(2 downto 0));
+end component;
+
+signal mem_en, mem_rw: STD_LOGIC;
+signal    aBus: STD_LOGIC_VECTOR(adrLength-1 downto 0);
+signal    dBus: STD_LOGIC_VECTOR(wordSize-1 downto 0);
+signal pc, ireg, iar, acc, alu: std_logic_vector(15 downto 0);
+signal t:           std_logic_vector(2 downto 0);
+signal ram30,ram31:STD_LOGIC_VECTOR(wordSize-1 downto 0);
+
+begin
+    ramC: ram1 port map(reset, mem_en, mem_rw, aBus, dBus,ram30,ram31);
+    cpuC: cpu port map(clk, reset, mem_en, mem_rw, aBus, dBus,
+            pc, iar, ireg, acc, alu,t);
+    mem_enX <= mem_en; mem_rwX <= mem_rw;
+    aBusX <= aBus; dBusX <= dBus;
+    pcX <= pc; iregX <= ireg; iarX <= iar; accX <= acc; aluX <= alu; tX <= t;
+	 M30 <=ram30;
+	 M31 <= ram31;
+end CPU_TEST;

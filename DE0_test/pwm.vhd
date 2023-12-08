@@ -74,7 +74,6 @@ BEGIN
         END IF;
         
     END PROCESS;
-
     led(0) <= '1' WHEN cnt1 < sww(0) ELSE
     '0';
     led(1) <= '1' WHEN cnt1 < sww(1) ELSE

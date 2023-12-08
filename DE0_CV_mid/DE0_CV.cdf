@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/") File("DE0_CV.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/A610/Desktop/hdl/DE0_CV_mid/") File("DE0_CV.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -11.655
+TNS   : -751.901
+
+Type  : Slow 1200mV 85C Model Setup 'ex_mem_addr[0]'
+Slack : -8.478
+TNS   : -6991.442
+
+Type  : Slow 1200mV 85C Model Hold 'ex_mem_addr[0]'
+Slack : -4.306
+TNS   : -1005.186
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -120.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ex_mem_addr[0]'
+Slack : -3.000
+TNS   : -7.185
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -10.403
+TNS   : -668.997
+
+Type  : Slow 1200mV 0C Model Setup 'ex_mem_addr[0]'
+Slack : -7.572
+TNS   : -6184.881
+
+Type  : Slow 1200mV 0C Model Hold 'ex_mem_addr[0]'
+Slack : -3.819
+TNS   : -873.353
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -120.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ex_mem_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -7.077
+TNS   : -416.621
+
+Type  : Fast 1200mV 0C Model Setup 'ex_mem_addr[0]'
+Slack : -5.274
+TNS   : -3859.683
+
+Type  : Fast 1200mV 0C Model Hold 'ex_mem_addr[0]'
+Slack : -2.679
+TNS   : -646.617
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ex_mem_addr[0]'
+Slack : -3.000
+TNS   : -576.717
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -157.454
+
+------------------------------------------------------------

@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\SHIN\Dropbox\CPU_ON_DE0\simulation\qsim
+vCPU_ON_DE0
+Z1 !s100 mR0KC0GOV5<0bQ[aI=41Y1
+Z2 I?E538L>;=eANeL^h8^3;12
+Z3 VjA6k6a>?A`_dzJcBfB4GB2
+Z4 dC:\Users\SHIN\Dropbox\CPU_ON_DE0\simulation\qsim
+Z5 w1691640201
+Z6 8CPU_ON_DE0.vo
+Z7 FCPU_ON_DE0.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|CPU_ON_DE0.vo|
+Z10 o-work work -O0
+Z11 n@c@p@u_@o@n_@d@e0
+!i10b 1
+!s85 0
+Z12 !s108 1691640202.506000
+Z13 !s107 CPU_ON_DE0.vo|
+!s101 -O0
+vCPU_ON_DE0_vlg_check_tst
+!i10b 1
+Z14 !s100 _e0a@[BiM7n]ia2`1zl]00
+Z15 IUTl;RgDM8iVV7IQ2UUKmW3
+Z16 V68M<RS:bFgkSnXnD<Sda30
+R4
+Z17 w1691640199
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 67
+R8
+r1
+!s85 0
+31
+Z20 !s108 1691640202.840000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@c@p@u_@o@n_@d@e0_vlg_check_tst
+vCPU_ON_DE0_vlg_sample_tst
+!i10b 1
+Z24 !s100 E0G7IjDhZl<akO5@:GY9F0
+Z25 Ii1A;Qz9^1RDEe@dhnAWAi0
+Z26 V50`SL;@LQlKe3;e:Z?3H_0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@c@p@u_@o@n_@d@e0_vlg_sample_tst
+vCPU_ON_DE0_vlg_vec_tst
+!i10b 1
+Z28 !s100 ?:l>VSC?Q7Qbn<JJ^?bhD2
+Z29 IblVD;G<REk?YYR1cNZS<E3
+Z30 V>cLPeQ7DMDHA?_o<6c7W_1
+R4
+R17
+R18
+R19
+Z31 L0 2619
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@c@p@u_@o@n_@d@e0_vlg_vec_tst
