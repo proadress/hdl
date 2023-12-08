@@ -56,7 +56,7 @@ begin
 				'1';				
 	 mem_rw <= mem_rw_cpu when mem_mux_sw = '0' else
 				'1';	
-	led <= led_cpu(9 downto 0);
+	led <= led_cpu(9 downto 0) when tmp_reg(15 downto 12) = x"b" else tmp_reg(9 downto 0);
 
  ramC: ram1 port map(reset, mem_en, mem_rw, abus, dbus_cpu);
  cpuC: cpu port map(clk, reset, mem_en_cpu, mem_rw_cpu, abus_cpu, dbus_cpu,led_cpu);

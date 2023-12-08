@@ -1,6 +1,6 @@
 Fitter report for CPU_ON_DE0
-Fri Dec 08 17:22:53 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Dec 08 18:40:53 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -28,7 +28,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  20. Control Signals
  21. Global & Other Fast Signals
  22. Non-Global High Fan-Out Signals
- 23. Other Routing Usage Summary
+ 23. Routing Usage Summary
  24. LAB Logic Elements
  25. LAB-wide Signals
  26. LAB Signals Sourced
@@ -65,26 +65,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Fitter Summary                                                                       ;
-+------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Dec 08 17:22:53 2023           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; CPU_ON_DE0                                      ;
-; Top-level Entity Name              ; CPU_ON_DE0                                      ;
-; Family                             ; Cyclone III                                     ;
-; Device                             ; EP3C16F484C6                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 2,074 / 15,408 ( 13 % )                         ;
-;     Total combinational functions  ; 2,045 / 15,408 ( 13 % )                         ;
-;     Dedicated logic registers      ; 117 / 15,408 ( < 1 % )                          ;
-; Total registers                    ; 117                                             ;
-; Total pins                         ; 47 / 347 ( 14 % )                               ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Fitter Summary                                                                  ;
++------------------------------------+--------------------------------------------+
+; Fitter Status                      ; Successful - Fri Dec 08 18:40:53 2023      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; CPU_ON_DE0                                 ;
+; Top-level Entity Name              ; CPU_ON_DE0                                 ;
+; Family                             ; Cyclone III                                ;
+; Device                             ; EP3C16F484C6                               ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 2,081 / 15,408 ( 14 % )                    ;
+;     Total combinational functions  ; 2,060 / 15,408 ( 13 % )                    ;
+;     Dedicated logic registers      ; 116 / 15,408 ( < 1 % )                     ;
+; Total registers                    ; 116                                        ;
+; Total pins                         ; 47 / 347 ( 14 % )                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
++------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -154,7 +154,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 20     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -205,19 +205,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------+--------------------------------------+
 
 
-+----------------------------------------------+
-; Incremental Compilation Preservation Summary ;
-+---------------------+------------------------+
-; Type                ; Value                  ;
-+---------------------+------------------------+
-; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 2287 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 2287 ( 0.00 % )    ;
-;                     ;                        ;
-; Routing (by net)    ;                        ;
-;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
-;     -- Achieved     ; 0 / 0 ( 0.00 % )       ;
-+---------------------+------------------------+
++---------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                      ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Placement (by node) ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 2301 ) ; 0.00 % ( 0 / 2301 )        ; 0.00 % ( 0 / 2301 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 2301 ) ; 0.00 % ( 0 / 2301 )        ; 0.00 % ( 0 / 2301 )      ;
+;                     ;                     ;                            ;                          ;
+; Routing (by net)    ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+---------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -230,20 +230,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+----------------+-------------------+-------------------------+------------------------+------------------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Incremental Compilation Placement Preservation                                                             ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 2277    ; 0                 ; N/A                     ; Source File       ;
-; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Incremental Compilation Placement Preservation                                                                                     ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
+; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
+; Top                            ; 0.00 % ( 0 / 2291 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/output_files/CPU_ON_DE0.pin.
+The pin-out file can be found in C:/Users/user/Documents/GitHub/hdl/CPU_ON_DE0 _HEX/output_files/CPU_ON_DE0.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -251,26 +251,26 @@ The pin-out file can be found in C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/outpu
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 2,074 / 15,408 ( 13 % ) ;
-;     -- Combinational with no register       ; 1957                    ;
-;     -- Register only                        ; 29                      ;
-;     -- Combinational with a register        ; 88                      ;
+; Total logic elements                        ; 2,081 / 15,408 ( 14 % ) ;
+;     -- Combinational with no register       ; 1965                    ;
+;     -- Register only                        ; 21                      ;
+;     -- Combinational with a register        ; 95                      ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 1082                    ;
-;     -- 3 input functions                    ; 871                     ;
-;     -- <=2 input functions                  ; 92                      ;
-;     -- Register only                        ; 29                      ;
+;     -- 4 input functions                    ; 1087                    ;
+;     -- 3 input functions                    ; 882                     ;
+;     -- <=2 input functions                  ; 91                      ;
+;     -- Register only                        ; 21                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 2025                    ;
+;     -- normal mode                          ; 2040                    ;
 ;     -- arithmetic mode                      ; 20                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 117 / 17,068 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 117 / 15,408 ( < 1 % )  ;
+; Total registers*                            ; 116 / 17,068 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 116 / 15,408 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 1,660 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 152 / 963 ( 16 % )      ;
+; Total LABs:  partially or completely used   ; 157 / 963 ( 16 % )      ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 47 / 347 ( 14 % )       ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )          ;
@@ -287,12 +287,12 @@ The pin-out file can be found in C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/outpu
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 7% / 7% / 8%            ;
-; Peak interconnect usage (total/H/V)         ; 30% / 26% / 34%         ;
-; Maximum fan-out                             ; 296                     ;
-; Highest non-global fan-out                  ; 296                     ;
-; Total fan-out                               ; 7665                    ;
-; Average fan-out                             ; 3.31                    ;
+; Average interconnect usage (total/H/V)      ; 8% / 7% / 8%            ;
+; Peak interconnect usage (total/H/V)         ; 31% / 29% / 35%         ;
+; Maximum fan-out                             ; 298                     ;
+; Highest non-global fan-out                  ; 298                     ;
+; Total fan-out                               ; 7705                    ;
+; Average fan-out                             ; 3.32                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -305,25 +305,26 @@ The pin-out file can be found in C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/outpu
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 2074 / 15408 ( 13 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 1957                  ; 0                              ;
-;     -- Register only                        ; 29                    ; 0                              ;
-;     -- Combinational with a register        ; 88                    ; 0                              ;
+; Total logic elements                        ; 2081 / 15408 ( 14 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 1965                  ; 0                              ;
+;     -- Register only                        ; 21                    ; 0                              ;
+;     -- Combinational with a register        ; 95                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 1082                  ; 0                              ;
-;     -- 3 input functions                    ; 871                   ; 0                              ;
-;     -- <=2 input functions                  ; 92                    ; 0                              ;
-;     -- Register only                        ; 29                    ; 0                              ;
+;     -- 4 input functions                    ; 1087                  ; 0                              ;
+;     -- 3 input functions                    ; 882                   ; 0                              ;
+;     -- <=2 input functions                  ; 91                    ; 0                              ;
+;     -- Register only                        ; 21                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 2025                  ; 0                              ;
+;     -- normal mode                          ; 2040                  ; 0                              ;
 ;     -- arithmetic mode                      ; 20                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 117                   ; 0                              ;
-;     -- Dedicated logic registers            ; 117 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+; Total registers                             ; 116                   ; 0                              ;
+;     -- Dedicated logic registers            ; 116 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 152 / 963 ( 16 % )    ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 157 / 963 ( 16 % )    ; 0 / 963 ( 0 % )                ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 47                    ; 0                              ;
@@ -339,8 +340,8 @@ The pin-out file can be found in C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/outpu
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 7660                  ; 5                              ;
-;     -- Registered Connections               ; 477                   ; 0                              ;
+;     -- Total Connections                    ; 7700                  ; 5                              ;
+;     -- Registered Connections               ; 487                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -372,7 +373,7 @@ The pin-out file can be found in C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/outpu
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; clk            ; B12   ; 7        ; 19           ; 29           ; 7            ; 117                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
+; clk            ; B12   ; 7        ; 19           ; 29           ; 7            ; 116                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
 ; ex_mem_addr[0] ; J6    ; 1        ; 0            ; 24           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
 ; ex_mem_addr[1] ; H5    ; 1        ; 0            ; 27           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
 ; ex_mem_addr[2] ; H6    ; 1        ; 0            ; 25           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
@@ -380,7 +381,7 @@ The pin-out file can be found in C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/outpu
 ; ex_mem_addr[4] ; G5    ; 1        ; 0            ; 27           ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
 ; ex_mem_addr[5] ; J7    ; 1        ; 0            ; 22           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
 ; mem_mux_sw     ; D2    ; 1        ; 0            ; 25           ; 0            ; 10                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
-; reset          ; H2    ; 1        ; 0            ; 21           ; 7            ; 296                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
+; reset          ; H2    ; 1        ; 0            ; 21           ; 7            ; 298                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -978,9 +979,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name   ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------+--------------+
-; |CPU_ON_DE0                ; 2074 (34)   ; 117 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 47   ; 0            ; 1957 (34)    ; 29 (0)            ; 88 (0)           ; |CPU_ON_DE0           ; work         ;
-;    |cpu:cpuC|              ; 244 (244)   ; 117 (117)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 127 (127)    ; 29 (29)           ; 88 (88)          ; |CPU_ON_DE0|cpu:cpuC  ; work         ;
-;    |ram1:ramC|             ; 1824 (1824) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1796 (1796)  ; 0 (0)             ; 28 (28)          ; |CPU_ON_DE0|ram1:ramC ; work         ;
+; |CPU_ON_DE0                ; 2081 (35)   ; 116 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 47   ; 0            ; 1965 (35)    ; 21 (0)            ; 95 (10)          ; |CPU_ON_DE0           ; work         ;
+;    |cpu:cpuC|              ; 253 (253)   ; 116 (116)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 137 (137)    ; 21 (21)           ; 95 (95)          ; |CPU_ON_DE0|cpu:cpuC  ; work         ;
+;    |ram1:ramC|             ; 1824 (1824) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1793 (1793)  ; 0 (0)             ; 31 (31)          ; |CPU_ON_DE0|ram1:ramC ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1028,11 +1029,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led[7]         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led[8]         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led[9]         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; ex_mem_addr[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; mem_mux_sw     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; ex_mem_addr[2] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; mem_mux_sw     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; ex_mem_addr[1] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; ex_mem_addr[3] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; ex_mem_addr[0] ; Input    ; --            ; (0) 0 ps      ; --                    ; --  ; --   ;
+; ex_mem_addr[0] ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; ex_mem_addr[4] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; ex_mem_addr[5] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; reset          ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
@@ -1040,334 +1041,336 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-----------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                  ;
-+-----------------------------------+-------------------+---------+
-; Source Pin / Fanout               ; Pad To Core Index ; Setting ;
-+-----------------------------------+-------------------+---------+
-; ex_mem_addr[2]                    ;                   ;         ;
-;      - abus[2]~0                  ; 0                 ; 6       ;
-; mem_mux_sw                        ;                   ;         ;
-;      - abus[2]~0                  ; 1                 ; 6       ;
-;      - abus[1]~1                  ; 1                 ; 6       ;
-;      - abus[3]~2                  ; 1                 ; 6       ;
-;      - abus[0]~3                  ; 1                 ; 6       ;
-;      - abus[4]~4                  ; 1                 ; 6       ;
-;      - abus[5]~5                  ; 1                 ; 6       ;
-;      - ram1:ramC|dBus~17          ; 1                 ; 6       ;
-;      - ram1:ramC|process_0~0      ; 1                 ; 6       ;
-;      - ram1:ramC|dBus~33          ; 1                 ; 6       ;
-;      - ram1:ramC|Decoder0~26      ; 1                 ; 6       ;
-; ex_mem_addr[1]                    ;                   ;         ;
-;      - abus[1]~1                  ; 1                 ; 6       ;
-; ex_mem_addr[3]                    ;                   ;         ;
-;      - abus[3]~2                  ; 1                 ; 6       ;
-; ex_mem_addr[0]                    ;                   ;         ;
-;      - abus[0]~3                  ; 1                 ; 0       ;
-; ex_mem_addr[4]                    ;                   ;         ;
-;      - abus[4]~4                  ; 1                 ; 6       ;
-;      - ram1:ramC|Decoder0~26      ; 1                 ; 6       ;
-; ex_mem_addr[5]                    ;                   ;         ;
-;      - abus[5]~5                  ; 0                 ; 6       ;
-; reset                             ;                   ;         ;
-;      - cpu:cpuC|m_en              ; 1                 ; 6       ;
-;      - cpu:cpuC|m_rw              ; 1                 ; 6       ;
-;      - cpu:cpuC|tick.t5           ; 1                 ; 6       ;
-;      - cpu:cpuC|pc[3]             ; 1                 ; 6       ;
-;      - cpu:cpuC|tick.t3           ; 1                 ; 6       ;
-;      - cpu:cpuC|pc[0]             ; 1                 ; 6       ;
-;      - cpu:cpuC|pc[1]             ; 1                 ; 6       ;
-;      - cpu:cpuC|pc[2]             ; 1                 ; 6       ;
-;      - cpu:cpuC|pc[4]             ; 1                 ; 6       ;
-;      - cpu:cpuC|pc[5]             ; 1                 ; 6       ;
-;      - cpu:cpuC|tick.t6           ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[0]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[3]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[2]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[1]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[4]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[7]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[6]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[5]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[8]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[11]           ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[10]           ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[9]            ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[12]           ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[15]           ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[14]           ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[13]           ; 1                 ; 6       ;
-;      - ram1:ramC|dBus~17          ; 1                 ; 6       ;
-;      - cpu:cpuC|dBus[3]~0         ; 1                 ; 6       ;
-;      - cpu:cpuC|dBus[3]~2         ; 1                 ; 6       ;
-;      - ram1:ramC|ram[31][0]~0     ; 1                 ; 6       ;
-;      - cpu:cpuC|aBus[0]~11        ; 1                 ; 6       ;
-;      - cpu:cpuC|aBus[0]~15        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[22][0]~5     ; 1                 ; 6       ;
-;      - ram1:ramC|ram[47][0]~18    ; 1                 ; 6       ;
-;      - ram1:ramC|ram[35][0]~23    ; 1                 ; 6       ;
-;      - ram1:ramC|ram[14][0]~36    ; 1                 ; 6       ;
-;      - ram1:ramC|ram[15][0]~37    ; 1                 ; 6       ;
-;      - ram1:ramC|ram[63][1]~38    ; 1                 ; 6       ;
-;      - ram1:ramC|ram[51][0]~43    ; 1                 ; 6       ;
-;      - cpu:cpuC|ledBus[0]~0       ; 1                 ; 6       ;
-;      - cpu:cpuC|acc[9]~2          ; 1                 ; 6       ;
-;      - cpu:cpuC|state.reset_state ; 1                 ; 6       ;
-;      - cpu:cpuC|state~40          ; 1                 ; 6       ;
-;      - cpu:cpuC|state~43          ; 1                 ; 6       ;
-;      - cpu:cpuC|tick~19           ; 1                 ; 6       ;
-;      - cpu:cpuC|tick~20           ; 1                 ; 6       ;
-;      - cpu:cpuC|tick~21           ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~1            ; 1                 ; 6       ;
-;      - cpu:cpuC|iar[2]~1          ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg[5]~2         ; 1                 ; 6       ;
-;      - cpu:cpuC|state~50          ; 1                 ; 6       ;
-;      - cpu:cpuC|pc[1]~5           ; 1                 ; 6       ;
-;      - cpu:cpuC|tick~22           ; 1                 ; 6       ;
-;      - cpu:cpuC|tick~25           ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~3            ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~4            ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~5            ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~6            ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~7            ; 1                 ; 6       ;
-;      - cpu:cpuC|state~56          ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~8            ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~9            ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~10           ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~11           ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~12           ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~13           ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~14           ; 1                 ; 6       ;
-;      - cpu:cpuC|state~59          ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~15           ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~16           ; 1                 ; 6       ;
-;      - cpu:cpuC|iReg~17           ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][1]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][1]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][1]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][1]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][1]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][3]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][3]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][3]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][3]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][3]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][0]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][0]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][0]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][0]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][0]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][2]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][2]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][2]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][2]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][2]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][5]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][5]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][5]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][5]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][5]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][7]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][7]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][7]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][7]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][7]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][4]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][4]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][4]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][4]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][4]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][6]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][6]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][6]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][6]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][6]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][9]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][9]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][9]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][9]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][9]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][11]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][11]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][11]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][11]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][11]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][8]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][8]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][8]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][8]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][8]        ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][10]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][10]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][10]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][10]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][10]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][13]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][13]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][13]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][13]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][13]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][15]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][15]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][15]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][15]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][15]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][12]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][12]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][12]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][12]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][12]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[11][14]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[10][14]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[13][14]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[12][14]      ; 1                 ; 6       ;
-;      - ram1:ramC|ram[9][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[8][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[6][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[4][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[3][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[1][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[2][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[0][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[7][14]       ; 1                 ; 6       ;
-;      - ram1:ramC|ram[5][14]       ; 1                 ; 6       ;
-; clk                               ;                   ;         ;
-+-----------------------------------+-------------------+---------+
++--------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                               ;
++--------------------------------+-------------------+---------+
+; Source Pin / Fanout            ; Pad To Core Index ; Setting ;
++--------------------------------+-------------------+---------+
+; ex_mem_addr[2]                 ;                   ;         ;
+;      - abus[2]~0               ; 1                 ; 6       ;
+; mem_mux_sw                     ;                   ;         ;
+;      - abus[2]~0               ; 0                 ; 6       ;
+;      - abus[1]~1               ; 0                 ; 6       ;
+;      - abus[3]~2               ; 0                 ; 6       ;
+;      - abus[0]~3               ; 0                 ; 6       ;
+;      - abus[4]~4               ; 0                 ; 6       ;
+;      - abus[5]~5               ; 0                 ; 6       ;
+;      - ram1:ramC|dBus~17       ; 0                 ; 6       ;
+;      - ram1:ramC|process_0~0   ; 0                 ; 6       ;
+;      - ram1:ramC|dBus~33       ; 0                 ; 6       ;
+;      - ram1:ramC|Decoder0~26   ; 0                 ; 6       ;
+; ex_mem_addr[1]                 ;                   ;         ;
+;      - abus[1]~1               ; 1                 ; 6       ;
+; ex_mem_addr[3]                 ;                   ;         ;
+;      - abus[3]~2               ; 1                 ; 6       ;
+; ex_mem_addr[0]                 ;                   ;         ;
+;      - abus[0]~3               ; 0                 ; 0       ;
+; ex_mem_addr[4]                 ;                   ;         ;
+;      - abus[4]~4               ; 1                 ; 6       ;
+;      - ram1:ramC|Decoder0~26   ; 1                 ; 6       ;
+; ex_mem_addr[5]                 ;                   ;         ;
+;      - abus[5]~5               ; 0                 ; 6       ;
+; reset                          ;                   ;         ;
+;      - cpu:cpuC|m_en           ; 1                 ; 6       ;
+;      - cpu:cpuC|m_rw           ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[0]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[1]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[2]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[3]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[4]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[5]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[6]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[7]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[8]         ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[9]         ; 1                 ; 6       ;
+;      - cpu:cpuC|tick.t5        ; 1                 ; 6       ;
+;      - cpu:cpuC|pc[3]          ; 1                 ; 6       ;
+;      - cpu:cpuC|tick.t3        ; 1                 ; 6       ;
+;      - cpu:cpuC|pc[0]          ; 1                 ; 6       ;
+;      - cpu:cpuC|pc[1]          ; 1                 ; 6       ;
+;      - cpu:cpuC|pc[2]          ; 1                 ; 6       ;
+;      - cpu:cpuC|pc[4]          ; 1                 ; 6       ;
+;      - cpu:cpuC|pc[5]          ; 1                 ; 6       ;
+;      - cpu:cpuC|tick.t6        ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[11]        ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[10]        ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[12]        ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[15]        ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[14]        ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[13]        ; 1                 ; 6       ;
+;      - ram1:ramC|dBus~17       ; 1                 ; 6       ;
+;      - cpu:cpuC|dBus[3]~0      ; 1                 ; 6       ;
+;      - cpu:cpuC|dBus[3]~2      ; 1                 ; 6       ;
+;      - ram1:ramC|ram[31][0]~0  ; 1                 ; 6       ;
+;      - cpu:cpuC|aBus[2]~11     ; 1                 ; 6       ;
+;      - cpu:cpuC|aBus[2]~14     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[22][0]~5  ; 1                 ; 6       ;
+;      - ram1:ramC|ram[47][0]~18 ; 1                 ; 6       ;
+;      - ram1:ramC|ram[35][0]~23 ; 1                 ; 6       ;
+;      - ram1:ramC|ram[14][0]~36 ; 1                 ; 6       ;
+;      - ram1:ramC|ram[15][0]~37 ; 1                 ; 6       ;
+;      - ram1:ramC|ram[63][1]~38 ; 1                 ; 6       ;
+;      - ram1:ramC|ram[51][0]~43 ; 1                 ; 6       ;
+;      - cpu:cpuC|ledBus[0]~0    ; 1                 ; 6       ;
+;      - cpu:cpuC|acc[8]~2       ; 1                 ; 6       ;
+;      - cpu:cpuC|state~40       ; 1                 ; 6       ;
+;      - cpu:cpuC|state~41       ; 1                 ; 6       ;
+;      - cpu:cpuC|tick~18        ; 1                 ; 6       ;
+;      - cpu:cpuC|tick~19        ; 1                 ; 6       ;
+;      - cpu:cpuC|tick~20        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~1         ; 1                 ; 6       ;
+;      - cpu:cpuC|iar[5]~1       ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg[1]~2      ; 1                 ; 6       ;
+;      - cpu:cpuC|state~46       ; 1                 ; 6       ;
+;      - cpu:cpuC|state~50       ; 1                 ; 6       ;
+;      - cpu:cpuC|pc[5]~5        ; 1                 ; 6       ;
+;      - cpu:cpuC|tick~21        ; 1                 ; 6       ;
+;      - cpu:cpuC|tick~24        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~3         ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~4         ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~5         ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~6         ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~7         ; 1                 ; 6       ;
+;      - cpu:cpuC|state~55       ; 1                 ; 6       ;
+;      - cpu:cpuC|state~57       ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~8         ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~9         ; 1                 ; 6       ;
+;      - cpu:cpuC|state~61       ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~10        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~11        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~12        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~13        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~14        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~15        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~16        ; 1                 ; 6       ;
+;      - cpu:cpuC|iReg~17        ; 1                 ; 6       ;
+;      - cpu:cpuC|state~62       ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][1]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][1]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][1]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][1]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][1]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][3]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][3]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][3]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][3]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][3]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][0]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][0]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][0]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][0]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][0]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][2]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][2]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][2]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][2]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][2]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][5]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][5]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][5]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][5]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][5]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][7]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][7]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][7]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][7]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][7]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][4]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][4]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][4]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][4]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][4]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][6]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][6]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][6]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][6]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][6]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][9]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][9]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][9]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][9]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][9]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][11]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][11]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][11]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][11]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][11]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][8]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][8]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][8]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][8]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][8]     ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][10]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][10]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][10]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][10]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][10]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][13]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][13]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][13]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][13]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][13]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][15]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][15]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][15]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][15]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][15]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][12]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][12]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][12]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][12]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][12]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[11][14]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[10][14]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[13][14]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[12][14]   ; 1                 ; 6       ;
+;      - ram1:ramC|ram[9][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[8][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[6][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[4][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[1][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[3][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[2][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[0][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[7][14]    ; 1                 ; 6       ;
+;      - ram1:ramC|ram[5][14]    ; 1                 ; 6       ;
+; clk                            ;                   ;         ;
++--------------------------------+-------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1376,82 +1379,82 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                    ; Location           ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 ; clk                     ; PIN_B12            ; 9       ; Clock                   ; no     ; --                   ; --               ; --                        ;
-; clk                     ; PIN_B12            ; 109     ; Clock                   ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; cpu:cpuC|aBus[0]~11     ; LCCOMB_X21_Y20_N26 ; 6       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|aBus[0]~15     ; LCCOMB_X21_Y20_N16 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|acc[9]~2       ; LCCOMB_X26_Y16_N22 ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|dBus[3]~1      ; LCCOMB_X19_Y24_N12 ; 32      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|iReg[5]~2      ; LCCOMB_X19_Y21_N24 ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|iar[2]~1       ; LCCOMB_X16_Y21_N6  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|ledBus[0]~0    ; LCCOMB_X14_Y17_N6  ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|pc[1]~5        ; LCCOMB_X14_Y21_N22 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|state.fetch    ; FF_X12_Y21_N21     ; 24      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; cpu:cpuC|state.mload    ; FF_X14_Y21_N25     ; 18      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|Decoder0~12   ; LCCOMB_X20_Y21_N24 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; ram1:ramC|Decoder0~13   ; LCCOMB_X16_Y17_N28 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; ram1:ramC|Decoder0~14   ; LCCOMB_X20_Y21_N26 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; ram1:ramC|Decoder0~15   ; LCCOMB_X20_Y21_N10 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK13           ; --                        ;
-; ram1:ramC|Decoder0~16   ; LCCOMB_X20_Y17_N8  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; ram1:ramC|Decoder0~17   ; LCCOMB_X21_Y14_N4  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; ram1:ramC|Decoder0~18   ; LCCOMB_X20_Y14_N0  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; ram1:ramC|Decoder0~19   ; LCCOMB_X21_Y14_N20 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK18           ; --                        ;
-; ram1:ramC|Decoder0~20   ; LCCOMB_X21_Y14_N16 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; ram1:ramC|Decoder0~21   ; LCCOMB_X16_Y17_N24 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; ram1:ramC|Decoder0~22   ; LCCOMB_X20_Y13_N10 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK16           ; --                        ;
-; ram1:ramC|Decoder0~23   ; LCCOMB_X20_Y17_N22 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; ram1:ramC|Decoder0~24   ; LCCOMB_X20_Y21_N16 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; ram1:ramC|Decoder0~25   ; LCCOMB_X20_Y21_N22 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; ram1:ramC|ram[14][0]~36 ; LCCOMB_X20_Y21_N20 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; ram1:ramC|ram[15][0]~37 ; LCCOMB_X20_Y21_N2  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; ram1:ramC|ram[16][0]~12 ; LCCOMB_X20_Y13_N28 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK15           ; --                        ;
-; ram1:ramC|ram[17][0]~8  ; LCCOMB_X16_Y17_N6  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; ram1:ramC|ram[18][0]~11 ; LCCOMB_X20_Y13_N8  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK17           ; --                        ;
-; ram1:ramC|ram[19][0]~7  ; LCCOMB_X22_Y21_N20 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[20][0]~10 ; LCCOMB_X16_Y18_N6  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[21][0]~6  ; LCCOMB_X23_Y15_N6  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[22][0]~13 ; LCCOMB_X16_Y18_N8  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[23][0]~9  ; LCCOMB_X20_Y15_N16 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[24][0]~3  ; LCCOMB_X16_Y14_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[25][0]~16 ; LCCOMB_X16_Y17_N8  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[26][0]~2  ; LCCOMB_X16_Y13_N6  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[27][0]~15 ; LCCOMB_X21_Y14_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[28][0]~1  ; LCCOMB_X22_Y15_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[29][0]~14 ; LCCOMB_X20_Y15_N18 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[30][0]~4  ; LCCOMB_X17_Y18_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[31][0]~17 ; LCCOMB_X20_Y15_N14 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[32][0]~30 ; LCCOMB_X17_Y20_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[33][0]~28 ; LCCOMB_X17_Y13_N8  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[34][0]~26 ; LCCOMB_X21_Y19_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[35][0]~24 ; LCCOMB_X19_Y19_N12 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[36][0]~29 ; LCCOMB_X20_Y20_N22 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[37][0]~31 ; LCCOMB_X19_Y21_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[38][0]~25 ; LCCOMB_X21_Y19_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[39][0]~27 ; LCCOMB_X17_Y19_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[40][0]~21 ; LCCOMB_X24_Y14_N6  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[41][0]~20 ; LCCOMB_X16_Y17_N14 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[42][0]~34 ; LCCOMB_X24_Y14_N4  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[43][0]~32 ; LCCOMB_X23_Y21_N26 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[44][0]~19 ; LCCOMB_X16_Y14_N20 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[45][0]~22 ; LCCOMB_X16_Y21_N14 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[46][0]~33 ; LCCOMB_X23_Y21_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[47][0]~35 ; LCCOMB_X23_Y21_N6  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[48][0]~50 ; LCCOMB_X17_Y12_N12 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[49][0]~49 ; LCCOMB_X19_Y12_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[50][0]~48 ; LCCOMB_X23_Y22_N14 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[51][0]~51 ; LCCOMB_X23_Y12_N16 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[52][0]~46 ; LCCOMB_X23_Y15_N22 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[53][0]~45 ; LCCOMB_X19_Y12_N8  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[54][0]~44 ; LCCOMB_X23_Y22_N4  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[55][0]~47 ; LCCOMB_X19_Y17_N14 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[56][0]~41 ; LCCOMB_X22_Y12_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[57][0]~40 ; LCCOMB_X16_Y17_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[58][0]~39 ; LCCOMB_X23_Y17_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[59][0]~42 ; LCCOMB_X19_Y19_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[60][0]~54 ; LCCOMB_X20_Y17_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[61][0]~53 ; LCCOMB_X17_Y12_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[62][0]~52 ; LCCOMB_X21_Y13_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; ram1:ramC|ram[63][1]~55 ; LCCOMB_X19_Y13_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
-; reset                   ; PIN_H2             ; 296     ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; clk                     ; PIN_B12            ; 108     ; Clock                   ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; cpu:cpuC|aBus[2]~11     ; LCCOMB_X20_Y18_N16 ; 6       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|aBus[2]~16     ; LCCOMB_X26_Y20_N26 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|acc[8]~2       ; LCCOMB_X26_Y18_N12 ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|dBus[3]~1      ; LCCOMB_X27_Y22_N30 ; 32      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|iReg[1]~2      ; LCCOMB_X26_Y20_N10 ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|iar[5]~1       ; LCCOMB_X26_Y22_N10 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|ledBus[0]~0    ; LCCOMB_X27_Y21_N16 ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|pc[5]~5        ; LCCOMB_X27_Y19_N12 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|state.fetch    ; FF_X27_Y19_N9      ; 27      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; cpu:cpuC|state.mload    ; FF_X27_Y21_N27     ; 18      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|Decoder0~12   ; LCCOMB_X20_Y15_N4  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; ram1:ramC|Decoder0~13   ; LCCOMB_X20_Y15_N26 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; ram1:ramC|Decoder0~14   ; LCCOMB_X20_Y15_N8  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; ram1:ramC|Decoder0~15   ; LCCOMB_X19_Y19_N28 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; ram1:ramC|Decoder0~16   ; LCCOMB_X21_Y19_N22 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK15           ; --                        ;
+; ram1:ramC|Decoder0~17   ; LCCOMB_X21_Y11_N16 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; ram1:ramC|Decoder0~18   ; LCCOMB_X20_Y20_N20 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; ram1:ramC|Decoder0~19   ; LCCOMB_X19_Y17_N2  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; ram1:ramC|Decoder0~20   ; LCCOMB_X20_Y15_N18 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK16           ; --                        ;
+; ram1:ramC|Decoder0~21   ; LCCOMB_X20_Y15_N14 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; ram1:ramC|Decoder0~22   ; LCCOMB_X20_Y15_N30 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; ram1:ramC|Decoder0~23   ; LCCOMB_X19_Y19_N18 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; ram1:ramC|Decoder0~24   ; LCCOMB_X17_Y17_N2  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; ram1:ramC|Decoder0~25   ; LCCOMB_X20_Y20_N2  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; ram1:ramC|ram[14][0]~36 ; LCCOMB_X19_Y16_N6  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; ram1:ramC|ram[15][0]~37 ; LCCOMB_X21_Y17_N2  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; ram1:ramC|ram[16][0]~12 ; LCCOMB_X20_Y15_N6  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK18           ; --                        ;
+; ram1:ramC|ram[17][0]~8  ; LCCOMB_X20_Y15_N2  ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; ram1:ramC|ram[18][0]~11 ; LCCOMB_X20_Y15_N10 ; 16      ; Latch enable            ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; ram1:ramC|ram[19][0]~7  ; LCCOMB_X16_Y21_N18 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[20][0]~10 ; LCCOMB_X19_Y17_N4  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[21][0]~6  ; LCCOMB_X19_Y15_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[22][0]~13 ; LCCOMB_X19_Y17_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[23][0]~9  ; LCCOMB_X19_Y15_N2  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[24][0]~3  ; LCCOMB_X21_Y16_N4  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[25][0]~16 ; LCCOMB_X21_Y16_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[26][0]~2  ; LCCOMB_X20_Y13_N10 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[27][0]~15 ; LCCOMB_X24_Y19_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[28][0]~1  ; LCCOMB_X16_Y16_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[29][0]~14 ; LCCOMB_X19_Y19_N8  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[30][0]~4  ; LCCOMB_X15_Y20_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[31][0]~17 ; LCCOMB_X24_Y19_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[32][0]~30 ; LCCOMB_X21_Y16_N6  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[33][0]~28 ; LCCOMB_X21_Y11_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[34][0]~26 ; LCCOMB_X19_Y12_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[35][0]~24 ; LCCOMB_X22_Y16_N16 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[36][0]~29 ; LCCOMB_X19_Y11_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[37][0]~31 ; LCCOMB_X22_Y12_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[38][0]~25 ; LCCOMB_X22_Y16_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[39][0]~27 ; LCCOMB_X21_Y12_N20 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[40][0]~21 ; LCCOMB_X23_Y15_N16 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[41][0]~20 ; LCCOMB_X23_Y12_N20 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[42][0]~34 ; LCCOMB_X23_Y12_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[43][0]~32 ; LCCOMB_X23_Y12_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[44][0]~19 ; LCCOMB_X19_Y12_N10 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[45][0]~22 ; LCCOMB_X26_Y15_N24 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[46][0]~33 ; LCCOMB_X23_Y20_N16 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[47][0]~35 ; LCCOMB_X21_Y20_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[48][0]~50 ; LCCOMB_X17_Y19_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[49][0]~49 ; LCCOMB_X21_Y17_N10 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[50][0]~48 ; LCCOMB_X17_Y17_N12 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[51][0]~51 ; LCCOMB_X17_Y17_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[52][0]~46 ; LCCOMB_X20_Y14_N10 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[53][0]~45 ; LCCOMB_X21_Y17_N22 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[54][0]~44 ; LCCOMB_X17_Y21_N26 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[55][0]~47 ; LCCOMB_X17_Y21_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[56][0]~41 ; LCCOMB_X19_Y11_N20 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[57][0]~40 ; LCCOMB_X20_Y19_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[58][0]~39 ; LCCOMB_X20_Y13_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[59][0]~42 ; LCCOMB_X20_Y19_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[60][0]~54 ; LCCOMB_X21_Y21_N30 ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[61][0]~53 ; LCCOMB_X21_Y19_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[62][0]~52 ; LCCOMB_X19_Y22_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; ram1:ramC|ram[63][1]~55 ; LCCOMB_X20_Y21_N0  ; 16      ; Latch enable            ; no     ; --                   ; --               ; --                        ;
+; reset                   ; PIN_H2             ; 298     ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
 +-------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1460,26 +1463,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                    ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk                     ; PIN_B12            ; 109     ; 51                                   ; Global Clock         ; GCLK12           ; --                        ;
-; ram1:ramC|Decoder0~12   ; LCCOMB_X20_Y21_N24 ; 16      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
-; ram1:ramC|Decoder0~13   ; LCCOMB_X16_Y17_N28 ; 16      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-; ram1:ramC|Decoder0~14   ; LCCOMB_X20_Y21_N26 ; 16      ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
-; ram1:ramC|Decoder0~15   ; LCCOMB_X20_Y21_N10 ; 16      ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
-; ram1:ramC|Decoder0~16   ; LCCOMB_X20_Y17_N8  ; 16      ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
-; ram1:ramC|Decoder0~17   ; LCCOMB_X21_Y14_N4  ; 16      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; ram1:ramC|Decoder0~18   ; LCCOMB_X20_Y14_N0  ; 16      ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
-; ram1:ramC|Decoder0~19   ; LCCOMB_X21_Y14_N20 ; 16      ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
-; ram1:ramC|Decoder0~20   ; LCCOMB_X21_Y14_N16 ; 16      ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
-; ram1:ramC|Decoder0~21   ; LCCOMB_X16_Y17_N24 ; 16      ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
-; ram1:ramC|Decoder0~22   ; LCCOMB_X20_Y13_N10 ; 16      ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
-; ram1:ramC|Decoder0~23   ; LCCOMB_X20_Y17_N22 ; 16      ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
-; ram1:ramC|Decoder0~24   ; LCCOMB_X20_Y21_N16 ; 16      ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
-; ram1:ramC|Decoder0~25   ; LCCOMB_X20_Y21_N22 ; 16      ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
-; ram1:ramC|ram[14][0]~36 ; LCCOMB_X20_Y21_N20 ; 16      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
-; ram1:ramC|ram[15][0]~37 ; LCCOMB_X20_Y21_N2  ; 16      ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
-; ram1:ramC|ram[16][0]~12 ; LCCOMB_X20_Y13_N28 ; 16      ; 0                                    ; Global Clock         ; GCLK15           ; --                        ;
-; ram1:ramC|ram[17][0]~8  ; LCCOMB_X16_Y17_N6  ; 16      ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
-; ram1:ramC|ram[18][0]~11 ; LCCOMB_X20_Y13_N8  ; 16      ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
+; clk                     ; PIN_B12            ; 108     ; 43                                   ; Global Clock         ; GCLK12           ; --                        ;
+; ram1:ramC|Decoder0~12   ; LCCOMB_X20_Y15_N4  ; 16      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
+; ram1:ramC|Decoder0~13   ; LCCOMB_X20_Y15_N26 ; 16      ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; ram1:ramC|Decoder0~14   ; LCCOMB_X20_Y15_N8  ; 16      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; ram1:ramC|Decoder0~15   ; LCCOMB_X19_Y19_N28 ; 16      ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
+; ram1:ramC|Decoder0~16   ; LCCOMB_X21_Y19_N22 ; 16      ; 0                                    ; Global Clock         ; GCLK15           ; --                        ;
+; ram1:ramC|Decoder0~17   ; LCCOMB_X21_Y11_N16 ; 16      ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
+; ram1:ramC|Decoder0~18   ; LCCOMB_X20_Y20_N20 ; 16      ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
+; ram1:ramC|Decoder0~19   ; LCCOMB_X19_Y17_N2  ; 16      ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
+; ram1:ramC|Decoder0~20   ; LCCOMB_X20_Y15_N18 ; 16      ; 0                                    ; Global Clock         ; GCLK16           ; --                        ;
+; ram1:ramC|Decoder0~21   ; LCCOMB_X20_Y15_N14 ; 16      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; ram1:ramC|Decoder0~22   ; LCCOMB_X20_Y15_N30 ; 16      ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
+; ram1:ramC|Decoder0~23   ; LCCOMB_X19_Y19_N18 ; 16      ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
+; ram1:ramC|Decoder0~24   ; LCCOMB_X17_Y17_N2  ; 16      ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
+; ram1:ramC|Decoder0~25   ; LCCOMB_X20_Y20_N2  ; 16      ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
+; ram1:ramC|ram[14][0]~36 ; LCCOMB_X19_Y16_N6  ; 16      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; ram1:ramC|ram[15][0]~37 ; LCCOMB_X21_Y17_N2  ; 16      ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
+; ram1:ramC|ram[16][0]~12 ; LCCOMB_X20_Y15_N6  ; 16      ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
+; ram1:ramC|ram[17][0]~8  ; LCCOMB_X20_Y15_N2  ; 16      ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
+; ram1:ramC|ram[18][0]~11 ; LCCOMB_X20_Y15_N10 ; 16      ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
 +-------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1488,17 +1491,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------+---------+
 ; Name                    ; Fan-Out ;
 +-------------------------+---------+
-; reset~input             ; 296     ;
-; abus[3]~2               ; 207     ;
-; abus[0]~3               ; 181     ;
-; abus[2]~0               ; 181     ;
-; abus[1]~1               ; 180     ;
-; abus[5]~5               ; 178     ;
+; reset~input             ; 298     ;
+; abus[3]~2               ; 201     ;
+; abus[0]~3               ; 183     ;
+; abus[1]~1               ; 182     ;
+; abus[5]~5               ; 179     ;
+; abus[2]~0               ; 178     ;
 ; abus[4]~4               ; 172     ;
-; ram1:ramC|dBus[14]~32   ; 60      ;
-; ram1:ramC|dBus[12]~31   ; 60      ;
-; ram1:ramC|dBus[15]~30   ; 60      ;
-; ram1:ramC|dBus[13]~29   ; 60      ;
+; ram1:ramC|dBus[14]~32   ; 61      ;
+; ram1:ramC|dBus[12]~31   ; 61      ;
+; ram1:ramC|dBus[15]~30   ; 61      ;
+; ram1:ramC|dBus[13]~29   ; 61      ;
 ; ram1:ramC|dBus[10]~28   ; 60      ;
 ; ram1:ramC|dBus[11]~26   ; 60      ;
 ; ram1:ramC|dBus[2]~55    ; 59      ;
@@ -1515,12 +1518,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cpu:cpuC|state.negate   ; 34      ;
 ; cpu:cpuC|dBus[3]~1      ; 32      ;
 ; cpu:cpuC|state.iload    ; 28      ;
-; cpu:cpuC|state.fetch    ; 24      ;
-; cpu:cpuC|state.dload    ; 19      ;
+; cpu:cpuC|state.fetch    ; 27      ;
+; cpu:cpuC|state.dload    ; 20      ;
 ; cpu:cpuC|state.mload    ; 18      ;
-; cpu:cpuC|state.istore   ; 18      ;
-; cpu:cpuC|iReg[5]~2      ; 16      ;
-; cpu:cpuC|acc[9]~2       ; 16      ;
+; cpu:cpuC|state.istore   ; 17      ;
+; cpu:cpuC|iReg[1]~2      ; 16      ;
+; cpu:cpuC|acc[8]~2       ; 16      ;
 ; ram1:ramC|ram[63][1]~55 ; 16      ;
 ; ram1:ramC|ram[60][0]~54 ; 16      ;
 ; ram1:ramC|ram[61][0]~53 ; 16      ;
@@ -1568,6 +1571,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[26][0]~2  ; 16      ;
 ; ram1:ramC|ram[28][0]~1  ; 16      ;
 ; cpu:cpuC|dBus[3]~2      ; 16      ;
+; cpu:cpuC|state~40       ; 15      ;
 ; ram1:ramC|dBus[2]~59    ; 14      ;
 ; ram1:ramC|dBus[0]~58    ; 14      ;
 ; ram1:ramC|dBus[3]~57    ; 14      ;
@@ -1584,12 +1588,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|dBus[4]~36    ; 14      ;
 ; ram1:ramC|dBus[7]~35    ; 14      ;
 ; ram1:ramC|dBus[5]~34    ; 14      ;
-; cpu:cpuC|iReg[12]       ; 13      ;
-; cpu:cpuC|state.dstore   ; 12      ;
-; cpu:cpuC|iReg[13]       ; 11      ;
+; cpu:cpuC|tick.t2        ; 14      ;
+; cpu:cpuC|state.dstore   ; 13      ;
 ; mem_mux_sw~input        ; 10      ;
 ; cpu:cpuC|ledBus[0]~0    ; 10      ;
-; cpu:cpuC|tick.t2        ; 10      ;
+; HEX3~7                  ; 10      ;
+; cpu:cpuC|iReg[12]       ; 9       ;
 ; cpu:cpuC|tick.t4        ; 9       ;
 ; clk~input               ; 8       ;
 ; ram1:ramC|Decoder0~26   ; 8       ;
@@ -1605,55 +1609,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|Decoder0~7    ; 8       ;
 ; ram1:ramC|Decoder0~6    ; 8       ;
 ; ram1:ramC|Decoder0~5    ; 8       ;
-; cpu:cpuC|aBus[0]~7      ; 8       ;
+; cpu:cpuC|aBus[2]~7      ; 8       ;
+; cpu:cpuC|WideOr0~0      ; 8       ;
 ; ram1:ramC|ram[31][0]~0  ; 8       ;
 ; ram1:ramC|Decoder0~4    ; 8       ;
 ; ram1:ramC|process_0~0   ; 8       ;
-; cpu:cpuC|tick.t1        ; 8       ;
-; cpu:cpuC|tick.t7        ; 8       ;
-; cpu:cpuC|state~43       ; 7       ;
-; cpu:cpuC|WideOr1~0      ; 7       ;
-; cpu:cpuC|tick.t5        ; 7       ;
-; cpu:cpuC|pc[1]~5        ; 6       ;
-; cpu:cpuC|iar[2]~1       ; 6       ;
+; cpu:cpuC|iReg[15]       ; 7       ;
+; cpu:cpuC|tick.t1        ; 7       ;
+; cpu:cpuC|tick.t7        ; 7       ;
+; cpu:cpuC|pc[5]~5        ; 6       ;
+; cpu:cpuC|iar[5]~1       ; 6       ;
+; cpu:cpuC|tick~17        ; 6       ;
+; cpu:cpuC|iReg[13]       ; 6       ;
 ; cpu:cpuC|iReg[11]       ; 6       ;
-; cpu:cpuC|aBus[0]~15     ; 6       ;
-; cpu:cpuC|aBus[0]~11     ; 6       ;
+; cpu:cpuC|iReg[0]        ; 6       ;
+; cpu:cpuC|aBus[2]~16     ; 6       ;
+; cpu:cpuC|aBus[2]~11     ; 6       ;
+; cpu:cpuC|tick.t5        ; 6       ;
 ; cpu:cpuC|m_en           ; 6       ;
-; cpu:cpuC|tick~18        ; 5       ;
-; cpu:cpuC|iReg[15]       ; 5       ;
-; cpu:cpuC|state~35       ; 5       ;
-; cpu:cpuC|iReg[14]       ; 5       ;
-; cpu:cpuC|iReg[0]        ; 5       ;
-; cpu:cpuC|tick~16        ; 5       ;
-; cpu:cpuC|tick.t3        ; 5       ;
+; cpu:cpuC|Mux0~0         ; 5       ;
+; cpu:cpuC|state~36       ; 5       ;
+; cpu:cpuC|tick.t0        ; 5       ;
+; cpu:cpuC|Selector77~0   ; 5       ;
 ; cpu:cpuC|m_rw           ; 5       ;
-; cpu:cpuC|state~41       ; 4       ;
-; cpu:cpuC|state~36       ; 4       ;
+; cpu:cpuC|state~46       ; 4       ;
+; cpu:cpuC|Equal1~3       ; 4       ;
+; cpu:cpuC|iReg[14]       ; 4       ;
 ; cpu:cpuC|iReg[5]        ; 4       ;
 ; cpu:cpuC|iReg[4]        ; 4       ;
 ; cpu:cpuC|iReg[3]        ; 4       ;
 ; cpu:cpuC|iReg[1]        ; 4       ;
-; cpu:cpuC|tick.t0        ; 4       ;
+; cpu:cpuC|state.add      ; 4       ;
 ; cpu:cpuC|iReg[2]        ; 4       ;
 ; ram1:ramC|Mux7~41       ; 4       ;
 ; ram1:ramC|Mux6~41       ; 4       ;
-; ram1:ramC|Mux9~43       ; 4       ;
-; ram1:ramC|Mux11~43      ; 4       ;
+; ram1:ramC|Mux9~41       ; 4       ;
+; ram1:ramC|Mux11~41      ; 4       ;
 ; ram1:ramC|Mux8~41       ; 4       ;
 ; ram1:ramC|Mux10~41      ; 4       ;
-; ram1:ramC|Mux13~41      ; 4       ;
+; ram1:ramC|Mux13~40      ; 4       ;
 ; ram1:ramC|Mux15~41      ; 4       ;
 ; ram1:ramC|Mux12~41      ; 4       ;
 ; ram1:ramC|Mux14~41      ; 4       ;
 ; cpu:cpuC|acc[15]        ; 4       ;
-; cpu:cpuC|state~52       ; 3       ;
-; cpu:cpuC|state~40       ; 3       ;
-; cpu:cpuC|state~39       ; 3       ;
+; cpu:cpuC|acc[8]         ; 4       ;
+; cpu:cpuC|acc[9]         ; 4       ;
+; cpu:cpuC|acc[6]         ; 4       ;
+; cpu:cpuC|acc[4]         ; 4       ;
+; cpu:cpuC|acc[7]         ; 4       ;
+; cpu:cpuC|acc[5]         ; 4       ;
+; cpu:cpuC|acc[2]         ; 4       ;
+; cpu:cpuC|acc[0]         ; 4       ;
+; cpu:cpuC|acc[3]         ; 4       ;
+; cpu:cpuC|tick.t3        ; 4       ;
+; cpu:cpuC|acc[1]         ; 4       ;
+; cpu:cpuC|state.brZero   ; 3       ;
+; cpu:cpuC|state.brNeg    ; 3       ;
+; cpu:cpuC|state~42       ; 3       ;
 ; cpu:cpuC|state.halt     ; 3       ;
-; cpu:cpuC|Equal1~3       ; 3       ;
-; cpu:cpuC|state.outp     ; 3       ;
-; cpu:cpuC|state.add      ; 3       ;
 ; cpu:cpuC|Selector0~0    ; 3       ;
 ; cpu:cpuC|dBus[8]~en     ; 3       ;
 ; cpu:cpuC|dBus[8]~reg0   ; 3       ;
@@ -1679,17 +1692,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cpu:cpuC|acc[12]        ; 3       ;
 ; cpu:cpuC|acc[13]        ; 3       ;
 ; cpu:cpuC|acc[10]        ; 3       ;
-; cpu:cpuC|acc[8]         ; 3       ;
 ; cpu:cpuC|acc[11]        ; 3       ;
-; cpu:cpuC|acc[9]         ; 3       ;
-; cpu:cpuC|acc[6]         ; 3       ;
-; cpu:cpuC|acc[4]         ; 3       ;
-; cpu:cpuC|acc[7]         ; 3       ;
-; cpu:cpuC|acc[5]         ; 3       ;
-; cpu:cpuC|acc[2]         ; 3       ;
-; cpu:cpuC|acc[0]         ; 3       ;
-; cpu:cpuC|acc[3]         ; 3       ;
-; cpu:cpuC|acc[1]         ; 3       ;
 ; ex_mem_addr[4]~input    ; 2       ;
 ; ram1:ramC|ram[63][14]   ; 2       ;
 ; ram1:ramC|ram[45][14]   ; 2       ;
@@ -1711,14 +1714,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[5][14]    ; 2       ;
 ; ram1:ramC|ram[7][14]    ; 2       ;
 ; ram1:ramC|ram[21][14]   ; 2       ;
-; ram1:ramC|ram[18][14]   ; 2       ;
 ; ram1:ramC|ram[0][14]    ; 2       ;
-; ram1:ramC|ram[2][14]    ; 2       ;
 ; ram1:ramC|ram[16][14]   ; 2       ;
-; ram1:ramC|ram[19][14]   ; 2       ;
-; ram1:ramC|ram[1][14]    ; 2       ;
+; ram1:ramC|ram[2][14]    ; 2       ;
+; ram1:ramC|ram[18][14]   ; 2       ;
 ; ram1:ramC|ram[3][14]    ; 2       ;
 ; ram1:ramC|ram[17][14]   ; 2       ;
+; ram1:ramC|ram[19][14]   ; 2       ;
+; ram1:ramC|ram[1][14]    ; 2       ;
 ; ram1:ramC|ram[22][14]   ; 2       ;
 ; ram1:ramC|ram[4][14]    ; 2       ;
 ; ram1:ramC|ram[6][14]    ; 2       ;
@@ -1796,8 +1799,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[36][12]   ; 2       ;
 ; ram1:ramC|ram[40][12]   ; 2       ;
 ; ram1:ramC|ram[46][12]   ; 2       ;
-; ram1:ramC|ram[38][12]   ; 2       ;
 ; ram1:ramC|ram[34][12]   ; 2       ;
+; ram1:ramC|ram[38][12]   ; 2       ;
 ; ram1:ramC|ram[42][12]   ; 2       ;
 ; ram1:ramC|ram[45][12]   ; 2       ;
 ; ram1:ramC|ram[33][12]   ; 2       ;
@@ -1843,9 +1846,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[0][15]    ; 2       ;
 ; ram1:ramC|ram[4][15]    ; 2       ;
 ; ram1:ramC|ram[32][15]   ; 2       ;
-; ram1:ramC|ram[38][15]   ; 2       ;
-; ram1:ramC|ram[2][15]    ; 2       ;
 ; ram1:ramC|ram[6][15]    ; 2       ;
+; ram1:ramC|ram[2][15]    ; 2       ;
+; ram1:ramC|ram[38][15]   ; 2       ;
 ; ram1:ramC|ram[34][15]   ; 2       ;
 ; ram1:ramC|ram[37][15]   ; 2       ;
 ; ram1:ramC|ram[1][15]    ; 2       ;
@@ -2219,14 +2222,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[25][6]    ; 2       ;
 ; ram1:ramC|ram[29][6]    ; 2       ;
 ; ram1:ramC|ram[57][6]    ; 2       ;
-; ram1:ramC|ram[42][6]    ; 2       ;
-; ram1:ramC|ram[8][6]     ; 2       ;
-; ram1:ramC|ram[10][6]    ; 2       ;
-; ram1:ramC|ram[40][6]    ; 2       ;
-; ram1:ramC|ram[43][6]    ; 2       ;
-; ram1:ramC|ram[9][6]     ; 2       ;
-; ram1:ramC|ram[11][6]    ; 2       ;
-; ram1:ramC|ram[41][6]    ; 2       ;
+; ram1:ramC|ram[39][6]    ; 2       ;
+; ram1:ramC|ram[3][6]     ; 2       ;
+; ram1:ramC|ram[7][6]     ; 2       ;
+; ram1:ramC|ram[35][6]    ; 2       ;
 ; ram1:ramC|ram[36][6]    ; 2       ;
 ; ram1:ramC|ram[0][6]     ; 2       ;
 ; ram1:ramC|ram[4][6]     ; 2       ;
@@ -2235,18 +2234,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[2][6]     ; 2       ;
 ; ram1:ramC|ram[6][6]     ; 2       ;
 ; ram1:ramC|ram[34][6]    ; 2       ;
-; ram1:ramC|ram[39][6]    ; 2       ;
-; ram1:ramC|ram[3][6]     ; 2       ;
-; ram1:ramC|ram[7][6]     ; 2       ;
-; ram1:ramC|ram[35][6]    ; 2       ;
-; ram1:ramC|ram[47][6]    ; 2       ;
-; ram1:ramC|ram[13][6]    ; 2       ;
-; ram1:ramC|ram[15][6]    ; 2       ;
-; ram1:ramC|ram[45][6]    ; 2       ;
 ; ram1:ramC|ram[37][6]    ; 2       ;
 ; ram1:ramC|ram[1][6]     ; 2       ;
 ; ram1:ramC|ram[5][6]     ; 2       ;
 ; ram1:ramC|ram[33][6]    ; 2       ;
+; ram1:ramC|ram[47][6]    ; 2       ;
+; ram1:ramC|ram[13][6]    ; 2       ;
+; ram1:ramC|ram[15][6]    ; 2       ;
+; ram1:ramC|ram[45][6]    ; 2       ;
+; ram1:ramC|ram[42][6]    ; 2       ;
+; ram1:ramC|ram[8][6]     ; 2       ;
+; ram1:ramC|ram[10][6]    ; 2       ;
+; ram1:ramC|ram[40][6]    ; 2       ;
+; ram1:ramC|ram[43][6]    ; 2       ;
+; ram1:ramC|ram[9][6]     ; 2       ;
+; ram1:ramC|ram[11][6]    ; 2       ;
+; ram1:ramC|ram[41][6]    ; 2       ;
 ; ram1:ramC|ram[46][6]    ; 2       ;
 ; ram1:ramC|ram[12][6]    ; 2       ;
 ; ram1:ramC|ram[14][6]    ; 2       ;
@@ -2283,6 +2286,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[44][4]    ; 2       ;
 ; ram1:ramC|ram[46][4]    ; 2       ;
 ; ram1:ramC|ram[60][4]    ; 2       ;
+; ram1:ramC|ram[23][4]    ; 2       ;
+; ram1:ramC|ram[5][4]     ; 2       ;
+; ram1:ramC|ram[7][4]     ; 2       ;
+; ram1:ramC|ram[21][4]    ; 2       ;
+; ram1:ramC|ram[18][4]    ; 2       ;
+; ram1:ramC|ram[0][4]     ; 2       ;
+; ram1:ramC|ram[2][4]     ; 2       ;
+; ram1:ramC|ram[16][4]    ; 2       ;
+; ram1:ramC|ram[19][4]    ; 2       ;
+; ram1:ramC|ram[1][4]     ; 2       ;
+; ram1:ramC|ram[3][4]     ; 2       ;
+; ram1:ramC|ram[17][4]    ; 2       ;
+; ram1:ramC|ram[22][4]    ; 2       ;
+; ram1:ramC|ram[4][4]     ; 2       ;
+; ram1:ramC|ram[6][4]     ; 2       ;
+; ram1:ramC|ram[20][4]    ; 2       ;
+; ram1:ramC|ram[31][4]    ; 2       ;
+; ram1:ramC|ram[14][4]    ; 2       ;
+; ram1:ramC|ram[15][4]    ; 2       ;
+; ram1:ramC|ram[30][4]    ; 2       ;
+; ram1:ramC|ram[25][4]    ; 2       ;
+; ram1:ramC|ram[8][4]     ; 2       ;
+; ram1:ramC|ram[9][4]     ; 2       ;
+; ram1:ramC|ram[24][4]    ; 2       ;
+; ram1:ramC|ram[13][4]    ; 2       ;
+; ram1:ramC|ram[12][4]    ; 2       ;
+; ram1:ramC|ram[29][4]    ; 2       ;
+; ram1:ramC|ram[28][4]    ; 2       ;
+; ram1:ramC|ram[27][4]    ; 2       ;
+; ram1:ramC|ram[10][4]    ; 2       ;
+; ram1:ramC|ram[11][4]    ; 2       ;
+; ram1:ramC|ram[26][4]    ; 2       ;
 ; ram1:ramC|ram[55][4]    ; 2       ;
 ; ram1:ramC|ram[35][4]    ; 2       ;
 ; ram1:ramC|ram[39][4]    ; 2       ;
@@ -2299,38 +2334,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[33][4]    ; 2       ;
 ; ram1:ramC|ram[37][4]    ; 2       ;
 ; ram1:ramC|ram[49][4]    ; 2       ;
-; ram1:ramC|ram[23][4]    ; 2       ;
-; ram1:ramC|ram[5][4]     ; 2       ;
-; ram1:ramC|ram[7][4]     ; 2       ;
-; ram1:ramC|ram[21][4]    ; 2       ;
-; ram1:ramC|ram[31][4]    ; 2       ;
-; ram1:ramC|ram[14][4]    ; 2       ;
-; ram1:ramC|ram[15][4]    ; 2       ;
-; ram1:ramC|ram[30][4]    ; 2       ;
-; ram1:ramC|ram[22][4]    ; 2       ;
-; ram1:ramC|ram[4][4]     ; 2       ;
-; ram1:ramC|ram[6][4]     ; 2       ;
-; ram1:ramC|ram[20][4]    ; 2       ;
-; ram1:ramC|ram[27][4]    ; 2       ;
-; ram1:ramC|ram[10][4]    ; 2       ;
-; ram1:ramC|ram[11][4]    ; 2       ;
-; ram1:ramC|ram[26][4]    ; 2       ;
-; ram1:ramC|ram[18][4]    ; 2       ;
-; ram1:ramC|ram[0][4]     ; 2       ;
-; ram1:ramC|ram[2][4]     ; 2       ;
-; ram1:ramC|ram[16][4]    ; 2       ;
-; ram1:ramC|ram[19][4]    ; 2       ;
-; ram1:ramC|ram[1][4]     ; 2       ;
-; ram1:ramC|ram[3][4]     ; 2       ;
-; ram1:ramC|ram[17][4]    ; 2       ;
-; ram1:ramC|ram[25][4]    ; 2       ;
-; ram1:ramC|ram[8][4]     ; 2       ;
-; ram1:ramC|ram[9][4]     ; 2       ;
-; ram1:ramC|ram[24][4]    ; 2       ;
-; ram1:ramC|ram[29][4]    ; 2       ;
-; ram1:ramC|ram[12][4]    ; 2       ;
-; ram1:ramC|ram[13][4]    ; 2       ;
-; ram1:ramC|ram[28][4]    ; 2       ;
 ; ram1:ramC|ram[63][7]    ; 2       ;
 ; ram1:ramC|ram[54][7]    ; 2       ;
 ; ram1:ramC|ram[55][7]    ; 2       ;
@@ -2479,67 +2482,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ram1:ramC|ram[17][2]    ; 2       ;
 ; ram1:ramC|ram[19][2]    ; 2       ;
 ; ram1:ramC|ram[21][2]    ; 2       ;
-; ram1:ramC|ram[6][2]     ; 2       ;
 ; ram1:ramC|ram[0][2]     ; 2       ;
 ; ram1:ramC|ram[2][2]     ; 2       ;
+; ram1:ramC|ram[6][2]     ; 2       ;
 ; ram1:ramC|ram[4][2]     ; 2       ;
 ; ram1:ramC|ram[7][2]     ; 2       ;
-; ram1:ramC|ram[1][2]     ; 2       ;
-; ram1:ramC|ram[3][2]     ; 2       ;
 ; ram1:ramC|ram[5][2]     ; 2       ;
+; ram1:ramC|ram[3][2]     ; 2       ;
+; ram1:ramC|ram[1][2]     ; 2       ;
 ; ram1:ramC|ram[22][2]    ; 2       ;
 +-------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Other Routing Usage Summary                           ;
-+-----------------------------+-------------------------+
-; Other Routing Resource Type ; Usage                   ;
-+-----------------------------+-------------------------+
-; Block interconnects         ; 3,603 / 47,787 ( 8 % )  ;
-; C16 interconnects           ; 101 / 1,804 ( 6 % )     ;
-; C4 interconnects            ; 2,454 / 31,272 ( 8 % )  ;
-; Direct links                ; 254 / 47,787 ( < 1 % )  ;
-; Global clocks               ; 20 / 20 ( 100 % )       ;
-; Local interconnects         ; 1,609 / 15,408 ( 10 % ) ;
-; R24 interconnects           ; 99 / 1,775 ( 6 % )      ;
-; R4 interconnects            ; 2,731 / 41,310 ( 7 % )  ;
-+-----------------------------+-------------------------+
++-------------------------------------------------+
+; Routing Usage Summary                           ;
++-----------------------+-------------------------+
+; Routing Resource Type ; Usage                   ;
++-----------------------+-------------------------+
+; Block interconnects   ; 3,687 / 47,787 ( 8 % )  ;
+; C16 interconnects     ; 100 / 1,804 ( 6 % )     ;
+; C4 interconnects      ; 2,578 / 31,272 ( 8 % )  ;
+; Direct links          ; 217 / 47,787 ( < 1 % )  ;
+; Global clocks         ; 20 / 20 ( 100 % )       ;
+; Local interconnects   ; 1,613 / 15,408 ( 10 % ) ;
+; R24 interconnects     ; 95 / 1,775 ( 5 % )      ;
+; R4 interconnects      ; 2,921 / 41,310 ( 7 % )  ;
++-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 13.64) ; Number of LABs  (Total = 152) ;
+; Number of Logic Elements  (Average = 13.25) ; Number of LABs  (Total = 157) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 6                             ;
-; 2                                           ; 6                             ;
-; 3                                           ; 4                             ;
-; 4                                           ; 0                             ;
-; 5                                           ; 0                             ;
-; 6                                           ; 1                             ;
-; 7                                           ; 1                             ;
-; 8                                           ; 1                             ;
-; 9                                           ; 3                             ;
+; 1                                           ; 9                             ;
+; 2                                           ; 3                             ;
+; 3                                           ; 2                             ;
+; 4                                           ; 2                             ;
+; 5                                           ; 4                             ;
+; 6                                           ; 4                             ;
+; 7                                           ; 0                             ;
+; 8                                           ; 2                             ;
+; 9                                           ; 5                             ;
 ; 10                                          ; 3                             ;
-; 11                                          ; 3                             ;
-; 12                                          ; 4                             ;
-; 13                                          ; 4                             ;
-; 14                                          ; 5                             ;
-; 15                                          ; 13                            ;
-; 16                                          ; 98                            ;
+; 11                                          ; 2                             ;
+; 12                                          ; 3                             ;
+; 13                                          ; 3                             ;
+; 14                                          ; 4                             ;
+; 15                                          ; 12                            ;
+; 16                                          ; 99                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.63) ; Number of LABs  (Total = 152) ;
+; LAB-wide Signals  (Average = 0.60) ; Number of LABs  (Total = 157) ;
 +------------------------------------+-------------------------------+
-; 1 Clock                            ; 41                            ;
+; 1 Clock                            ; 43                            ;
 ; 1 Clock enable                     ; 33                            ;
-; 1 Sync. clear                      ; 7                             ;
-; 1 Sync. load                       ; 7                             ;
+; 1 Sync. clear                      ; 5                             ;
+; 1 Sync. load                       ; 6                             ;
 ; 2 Clock enables                    ; 5                             ;
 ; 2 Clocks                           ; 2                             ;
 +------------------------------------+-------------------------------+
@@ -2548,105 +2551,103 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 14.41) ; Number of LABs  (Total = 152) ;
+; Number of Signals Sourced  (Average = 13.98) ; Number of LABs  (Total = 157) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 6                             ;
-; 2                                            ; 6                             ;
-; 3                                            ; 3                             ;
-; 4                                            ; 1                             ;
-; 5                                            ; 0                             ;
-; 6                                            ; 1                             ;
+; 1                                            ; 9                             ;
+; 2                                            ; 3                             ;
+; 3                                            ; 1                             ;
+; 4                                            ; 3                             ;
+; 5                                            ; 4                             ;
+; 6                                            ; 3                             ;
 ; 7                                            ; 1                             ;
-; 8                                            ; 0                             ;
-; 9                                            ; 3                             ;
-; 10                                           ; 3                             ;
-; 11                                           ; 2                             ;
-; 12                                           ; 4                             ;
+; 8                                            ; 2                             ;
+; 9                                            ; 5                             ;
+; 10                                           ; 1                             ;
+; 11                                           ; 4                             ;
+; 12                                           ; 2                             ;
 ; 13                                           ; 4                             ;
-; 14                                           ; 5                             ;
-; 15                                           ; 11                            ;
+; 14                                           ; 3                             ;
+; 15                                           ; 12                            ;
 ; 16                                           ; 62                            ;
-; 17                                           ; 22                            ;
-; 18                                           ; 5                             ;
-; 19                                           ; 2                             ;
-; 20                                           ; 0                             ;
-; 21                                           ; 8                             ;
-; 22                                           ; 1                             ;
+; 17                                           ; 16                            ;
+; 18                                           ; 7                             ;
+; 19                                           ; 3                             ;
+; 20                                           ; 3                             ;
+; 21                                           ; 3                             ;
+; 22                                           ; 3                             ;
 ; 23                                           ; 1                             ;
-; 24                                           ; 0                             ;
-; 25                                           ; 1                             ;
+; 24                                           ; 2                             ;
 +----------------------------------------------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 6.18) ; Number of LABs  (Total = 152) ;
+; Number of Signals Sourced Out  (Average = 6.23) ; Number of LABs  (Total = 157) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 23                            ;
+; 1                                               ; 27                            ;
 ; 2                                               ; 14                            ;
-; 3                                               ; 18                            ;
-; 4                                               ; 9                             ;
-; 5                                               ; 7                             ;
+; 3                                               ; 12                            ;
+; 4                                               ; 15                            ;
+; 5                                               ; 15                            ;
 ; 6                                               ; 14                            ;
-; 7                                               ; 20                            ;
-; 8                                               ; 8                             ;
-; 9                                               ; 8                             ;
-; 10                                              ; 5                             ;
-; 11                                              ; 7                             ;
+; 7                                               ; 11                            ;
+; 8                                               ; 4                             ;
+; 9                                               ; 9                             ;
+; 10                                              ; 8                             ;
+; 11                                              ; 5                             ;
 ; 12                                              ; 3                             ;
-; 13                                              ; 4                             ;
+; 13                                              ; 3                             ;
 ; 14                                              ; 3                             ;
-; 15                                              ; 3                             ;
-; 16                                              ; 1                             ;
-; 17                                              ; 4                             ;
-; 18                                              ; 1                             ;
+; 15                                              ; 5                             ;
+; 16                                              ; 6                             ;
+; 17                                              ; 1                             ;
+; 18                                              ; 0                             ;
+; 19                                              ; 2                             ;
 +-------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 18.59) ; Number of LABs  (Total = 152) ;
+; Number of Distinct Inputs  (Average = 18.48) ; Number of LABs  (Total = 157) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
 ; 2                                            ; 2                             ;
-; 3                                            ; 6                             ;
+; 3                                            ; 8                             ;
 ; 4                                            ; 1                             ;
-; 5                                            ; 2                             ;
-; 6                                            ; 3                             ;
-; 7                                            ; 2                             ;
-; 8                                            ; 0                             ;
-; 9                                            ; 3                             ;
-; 10                                           ; 2                             ;
-; 11                                           ; 6                             ;
-; 12                                           ; 5                             ;
-; 13                                           ; 4                             ;
-; 14                                           ; 6                             ;
-; 15                                           ; 6                             ;
-; 16                                           ; 6                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 0                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 2                             ;
+; 9                                            ; 4                             ;
+; 10                                           ; 8                             ;
+; 11                                           ; 4                             ;
+; 12                                           ; 4                             ;
+; 13                                           ; 5                             ;
+; 14                                           ; 5                             ;
+; 15                                           ; 5                             ;
+; 16                                           ; 5                             ;
 ; 17                                           ; 7                             ;
-; 18                                           ; 14                            ;
-; 19                                           ; 12                            ;
-; 20                                           ; 8                             ;
+; 18                                           ; 10                            ;
+; 19                                           ; 13                            ;
+; 20                                           ; 9                             ;
 ; 21                                           ; 16                            ;
-; 22                                           ; 1                             ;
-; 23                                           ; 7                             ;
-; 24                                           ; 7                             ;
-; 25                                           ; 0                             ;
-; 26                                           ; 1                             ;
-; 27                                           ; 1                             ;
-; 28                                           ; 1                             ;
-; 29                                           ; 2                             ;
-; 30                                           ; 3                             ;
-; 31                                           ; 3                             ;
-; 32                                           ; 3                             ;
-; 33                                           ; 11                            ;
-; 34                                           ; 0                             ;
-; 35                                           ; 1                             ;
+; 22                                           ; 3                             ;
+; 23                                           ; 6                             ;
+; 24                                           ; 6                             ;
+; 25                                           ; 1                             ;
+; 26                                           ; 3                             ;
+; 27                                           ; 2                             ;
+; 28                                           ; 0                             ;
+; 29                                           ; 1                             ;
+; 30                                           ; 1                             ;
+; 31                                           ; 6                             ;
+; 32                                           ; 6                             ;
+; 33                                           ; 10                            ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -2803,15 +2804,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------+------------------------+-------------------+
 ; Source Clock(s)        ; Destination Clock(s)   ; Delay Added in ns ;
 +------------------------+------------------------+-------------------+
-; clk,I/O                ; clk,ex_mem_addr[0],I/O ; 985.5             ;
-; clk,ex_mem_addr[0],I/O ; ex_mem_addr[0]         ; 273.4             ;
-; clk                    ; ex_mem_addr[0]         ; 110.1             ;
-; clk,ex_mem_addr[0],I/O ; clk,ex_mem_addr[0],I/O ; 61.3              ;
-; clk                    ; clk,ex_mem_addr[0],I/O ; 60.2              ;
-; clk,I/O                ; ex_mem_addr[0]         ; 36.3              ;
+; clk,ex_mem_addr[0],I/O ; ex_mem_addr[0]         ; 810.5             ;
+; clk,I/O                ; clk,ex_mem_addr[0],I/O ; 408.6             ;
+; clk                    ; ex_mem_addr[0]         ; 95.7              ;
 +------------------------+------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
+This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
 +--------------------------------------------------------------------+
@@ -2819,106 +2817,106 @@ This will disable optimization of problematic paths and expose them for further 
 +------------------------+-----------------------+-------------------+
 ; Source Register        ; Destination Register  ; Delay Added in ns ;
 +------------------------+-----------------------+-------------------+
-; cpu:cpuC|dBus[4]~reg0  ; ram1:ramC|ram[13][4]  ; 5.267             ;
-; cpu:cpuC|dBus[1]~reg0  ; ram1:ramC|ram[8][1]   ; 5.233             ;
-; cpu:cpuC|dBus[1]~en    ; ram1:ramC|ram[8][1]   ; 5.022             ;
-; cpu:cpuC|dBus[4]~en    ; ram1:ramC|ram[13][4]  ; 4.974             ;
-; cpu:cpuC|dBus[3]~reg0  ; ram1:ramC|ram[6][3]   ; 4.955             ;
-; cpu:cpuC|dBus[8]~en    ; ram1:ramC|ram[8][8]   ; 4.940             ;
-; cpu:cpuC|dBus[8]~reg0  ; ram1:ramC|ram[8][8]   ; 4.929             ;
-; cpu:cpuC|m_rw          ; ram1:ramC|ram[13][12] ; 4.795             ;
-; cpu:cpuC|dBus[3]~en    ; ram1:ramC|ram[6][3]   ; 4.776             ;
-; cpu:cpuC|m_en          ; ram1:ramC|ram[13][12] ; 4.711             ;
-; ex_mem_addr[4]         ; ram1:ramC|ram[17][8]  ; 4.696             ;
-; cpu:cpuC|aBus[4]       ; ram1:ramC|ram[17][8]  ; 4.696             ;
-; mem_mux_sw             ; ram1:ramC|ram[17][8]  ; 4.696             ;
-; cpu:cpuC|dBus[2]~reg0  ; ram1:ramC|ram[6][2]   ; 4.664             ;
-; cpu:cpuC|dBus[6]~reg0  ; ram1:ramC|ram[5][6]   ; 4.663             ;
-; cpu:cpuC|dBus[10]~reg0 ; ram1:ramC|ram[8][10]  ; 4.619             ;
-; cpu:cpuC|dBus[7]~reg0  ; ram1:ramC|ram[15][7]  ; 4.607             ;
-; cpu:cpuC|dBus[15]~en   ; ram1:ramC|ram[10][15] ; 4.585             ;
-; ex_mem_addr[5]         ; ram1:ramC|ram[17][4]  ; 4.573             ;
-; cpu:cpuC|aBus[5]       ; ram1:ramC|ram[17][4]  ; 4.573             ;
-; ex_mem_addr[3]         ; ram1:ramC|ram[17][4]  ; 4.537             ;
-; cpu:cpuC|aBus[3]       ; ram1:ramC|ram[17][4]  ; 4.537             ;
-; cpu:cpuC|dBus[9]~reg0  ; ram1:ramC|ram[8][9]   ; 4.535             ;
-; ex_mem_addr[1]         ; ram1:ramC|ram[17][8]  ; 4.491             ;
-; cpu:cpuC|aBus[1]       ; ram1:ramC|ram[17][8]  ; 4.491             ;
-; cpu:cpuC|dBus[2]~en    ; ram1:ramC|ram[6][2]   ; 4.471             ;
-; ex_mem_addr[2]         ; ram1:ramC|ram[15][7]  ; 4.465             ;
-; cpu:cpuC|aBus[2]       ; ram1:ramC|ram[15][7]  ; 4.465             ;
-; cpu:cpuC|dBus[6]~en    ; ram1:ramC|ram[5][6]   ; 4.461             ;
-; cpu:cpuC|dBus[9]~en    ; ram1:ramC|ram[8][9]   ; 4.375             ;
-; cpu:cpuC|dBus[7]~en    ; ram1:ramC|ram[13][7]  ; 4.352             ;
-; cpu:cpuC|dBus[10]~en   ; ram1:ramC|ram[8][10]  ; 4.322             ;
-; cpu:cpuC|dBus[14]~reg0 ; ram1:ramC|ram[6][14]  ; 4.305             ;
-; ex_mem_addr[0]         ; ram1:ramC|ram[15][7]  ; 4.204             ;
-; cpu:cpuC|aBus[0]       ; ram1:ramC|ram[15][7]  ; 4.204             ;
-; cpu:cpuC|dBus[12]~reg0 ; ram1:ramC|ram[13][12] ; 4.193             ;
-; cpu:cpuC|dBus[11]~reg0 ; ram1:ramC|ram[4][11]  ; 4.173             ;
-; cpu:cpuC|dBus[11]~en   ; ram1:ramC|ram[4][11]  ; 4.169             ;
-; cpu:cpuC|dBus[15]~reg0 ; ram1:ramC|ram[10][15] ; 4.151             ;
-; cpu:cpuC|dBus[0]~reg0  ; ram1:ramC|ram[2][0]   ; 4.146             ;
-; cpu:cpuC|dBus[5]~reg0  ; ram1:ramC|ram[8][5]   ; 4.129             ;
-; cpu:cpuC|dBus[12]~en   ; ram1:ramC|ram[13][12] ; 3.979             ;
-; cpu:cpuC|dBus[0]~en    ; ram1:ramC|ram[2][0]   ; 3.943             ;
-; cpu:cpuC|dBus[13]~reg0 ; ram1:ramC|ram[3][13]  ; 3.917             ;
-; cpu:cpuC|dBus[13]~en   ; ram1:ramC|ram[3][13]  ; 3.859             ;
-; cpu:cpuC|dBus[14]~en   ; ram1:ramC|ram[6][14]  ; 3.789             ;
-; cpu:cpuC|dBus[5]~en    ; ram1:ramC|ram[8][5]   ; 3.778             ;
-; reset                  ; ram1:ramC|ram[17][4]  ; 3.182             ;
-; ram1:ramC|ram[14][15]  ; ram1:ramC|ram[49][15] ; 2.839             ;
-; ram1:ramC|ram[12][15]  ; ram1:ramC|ram[49][15] ; 2.839             ;
-; ram1:ramC|ram[3][4]    ; ram1:ramC|ram[17][4]  ; 2.789             ;
-; ram1:ramC|ram[1][4]    ; ram1:ramC|ram[17][4]  ; 2.789             ;
-; ram1:ramC|ram[7][4]    ; ram1:ramC|ram[17][4]  ; 2.721             ;
-; ram1:ramC|ram[5][4]    ; ram1:ramC|ram[17][4]  ; 2.721             ;
-; ram1:ramC|ram[47][4]   ; ram1:ramC|ram[17][4]  ; 2.714             ;
-; ram1:ramC|ram[45][4]   ; ram1:ramC|ram[17][4]  ; 2.714             ;
-; ram1:ramC|ram[13][4]   ; ram1:ramC|ram[17][4]  ; 2.696             ;
-; ram1:ramC|ram[12][4]   ; ram1:ramC|ram[17][4]  ; 2.696             ;
-; ram1:ramC|ram[23][8]   ; ram1:ramC|ram[17][8]  ; 2.694             ;
-; ram1:ramC|ram[22][8]   ; ram1:ramC|ram[17][8]  ; 2.694             ;
-; ram1:ramC|ram[14][8]   ; ram1:ramC|ram[17][8]  ; 2.679             ;
-; ram1:ramC|ram[12][8]   ; ram1:ramC|ram[17][8]  ; 2.679             ;
-; ram1:ramC|ram[9][4]    ; ram1:ramC|ram[17][4]  ; 2.668             ;
-; ram1:ramC|ram[8][4]    ; ram1:ramC|ram[17][4]  ; 2.668             ;
-; ram1:ramC|ram[7][15]   ; ram1:ramC|ram[49][15] ; 2.614             ;
-; ram1:ramC|ram[3][15]   ; ram1:ramC|ram[49][15] ; 2.614             ;
-; ram1:ramC|ram[55][7]   ; ram1:ramC|ram[15][7]  ; 2.599             ;
-; ram1:ramC|ram[54][7]   ; ram1:ramC|ram[15][7]  ; 2.599             ;
-; ram1:ramC|ram[60][4]   ; ram1:ramC|ram[17][4]  ; 2.542             ;
-; ram1:ramC|ram[36][3]   ; ram1:ramC|ram[15][3]  ; 2.513             ;
-; ram1:ramC|ram[32][3]   ; ram1:ramC|ram[15][3]  ; 2.513             ;
-; ram1:ramC|ram[22][7]   ; ram1:ramC|ram[15][7]  ; 2.512             ;
-; ram1:ramC|ram[20][7]   ; ram1:ramC|ram[15][7]  ; 2.512             ;
-; ram1:ramC|ram[5][15]   ; ram1:ramC|ram[49][15] ; 2.503             ;
-; ram1:ramC|ram[1][15]   ; ram1:ramC|ram[49][15] ; 2.503             ;
-; ram1:ramC|ram[28][4]   ; ram1:ramC|ram[17][4]  ; 2.500             ;
-; ram1:ramC|ram[17][4]   ; ram1:ramC|ram[17][4]  ; 2.497             ;
-; ram1:ramC|ram[19][4]   ; ram1:ramC|ram[17][4]  ; 2.497             ;
-; ram1:ramC|ram[42][4]   ; ram1:ramC|ram[17][4]  ; 2.493             ;
-; ram1:ramC|ram[40][4]   ; ram1:ramC|ram[17][4]  ; 2.493             ;
-; ram1:ramC|ram[23][9]   ; ram1:ramC|ram[17][9]  ; 2.481             ;
-; ram1:ramC|ram[22][9]   ; ram1:ramC|ram[17][9]  ; 2.481             ;
-; ram1:ramC|ram[7][7]    ; ram1:ramC|ram[15][7]  ; 2.478             ;
-; ram1:ramC|ram[6][7]    ; ram1:ramC|ram[15][7]  ; 2.478             ;
-; ram1:ramC|ram[43][3]   ; ram1:ramC|ram[15][3]  ; 2.476             ;
-; ram1:ramC|ram[42][3]   ; ram1:ramC|ram[15][3]  ; 2.476             ;
-; ram1:ramC|ram[38][3]   ; ram1:ramC|ram[15][3]  ; 2.472             ;
-; ram1:ramC|ram[34][3]   ; ram1:ramC|ram[15][3]  ; 2.472             ;
-; ram1:ramC|ram[14][9]   ; ram1:ramC|ram[17][9]  ; 2.470             ;
-; ram1:ramC|ram[12][9]   ; ram1:ramC|ram[17][9]  ; 2.470             ;
-; ram1:ramC|ram[19][3]   ; ram1:ramC|ram[15][3]  ; 2.469             ;
-; ram1:ramC|ram[17][3]   ; ram1:ramC|ram[15][3]  ; 2.469             ;
-; ram1:ramC|ram[44][15]  ; ram1:ramC|ram[49][15] ; 2.469             ;
-; ram1:ramC|ram[46][15]  ; ram1:ramC|ram[49][15] ; 2.469             ;
-; ram1:ramC|ram[36][2]   ; ram1:ramC|ram[6][2]   ; 2.455             ;
-; ram1:ramC|ram[32][2]   ; ram1:ramC|ram[6][2]   ; 2.455             ;
-; ram1:ramC|ram[13][2]   ; ram1:ramC|ram[6][2]   ; 2.454             ;
-; ram1:ramC|ram[12][2]   ; ram1:ramC|ram[6][2]   ; 2.454             ;
-; ram1:ramC|ram[15][15]  ; ram1:ramC|ram[49][15] ; 2.451             ;
-; ram1:ramC|ram[13][15]  ; ram1:ramC|ram[49][15] ; 2.451             ;
+; ex_mem_addr[2]         ; ram1:ramC|ram[15][12] ; 5.246             ;
+; mem_mux_sw             ; ram1:ramC|ram[15][12] ; 5.246             ;
+; cpu:cpuC|aBus[2]       ; ram1:ramC|ram[15][12] ; 5.246             ;
+; cpu:cpuC|dBus[3]~en    ; ram1:ramC|ram[15][3]  ; 5.218             ;
+; ex_mem_addr[0]         ; ram1:ramC|ram[15][3]  ; 5.212             ;
+; cpu:cpuC|aBus[0]       ; ram1:ramC|ram[15][3]  ; 5.212             ;
+; ex_mem_addr[4]         ; ram1:ramC|ram[15][12] ; 5.121             ;
+; cpu:cpuC|aBus[4]       ; ram1:ramC|ram[15][12] ; 5.121             ;
+; ex_mem_addr[5]         ; ram1:ramC|ram[15][2]  ; 5.111             ;
+; cpu:cpuC|aBus[5]       ; ram1:ramC|ram[15][2]  ; 5.111             ;
+; cpu:cpuC|dBus[10]~reg0 ; ram1:ramC|ram[13][10] ; 5.020             ;
+; cpu:cpuC|dBus[1]~reg0  ; ram1:ramC|ram[7][1]   ; 4.961             ;
+; ex_mem_addr[3]         ; ram1:ramC|ram[15][3]  ; 4.954             ;
+; cpu:cpuC|aBus[3]       ; ram1:ramC|ram[15][3]  ; 4.954             ;
+; cpu:cpuC|dBus[7]~reg0  ; ram1:ramC|ram[15][7]  ; 4.877             ;
+; cpu:cpuC|dBus[11]~reg0 ; ram1:ramC|ram[6][11]  ; 4.867             ;
+; ex_mem_addr[1]         ; ram1:ramC|ram[15][12] ; 4.847             ;
+; cpu:cpuC|aBus[1]       ; ram1:ramC|ram[15][12] ; 4.847             ;
+; cpu:cpuC|dBus[9]~en    ; ram1:ramC|ram[6][9]   ; 4.768             ;
+; cpu:cpuC|dBus[15]~reg0 ; ram1:ramC|ram[6][15]  ; 4.717             ;
+; cpu:cpuC|dBus[6]~reg0  ; ram1:ramC|ram[6][6]   ; 4.710             ;
+; cpu:cpuC|dBus[5]~reg0  ; ram1:ramC|ram[7][5]   ; 4.698             ;
+; cpu:cpuC|dBus[8]~en    ; ram1:ramC|ram[6][8]   ; 4.685             ;
+; cpu:cpuC|dBus[12]~reg0 ; ram1:ramC|ram[15][12] ; 4.683             ;
+; cpu:cpuC|dBus[3]~reg0  ; ram1:ramC|ram[13][3]  ; 4.591             ;
+; cpu:cpuC|dBus[0]~reg0  ; ram1:ramC|ram[6][0]   ; 4.537             ;
+; cpu:cpuC|dBus[9]~reg0  ; ram1:ramC|ram[6][9]   ; 4.435             ;
+; cpu:cpuC|dBus[14]~reg0 ; ram1:ramC|ram[7][14]  ; 4.421             ;
+; cpu:cpuC|dBus[1]~en    ; ram1:ramC|ram[7][1]   ; 4.421             ;
+; cpu:cpuC|dBus[11]~en   ; ram1:ramC|ram[6][11]  ; 4.349             ;
+; cpu:cpuC|dBus[8]~reg0  ; ram1:ramC|ram[6][8]   ; 4.306             ;
+; cpu:cpuC|dBus[6]~en    ; ram1:ramC|ram[15][6]  ; 4.246             ;
+; cpu:cpuC|m_en          ; ram1:ramC|ram[15][3]  ; 4.197             ;
+; cpu:cpuC|dBus[13]~reg0 ; ram1:ramC|ram[6][13]  ; 4.179             ;
+; cpu:cpuC|dBus[2]~reg0  ; ram1:ramC|ram[1][2]   ; 4.176             ;
+; cpu:cpuC|dBus[15]~en   ; ram1:ramC|ram[6][15]  ; 4.141             ;
+; cpu:cpuC|dBus[2]~en    ; ram1:ramC|ram[15][2]  ; 4.097             ;
+; cpu:cpuC|m_rw          ; ram1:ramC|ram[15][3]  ; 4.060             ;
+; cpu:cpuC|dBus[12]~en   ; ram1:ramC|ram[13][12] ; 3.997             ;
+; cpu:cpuC|dBus[14]~en   ; ram1:ramC|ram[15][14] ; 3.936             ;
+; ram1:ramC|ram[52][2]   ; ram1:ramC|ram[15][2]  ; 3.928             ;
+; ram1:ramC|ram[48][2]   ; ram1:ramC|ram[15][2]  ; 3.928             ;
+; cpu:cpuC|dBus[4]~reg0  ; ram1:ramC|ram[13][4]  ; 3.882             ;
+; ram1:ramC|ram[19][0]   ; ram1:ramC|ram[15][0]  ; 3.862             ;
+; ram1:ramC|ram[18][0]   ; ram1:ramC|ram[15][0]  ; 3.862             ;
+; cpu:cpuC|dBus[0]~en    ; ram1:ramC|ram[15][0]  ; 3.836             ;
+; cpu:cpuC|dBus[5]~en    ; ram1:ramC|ram[7][5]   ; 3.834             ;
+; cpu:cpuC|dBus[13]~en   ; ram1:ramC|ram[6][13]  ; 3.825             ;
+; cpu:cpuC|dBus[4]~en    ; ram1:ramC|ram[13][4]  ; 3.795             ;
+; cpu:cpuC|dBus[7]~en    ; ram1:ramC|ram[15][7]  ; 3.780             ;
+; ram1:ramC|ram[49][2]   ; ram1:ramC|ram[15][2]  ; 3.770             ;
+; ram1:ramC|ram[53][2]   ; ram1:ramC|ram[15][2]  ; 3.770             ;
+; ram1:ramC|ram[11][4]   ; ram1:ramC|ram[15][4]  ; 3.743             ;
+; ram1:ramC|ram[10][4]   ; ram1:ramC|ram[15][4]  ; 3.743             ;
+; ram1:ramC|ram[49][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[19][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[17][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[51][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[52][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[22][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[20][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[54][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[48][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[18][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[16][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[50][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[53][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[23][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[21][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[55][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[44][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[41][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[40][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[45][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[11][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[14][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[10][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[15][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[12][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[9][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[8][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[13][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[46][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[43][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[42][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[47][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[33][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[36][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[32][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[37][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[3][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[6][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[2][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[7][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[1][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[4][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[0][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[5][3]    ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[35][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
+; ram1:ramC|ram[38][3]   ; ram1:ramC|ram[15][3]  ; 3.716             ;
 +------------------------+-----------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
@@ -3004,24 +3002,24 @@ Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
-Info (170089): 2e+03 ns of routing delay (approximately 5.0% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
+Info (170089): 1e+03 ns of routing delay (approximately 4.5% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
 Info (170195): Router estimated average interconnect usage is 7% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 28% of the available device resources in the region that extends from location X10_Y10 to location X20_Y19
+    Info (170196): Router estimated peak interconnect usage is 28% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
 Info (188005): Design requires adding a large amount of routing delay for some signals to meet hold time requirements, and there is an excessive demand for the available routing resources. The Fitter is reducing the routing delays of some signals to help the routing algorithm converge, but doing so may cause hold time failures. For more information, refer to the "Estimated Delay Added for Hold Timing" section in the Fitter report.
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:17
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:30
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 3.31 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 8.81 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (169177): 9 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone III Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin ex_mem_addr[2] uses I/O standard 3.3-V LVTTL at H6
     Info (169178): Pin mem_mux_sw uses I/O standard 3.3-V LVTTL at D2
@@ -3032,17 +3030,17 @@ Warning (169177): 9 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V
     Info (169178): Pin ex_mem_addr[5] uses I/O standard 3.3-V LVTTL at J7
     Info (169178): Pin reset uses I/O standard 3.3-V LVTTL at H2
     Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at B12
-Info (144001): Generated suppressed messages file C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/output_files/CPU_ON_DE0.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/user/Documents/GitHub/hdl/CPU_ON_DE0 _HEX/output_files/CPU_ON_DE0.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4949 megabytes
-    Info: Processing ended: Fri Dec 08 17:22:53 2023
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 5001 megabytes
+    Info: Processing ended: Fri Dec 08 18:40:53 2023
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:42
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/A610/Desktop/hdl/CPU_ON_DE0 _HEX/output_files/CPU_ON_DE0.fit.smsg.
+The suppressed messages can be found in C:/Users/user/Documents/GitHub/hdl/CPU_ON_DE0 _HEX/output_files/CPU_ON_DE0.fit.smsg.
 
 

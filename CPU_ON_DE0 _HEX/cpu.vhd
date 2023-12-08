@@ -143,8 +143,8 @@ begin
 							  if tick = t1 then acc <= alu; end if;
 							  if tick = t2 then wrapup; end if;
 						when outp =>
-							  if tick = t1 then ledBus <= aBus; end if;
-							  if tick = t2 then wrapup; end if;
+							  if tick = t2 then ledBus <= acc; end if;
+							  wrapup;
 						 when others => state <= halt;
                 end case;
             end if;
@@ -194,9 +194,7 @@ begin
 						 when add =>
 							  if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
 							  if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
-						when outp =>
-							  if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
-							  if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
+
 
 						 when others => -- do nothing
 					end case;
