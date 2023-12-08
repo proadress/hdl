@@ -6,7 +6,20 @@ module top (
   logic [7:0] alu_out, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus;
   logic [10:0] PC_q, mar_q, PC_next;
   logic [13:0] prog_data, ir_q;
-  logic load_pc, load_mar, load_ir, load_w, sel_pc, d, sel_alu, ram_en, sel_bit, sel_bus,btfsc_btfss_skip_bit,btfsc_skip_bit,btfss_skip_bit,alu_zero;
+  logic
+      load_pc,
+      load_mar,
+      load_ir,
+      load_w,
+      sel_pc,
+      d,
+      sel_alu,
+      ram_en,
+      sel_bus,
+      btfsc_btfss_skip_bit,
+      btfsc_skip_bit,
+      btfss_skip_bit,
+      alu_zero;
   logic [3:0] op;
   logic
       GOTO,
@@ -35,6 +48,7 @@ module top (
       DECFSZ,
       INCFSZ;
   logic [1:0] sel_RAM_mux;
+  logic [2:0] sel_bit;
 
   typedef enum {
     t0,
@@ -129,80 +143,55 @@ module top (
         end else if (INCF) begin
           op = 6;
           sel_alu = 1;
-          if (d) begin
-            ram_en  = 1;
-            sel_bus = 0;
-          end else load_w = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
         end else if (IORWF) begin
           op = 3;
           sel_alu = 1;
-          if (d) begin
-            ram_en  = 1;
-            sel_bus = 0;
-          end else load_w = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
         end else if (MOVF) begin
           op = 5;
           sel_alu = 1;
-          if (d) begin
-            ram_en  = 1;
-            sel_bus = 0;
-          end else load_w = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
         end else if (MOVWF) begin
           ram_en  = 1;
           sel_bus = 1;
         end else if (SUBWF) begin
           op = 1;
           sel_alu = 1;
-          if (d) begin
-            ram_en  = 1;
-            sel_bus = 0;
-          end else load_w = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
         end else if (XORWF) begin
           op = 4;
           sel_alu = 1;
-          if (d) begin
-            ram_en  = 1;
-            sel_bus = 0;
-          end else load_w = 1;
-        end else if(BCF) begin
+          if (d) ram_en = 1;
+          else load_w = 1;
+        end else if (BCF) begin
           sel_alu = 1;
           sel_RAM_mux = 1;
           op[3:0] = 5;
-          sel_bus = 0;
           ram_en = 1;
         end else if (BSF) begin
           sel_alu = 1;
           sel_RAM_mux = 2;
           op[3:0] = 5;
-          sel_bus = 0;
           ram_en = 1;
         end else if (BTFSC | BTFSS) begin
-          if(btfsc_btfss_skip_bit)begin
-            load_pc = 1;
-            sel_pc = 0;
-          end
+          if (btfsc_btfss_skip_bit) load_pc = 1;
         end else if (DECFSZ) begin
           sel_alu = 1;
           op[3:0] = 7;
-          if (alu_zero) begin
-            load_pc = 1;
-            sel_pc = 0;
-          end
-          if (d) begin
-            ram_en  = 1;
-            sel_bus = 0;
-          end else load_w = 1;
+          if (alu_zero) load_pc = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
         end else if (INCFSZ) begin
           sel_alu = 1;
           op[3:0] = 6;
-          if (alu_zero) begin
-            load_pc = 1;
-            sel_pc = 0;
-          end
-          if (d) begin
-            ram_en  = 1;
-            sel_bus = 0;
-          end else load_w = 1;
+          if (alu_zero) load_pc = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
         end
       end
       t5: ns = t6;
@@ -235,8 +224,8 @@ module top (
 
   assign BCF = ir_q[13:10] == 4'b0100;
   assign BSF = ir_q[13:10] == 4'b0101;
-  assign BCFSC = ir_q[13:10] == 4'b0110;
-  assign BSFSS = ir_q[13:10] == 4'b0111;
+  assign BTFSC = ir_q[13:10] == 4'b0110;
+  assign BTFSS = ir_q[13:10] == 4'b0111;
   assign DECFSZ = ir_q[13:8] == 6'b001011;
   assign INCFSZ = ir_q[13:8] == 6'b001111;
 
@@ -244,17 +233,17 @@ module top (
 
 
   assign sel_bit = ir_q[9:7];
-  assign btfsc_skip_bit = ram_out[ir_q[9:7]]==0;
-  assign btfss_skip_bit = ram_out[ir_q[9:7]]==1;
-  assign btfsc_btfss_skip_bit = (BTFSC&btfsc_skip_bit)|(BTFSS&btfss_skip_bit);
-  assign alu_zero = alu_out==0;
+  assign btfsc_skip_bit = ram_out[ir_q[9:7]] == 0;
+  assign btfss_skip_bit = ram_out[ir_q[9:7]] == 1;
+  assign btfsc_btfss_skip_bit = (BTFSC & btfsc_skip_bit) | (BTFSS & btfss_skip_bit);
+  assign alu_zero = (alu_out == 0) ? 1'b1 : 1'b0;
 
   //clk
   always_ff @(posedge clk) begin
     if (rst) ps <= #1 t0;
     else ps <= #1 ns;
   end
-  //sel_PC
+  //alu_out
   always_comb begin
     case (op)
       0: alu_out = mux1_out + w_q;
@@ -272,8 +261,8 @@ module top (
   end
   //sel_bus
   always_comb begin
-    if (sel_bus) databus <= #1 w_q;
-    else databus <= #1 alu_out;
+    if (sel_bus) databus = w_q;
+    else databus = alu_out;
   end
   //RAM
   single_port_ram_128x8 ram (
@@ -285,23 +274,28 @@ module top (
   );
   //sel_alu
   always_comb begin
-    if (sel_alu) mux1_out <= #1 RAM_mux;
-    else mux1_out <= #1 ir_q[7:0];
+    if (sel_alu) mux1_out = RAM_mux;
+    else mux1_out = ir_q[7:0];
+  end
+  //sel_pc
+  always_comb begin
+    if (sel_pc) PC_next = ir_q[10:0];
+    else PC_next = PC_q + 1;
   end
   //PC
   always_ff @(posedge clk) begin
-    if (rst) PC_q = 0;
-    else if (load_pc) PC_q = PC_q + 1;
+    if (rst) PC_q <= #1 0;
+    else if (load_pc) PC_q <= #1 PC_next;
   end
   //MAR
   always_ff @(posedge clk) begin
-    if (rst) mar_q = 0;
-    else if (load_mar) mar_q = PC_q;
+    if (rst) mar_q <= #1 0;
+    else if (load_mar) mar_q <= #1 PC_q;
   end
   //IR
   always_ff @(posedge clk) begin
-    if (rst) ir_q = 0;
-    else if (load_ir) ir_q = prog_data;
+    if (rst) ir_q <= #1 0;
+    else if (load_ir) ir_q <= #1 prog_data;
   end
   //W
   always_ff @(posedge clk) begin
@@ -319,27 +313,27 @@ module top (
   //BCF
   always_comb begin
     case (sel_bit)
-    3'b000:bcf_mux = ram_out & 8'b1111_1110;
-    3'b001:bcf_mux = ram_out & 8'b1111_1101;
-    3'b010:bcf_mux = ram_out & 8'b1111_1011;
-    3'b011:bcf_mux = ram_out & 8'b1111_0111;
-    3'b100:bcf_mux = ram_out & 8'b1110_1111;
-    3'b101:bcf_mux = ram_out & 8'b1101_1111;
-    3'b110:bcf_mux = ram_out & 8'b1011_1111;
-    3'b111:bcf_mux = ram_out & 8'b0111_1111;
+      3'b000: bcf_mux = ram_out & 8'b1111_1110;
+      3'b001: bcf_mux = ram_out & 8'b1111_1101;
+      3'b010: bcf_mux = ram_out & 8'b1111_1011;
+      3'b011: bcf_mux = ram_out & 8'b1111_0111;
+      3'b100: bcf_mux = ram_out & 8'b1110_1111;
+      3'b101: bcf_mux = ram_out & 8'b1101_1111;
+      3'b110: bcf_mux = ram_out & 8'b1011_1111;
+      3'b111: bcf_mux = ram_out & 8'b0111_1111;
     endcase
   end
   //BSF
   always_comb begin
     case (sel_bit)
-    3'b001:bsf_mux = ram_out | 8'b0000_0010;
-    3'b000:bsf_mux = ram_out | 8'b0000_0001;
-    3'b010:bsf_mux = ram_out | 8'b0000_0100;
-    3'b011:bsf_mux = ram_out | 8'b0000_1000;
-    3'b100:bsf_mux = ram_out | 8'b0001_0000;
-    3'b101:bsf_mux = ram_out | 8'b0010_0000;
-    3'b110:bsf_mux = ram_out | 8'b0100_0000;
-    3'b111:bsf_mux = ram_out | 8'b1000_0000;
+      3'b000: bsf_mux = ram_out | 8'b0000_0001;
+      3'b001: bsf_mux = ram_out | 8'b0000_0010;
+      3'b010: bsf_mux = ram_out | 8'b0000_0100;
+      3'b011: bsf_mux = ram_out | 8'b0000_1000;
+      3'b100: bsf_mux = ram_out | 8'b0001_0000;
+      3'b101: bsf_mux = ram_out | 8'b0010_0000;
+      3'b110: bsf_mux = ram_out | 8'b0100_0000;
+      3'b111: bsf_mux = ram_out | 8'b1000_0000;
     endcase
   end
 endmodule

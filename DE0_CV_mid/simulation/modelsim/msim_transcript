@@ -10,186 +10,86 @@
 # Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv}
+# vlog -sv -work work +incdir+D:/code/hdl/DE0_CV_mid/design {D:/code/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:13 on Dec 04,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design" C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv 
+# Start time: 13:24:42 on Dec 08,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/code/hdl/DE0_CV_mid/design" D:/code/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv 
 # -- Compiling module single_port_ram_128x8
 # 
 # Top level modules:
 # 	single_port_ram_128x8
-# End time: 12:14:13 on Dec 04,2023, Elapsed time: 0:00:00
+# End time: 13:24:42 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/top.sv}
+# vlog -sv -work work +incdir+D:/code/hdl/DE0_CV_mid/design {D:/code/hdl/DE0_CV_mid/design/top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:13 on Dec 04,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design" C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/top.sv 
+# Start time: 13:24:42 on Dec 08,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/code/hdl/DE0_CV_mid/design" D:/code/hdl/DE0_CV_mid/design/top.sv 
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 12:14:13 on Dec 04,2023, Elapsed time: 0:00:00
+# End time: 13:24:43 on Dec 08,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/Program_Rom.sv}
+# vlog -sv -work work +incdir+D:/code/hdl/DE0_CV_mid/design {D:/code/hdl/DE0_CV_mid/design/Program_Rom.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:13 on Dec 04,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design" C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/Program_Rom.sv 
+# Start time: 13:24:43 on Dec 08,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/code/hdl/DE0_CV_mid/design" D:/code/hdl/DE0_CV_mid/design/Program_Rom.sv 
 # -- Compiling module Program_Rom
 # 
 # Top level modules:
 # 	Program_Rom
-# End time: 12:14:13 on Dec 04,2023, Elapsed time: 0:00:00
+# End time: 13:24:43 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/DE0_CV.sv}
+# vlog -sv -work work +incdir+D:/code/hdl/DE0_CV_mid/design {D:/code/hdl/DE0_CV_mid/design/DE0_CV.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:13 on Dec 04,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design" C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/DE0_CV.sv 
+# Start time: 13:24:43 on Dec 08,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/code/hdl/DE0_CV_mid/design" D:/code/hdl/DE0_CV_mid/design/DE0_CV.sv 
 # -- Compiling module DE0_CV
 # 
 # Top level modules:
 # 	DE0_CV
-# End time: 12:14:13 on Dec 04,2023, Elapsed time: 0:00:00
+# End time: 13:24:43 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 do compile.do
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:16 on Dec 04,2023
+# Start time: 13:24:58 on Dec 08,2023
 # vlog -reportprogress 300 -sv ../tb/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 12:14:16 on Dec 04,2023, Elapsed time: 0:00:00
+# End time: 13:24:58 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:16 on Dec 04,2023
+# Start time: 13:24:58 on Dec 08,2023
 # vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
 # -- Compiling module DE0_CV
 # 
 # Top level modules:
 # 	DE0_CV
-# End time: 12:14:17 on Dec 04,2023, Elapsed time: 0:00:01
+# End time: 13:24:58 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:17 on Dec 04,2023
+# Start time: 13:24:59 on Dec 08,2023
 # vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
 # -- Compiling module Program_Rom
 # 
 # Top level modules:
 # 	Program_Rom
-# End time: 12:14:17 on Dec 04,2023, Elapsed time: 0:00:00
+# End time: 13:24:59 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:17 on Dec 04,2023
+# Start time: 13:24:59 on Dec 08,2023
 # vlog -reportprogress 300 -sv ../../design/top.sv 
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 12:14:17 on Dec 04,2023, Elapsed time: 0:00:00
+# End time: 13:24:59 on Dec 08,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.testbench 
-# Start time: 12:14:17 on Dec 04,2023
-# Loading sv_std.std
-# Loading work.testbench
-# Loading work.top
-# Loading work.Program_Rom
-# Loading work.single_port_ram_128x8
-# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ../tb/testbench.sv(19)
-#    Time: 1020 ps  Iteration: 0  Instance: /testbench
-# Break in Module testbench at ../tb/testbench.sv line 19
-do compile.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:38 on Dec 04,2023
-# vlog -reportprogress 300 -sv ../tb/testbench.sv 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 12:14:38 on Dec 04,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:38 on Dec 04,2023
-# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
-# -- Compiling module DE0_CV
-# 
-# Top level modules:
-# 	DE0_CV
-# End time: 12:14:38 on Dec 04,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:38 on Dec 04,2023
-# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
-# -- Compiling module Program_Rom
-# 
-# Top level modules:
-# 	Program_Rom
-# End time: 12:14:38 on Dec 04,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:14:39 on Dec 04,2023
-# vlog -reportprogress 300 -sv ../../design/top.sv 
-# -- Compiling module top
-# 
-# Top level modules:
-# 	top
-# End time: 12:14:39 on Dec 04,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 12:14:39 on Dec 04,2023, Elapsed time: 0:00:22
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.testbench 
-# Start time: 12:14:39 on Dec 04,2023
-# Loading sv_std.std
-# Loading work.testbench
-# Loading work.top
-# Loading work.Program_Rom
-# Loading work.single_port_ram_128x8
-# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ../tb/testbench.sv(19)
-#    Time: 1020 ps  Iteration: 0  Instance: /testbench
-# Break in Module testbench at ../tb/testbench.sv line 19
-do compile.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:16:18 on Dec 04,2023
-# vlog -reportprogress 300 -sv ../tb/testbench.sv 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 12:16:18 on Dec 04,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:16:18 on Dec 04,2023
-# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
-# -- Compiling module DE0_CV
-# 
-# Top level modules:
-# 	DE0_CV
-# End time: 12:16:18 on Dec 04,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:16:18 on Dec 04,2023
-# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
-# -- Compiling module Program_Rom
-# 
-# Top level modules:
-# 	Program_Rom
-# End time: 12:16:18 on Dec 04,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:16:18 on Dec 04,2023
-# vlog -reportprogress 300 -sv ../../design/top.sv 
-# -- Compiling module top
-# 
-# Top level modules:
-# 	top
-# End time: 12:16:18 on Dec 04,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 12:16:18 on Dec 04,2023, Elapsed time: 0:01:39
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.testbench 
-# Start time: 12:16:18 on Dec 04,2023
+# Start time: 13:25:00 on Dec 08,2023
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.top
@@ -199,14 +99,1316 @@ do compile.do
 # ** Note: $stop    : ../tb/testbench.sv(19)
 #    Time: 2020 ps  Iteration: 0  Instance: /testbench
 # Break in Module testbench at ../tb/testbench.sv line 19
-add wave -position end  sim:/testbench/top1/DECFSZ
 add wave -position end  sim:/testbench/top1/GOTO
-add wave -position end  sim:/testbench/top1/MOVF
-add wave -position end  sim:/testbench/top1/INCF
-add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
 add wave -position end  sim:/testbench/top1/DECF
-add wave -position end  sim:/testbench/top1/DECFSZ
-add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
 add wave -position end  sim:/testbench/top1/BCF
-# End time: 12:32:56 on Dec 04,2023, Elapsed time: 0:16:38
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/DECFSZ
+add wave -position end  sim:/testbench/top1/INCFSZ
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:33:20 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:33:20 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:33:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:33:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:33:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 13:33:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:33:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:33:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:33:24 on Dec 08,2023, Elapsed time: 0:08:24
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:33:25 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/btfsc_skip_bit
+add wave -position end  sim:/testbench/top1/btfss_skip_bit
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/alu_out
+add wave -position end  sim:/testbench/top1/alu_zero
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:37:45 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:37:45 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:37:45 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:37:45 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:37:46 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 13:37:46 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:37:46 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:37:46 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:37:49 on Dec 08,2023, Elapsed time: 0:04:24
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:37:49 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:44 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:38:44 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:44 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:38:44 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:44 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 13:38:44 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:38:45 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:38:45 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:38:52 on Dec 08,2023, Elapsed time: 0:01:03
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:38:52 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/alu_out
+add wave -position end  sim:/testbench/top1/alu_zero
+do compi;e.do
+# Cannot open macro file: compi
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:14 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:41:14 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:14 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:41:14 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:14 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 13:41:14 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:41:14 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:41:14 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:41:17 on Dec 08,2023, Elapsed time: 0:02:25
+# Errors: 1, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:41:18 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/btfsc_btfss_skip_bit
+add wave -position end  sim:/testbench/top1/btfsc_skip_bit
+add wave -position end  sim:/testbench/top1/btfss_skip_bit
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
+add wave -position end  sim:/testbench/top1/DECF
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:51:16 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:51:16 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:51:17 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:51:17 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:51:17 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 13:51:17 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:51:17 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:51:17 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:51:20 on Dec 08,2023, Elapsed time: 0:10:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:51:20 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
+add wave -position end  sim:/testbench/top1/DECF
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+do compi;e.do
+# Cannot open macro file: compi
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:53:48 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:53:48 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:53:49 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:53:49 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:53:49 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 13:53:49 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:53:49 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:53:49 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:53:53 on Dec 08,2023, Elapsed time: 0:02:33
+# Errors: 1, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:53:53 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/clk
+add wave -position end  sim:/testbench/top1/rst
+add wave -position end  sim:/testbench/top1/w_q
+add wave -position end  sim:/testbench/top1/alu_out
+add wave -position end  sim:/testbench/top1/mux1_out
+add wave -position end  sim:/testbench/top1/ram_out
+add wave -position end  sim:/testbench/top1/RAM_mux
+add wave -position end  sim:/testbench/top1/bcf_mux
+add wave -position end  sim:/testbench/top1/bsf_mux
+add wave -position end  sim:/testbench/top1/databus
+add wave -position end  sim:/testbench/top1/PC_q
+add wave -position end  sim:/testbench/top1/mar_q
+add wave -position end  sim:/testbench/top1/PC_next
+add wave -position end  sim:/testbench/top1/prog_data
+add wave -position end  sim:/testbench/top1/ir_q
+add wave -position end  sim:/testbench/top1/load_pc
+add wave -position end  sim:/testbench/top1/load_mar
+add wave -position end  sim:/testbench/top1/load_ir
+add wave -position end  sim:/testbench/top1/load_w
+add wave -position end  sim:/testbench/top1/sel_pc
+add wave -position end  sim:/testbench/top1/d
+add wave -position end  sim:/testbench/top1/sel_alu
+add wave -position end  sim:/testbench/top1/ram_en
+add wave -position end  sim:/testbench/top1/sel_bit
+add wave -position end  sim:/testbench/top1/sel_bus
+add wave -position end  sim:/testbench/top1/btfsc_btfss_skip_bit
+add wave -position end  sim:/testbench/top1/btfsc_skip_bit
+add wave -position end  sim:/testbench/top1/btfss_skip_bit
+add wave -position end  sim:/testbench/top1/alu_zero
+add wave -position end  sim:/testbench/top1/op
+add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
+add wave -position end  sim:/testbench/top1/DECF
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/DECFSZ
+add wave -position end  sim:/testbench/top1/INCFSZ
+add wave -position end  sim:/testbench/top1/sel_RAM_mux
+add wave -position end  sim:/testbench/top1/ps
+add wave -position end  sim:/testbench/top1/ns
+add wave -position end  sim:/testbench/top1/#implicit-var#ir_q
+# Drop insertion failed: sim:/testbench/top1/#implicit-var#ir_q
+# (vsim-4027) Logging is not supported for Packed Array item: /testbench/top1/#implicit-var#ir_q 
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:57:25 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:57:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:57:25 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:57:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:57:25 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 13:57:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:57:25 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:57:25 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:57:28 on Dec 08,2023, Elapsed time: 0:03:35
+# Errors: 2, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:57:28 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
+add wave -position end  sim:/testbench/top1/DECF
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/DECFSZ
+# WARNING: No extended dataflow license exists
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:58:26 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 13:58:26 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:58:26 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 13:58:26 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:58:27 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 13:58:27 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:58:27 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:58:27 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:58:29 on Dec 08,2023, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 13:58:29 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
+add wave -position end  sim:/testbench/top1/DECF
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/DECFSZ
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:08:54 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:08:54 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:08:54 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:08:54 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:08:54 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:08:54 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:08:55 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error: ../../design/top.sv(307): (vlog-2730) Undefined variable: 'PC'.
+# End time: 14:08:55 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:02 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:09:02 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:02 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:09:02 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:02 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:09:02 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:02 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# ** Error: ../../design/top.sv(307): (vlog-2730) Undefined variable: 'PC'.
+# End time: 14:09:02 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./compile.do line 9
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv ../../design/top.sv"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:31 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:09:31 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:32 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:09:32 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:32 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:09:32 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:32 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:09:32 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:09:34 on Dec 08,2023, Elapsed time: 0:11:05
+# Errors: 8, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:09:34 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:10:15 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:10:15 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:10:15 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:10:15 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:10:15 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:10:15 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:10:16 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:10:16 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:10:22 on Dec 08,2023, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:10:22 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
+add wave -position end  sim:/testbench/top1/DECF
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/DECFSZ
+add wave -position end  sim:/testbench/top1/INCFSZ
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:01 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:11:01 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:01 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:11:01 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:01 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:11:01 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:11:01 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:11:01 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:11:04 on Dec 08,2023, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:11:04 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
+add wave -position end  sim:/testbench/top1/DECF
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/DECFSZ
+add wave -position end  sim:/testbench/top1/INCFSZ
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:50 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:19:50 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:51 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:19:51 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:51 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:19:51 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:51 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:19:51 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:19:54 on Dec 08,2023, Elapsed time: 0:08:50
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:19:54 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:21:38 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:21:38 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:21:38 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:21:38 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:21:38 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:21:38 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:21:38 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:21:38 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:21:43 on Dec 08,2023, Elapsed time: 0:01:49
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:21:43 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:24:59 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:24:59 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:24:59 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:24:59 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:00 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:25:00 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:00 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:25:00 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:25:05 on Dec 08,2023, Elapsed time: 0:03:22
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:25:05 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:25:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:25:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:25:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:25:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:25:24 on Dec 08,2023, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:25:24 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:12 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:27:12 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:12 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:27:12 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:12 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:27:12 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:27:13 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:27:13 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:27:18 on Dec 08,2023, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:27:18 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/sel_pc
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:28:13 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:28:13 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:28:14 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:28:14 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:28:14 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:28:14 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:28:14 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:28:14 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:28:17 on Dec 08,2023, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:28:17 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+do compil.eod
+# Cannot open macro file: compil.eod
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:07 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:32:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:07 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:32:07 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:08 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:32:08 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:08 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:32:08 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:32:15 on Dec 08,2023, Elapsed time: 0:03:58
+# Errors: 1, Warnings: 0
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:32:15 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+add wave -position end  sim:/testbench/top1/GOTO
+add wave -position end  sim:/testbench/top1/ADDWF
+add wave -position end  sim:/testbench/top1/ANDWF
+add wave -position end  sim:/testbench/top1/CLRF
+add wave -position end  sim:/testbench/top1/CLRW
+add wave -position end  sim:/testbench/top1/COMF
+add wave -position end  sim:/testbench/top1/DECF
+add wave -position end  sim:/testbench/top1/MOVLW
+add wave -position end  sim:/testbench/top1/ADDLW
+add wave -position end  sim:/testbench/top1/SUBLW
+add wave -position end  sim:/testbench/top1/ANDLW
+add wave -position end  sim:/testbench/top1/IORLW
+add wave -position end  sim:/testbench/top1/XORLW
+add wave -position end  sim:/testbench/top1/INCF
+add wave -position end  sim:/testbench/top1/IORWF
+add wave -position end  sim:/testbench/top1/MOVF
+add wave -position end  sim:/testbench/top1/MOVWF
+add wave -position end  sim:/testbench/top1/SUBWF
+add wave -position end  sim:/testbench/top1/XORWF
+add wave -position end  sim:/testbench/top1/BCF
+add wave -position end  sim:/testbench/top1/BSF
+add wave -position end  sim:/testbench/top1/BTFSC
+add wave -position end  sim:/testbench/top1/BTFSS
+add wave -position end  sim:/testbench/top1/DECFSZ
+add wave -position end  sim:/testbench/top1/INCFSZ
+add wave -position end  sim:/testbench/top1/ir_q
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+add wave -position end  sim:/testbench/top1/sel_bit
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+do compile.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:20 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../tb/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:49:20 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/DE0_CV.sv 
+# -- Compiling module DE0_CV
+# 
+# Top level modules:
+# 	DE0_CV
+# End time: 14:49:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/Program_Rom.sv 
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# End time: 14:49:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:49:21 on Dec 08,2023
+# vlog -reportprogress 300 -sv ../../design/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:49:21 on Dec 08,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:49:24 on Dec 08,2023, Elapsed time: 0:17:09
+# Errors: 2, Warnings: 1
+# vsim -voptargs="+acc" work.testbench 
+# Start time: 14:49:24 on Dec 08,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../tb/testbench.sv(19)
+#    Time: 2020 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../tb/testbench.sv line 19
+# End time: 14:50:24 on Dec 08,2023, Elapsed time: 0:01:00
 # Errors: 0, Warnings: 0
