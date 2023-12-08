@@ -15,6 +15,7 @@ ARCHITECTURE pwm OF pwm IS
 
     TYPE CC IS ARRAY(0 TO 9) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
 
+
     SIGNAL sww : CC;
     SIGNAL r : STD_LOGIC;
 
@@ -71,6 +72,7 @@ BEGIN
                 up <= up(8 DOWNTO 0) & '1';
             END IF;
         END IF;
+        
     END PROCESS;
 
     led(0) <= '1' WHEN cnt1 < sww(0) ELSE
