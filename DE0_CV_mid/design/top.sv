@@ -1,17 +1,17 @@
 module top (
     input clk,
     rst,
-    output logic [7:0] w_q
+    output logic [7:0] w_q,port_b_out
 );
   logic [7:0] alu_out, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus;
-  logic [10:0] PC_q, mar_q, PC_next;
+  logic [10:0] PC_q, mar_q, PC_next,stack_q;
   logic [13:0] prog_data, ir_q;
   logic
       load_pc,
       load_mar,
       load_ir,
       load_w,
-      sel_pc,
+      
       d,
       sel_alu,
       ram_en,
@@ -19,7 +19,11 @@ module top (
       btfsc_btfss_skip_bit,
       btfsc_skip_bit,
       btfss_skip_bit,
-      alu_zero;
+      alu_zero,
+      load_port_b,
+      addr_port_b,
+      push,
+      pop;
   logic [3:0] op;
   logic
       GOTO,
@@ -46,8 +50,16 @@ module top (
       BTFSC,
       BTFSS,
       DECFSZ,
-      INCFSZ;
-  logic [1:0] sel_RAM_mux;
+      INCFSZ,
+      ASRF,
+      LSLF,
+      LSRF,
+      RLF,
+      RRF,
+      SWAPE,
+      CALL,
+      RETURN;
+  logic [1:0] sel_RAM_mux,sel_pc;
   logic [2:0] sel_bit;
 
   typedef enum {
@@ -66,6 +78,15 @@ module top (
       .Rom_addr_in (mar_q),
       .Rom_data_out(prog_data)
   );
+    //stack
+  Stack s (
+      .stack_in (PC_q),
+      .stack_out(stack_q)
+      .pop(pop)
+      .push(push)
+      .clk(clk)
+      .reset(rst)
+  );
 
   always_comb begin
     load_ir = 0;
@@ -79,6 +100,7 @@ module top (
     ram_en = 0;
     sel_bus = 0;
     sel_RAM_mux = 0;
+    load_port_b = 0;
     case (ps)
       t0: ns = t1;
       t1: begin
@@ -156,7 +178,8 @@ module top (
           if (d) ram_en = 1;
           else load_w = 1;
         end else if (MOVWF) begin
-          ram_en  = 1;
+          if(addr_port_b)load_port_b = 1;
+          else ram_en  = 1;
           sel_bus = 1;
         end else if (SUBWF) begin
           op = 1;
@@ -192,6 +215,37 @@ module top (
           if (alu_zero) load_pc = 1;
           if (d) ram_en = 1;
           else load_w = 1;
+        end else if (ASRF) begin
+          sel_alu = 1;
+          op = 4'hA;
+          if(d)ram_en = 1;
+          else load_w = 1;
+        end else if (LSLF) begin
+          sel_alu = 1;
+          op = 4'hB;
+          if(d)ram_en = 1;
+          else load_w = 1;
+        end else if (LSRF) begin
+          sel_alu = 1;
+          op = 4'hC;
+          if(d)ram_en = 1;
+          else load_w = 1;
+        end else if (RLF) begin
+          sel_alu = 1;
+          op = 4'hD;
+          if(d)ram_en = 1;
+          else load_w = 1;
+        end else if (RRF) begin
+          sel_alu = 1;
+          op = 4'hE;
+          if(d)ram_en = 1;
+          else load_w = 1;
+        end else if (SWAPE) begin
+          sel_alu = 1;
+          op = 4'hF;
+          if(d)ram_en = 1;
+          else load_w = 1;
+
         end
       end
       t5: ns = t6;
@@ -229,6 +283,17 @@ module top (
   assign DECFSZ = ir_q[13:8] == 6'b001011;
   assign INCFSZ = ir_q[13:8] == 6'b001111;
 
+  assign ASRF = ir_q[13:8] == 6'b110111;
+  assign LSLF = ir_q[13:8] == 6'b110101;
+  assign LSRF = ir_q[13:8] == 6'b110110;
+  assign RLF = ir_q[13:8] == 6'b001101;
+  assign RRF = ir_q[13:8] == 6'b001100;
+  assign SWAPF = ir_q[13:8] == 6'b001110;
+
+  assign CALL = ir_q[13:11] == 3'b100;
+  assign RETURN = ir_q == 14'b00000000001000;
+
+
 
 
 
@@ -238,25 +303,33 @@ module top (
   assign btfsc_btfss_skip_bit = (BTFSC & btfsc_skip_bit) | (BTFSS & btfss_skip_bit);
   assign alu_zero = (alu_out == 0) ? 1'b1 : 1'b0;
 
+  assign addr_port_b = ir_q[6:0] == 7'h0d;
+
   //clk
   always_ff @(posedge clk) begin
-    if (rst) ps <= #1 t0;
-    else ps <= #1 ns;
+    if (rst) ps <=  t0;
+    else ps <=  ns;
   end
   //alu_out
   always_comb begin
     case (op)
-      0: alu_out = mux1_out + w_q;
-      1: alu_out = mux1_out - w_q;
-      2: alu_out = mux1_out & w_q;
-      3: alu_out = mux1_out | w_q;
-      4: alu_out = mux1_out ^ w_q;
-      5: alu_out = mux1_out;
-      6: alu_out = mux1_out + 1;
-      7: alu_out = mux1_out - 1;
-      8: alu_out = 0;
-      9: alu_out = ~mux1_out;
-      default alu_out = mux1_out + w_q;
+      4'h0: alu_out = mux1_out[7:0] + w_q;
+      4'h1: alu_out = mux1_out[7:0] - w_q;
+      4'h2: alu_out = mux1_out[7:0] & w_q;
+      4'h3: alu_out = mux1_out[7:0] | w_q;
+      4'h4: alu_out = mux1_out[7:0] ^ w_q;
+      4'h5: alu_out = mux1_out[7:0];
+      4'h6: alu_out = mux1_out[7:0] + 1;
+      4'h7: alu_out = mux1_out[7:0] - 1;
+      4'h8: alu_out = 0;
+      4'h9: alu_out = ~mux1_out[7:0];
+      4'hA: alu_out = {mux1_out[7],mux1_out[7:1]};
+      4'hB: alu_out = {mux1_out[6:0],1'b0};
+      4'hC: alu_out = {1'b0,mux1_out[7:1]};
+      4'hD: alu_out = {mux1_out[6:0],mux1_out[7]};
+      4'hE: alu_out = {mux1_out[0],mux1_out[7:1]};
+      4'hF: alu_out = {mux1_out[3:0],mux1_out[7:4]};
+      default alu_out = mux1_out[7:0] + w_q;
     endcase
   end
   //sel_bus
@@ -279,28 +352,31 @@ module top (
   end
   //sel_pc
   always_comb begin
-    if (sel_pc) PC_next = ir_q[10:0];
-    else PC_next = PC_q + 1;
+    case (sel_pc)
+      0: PC_next = ir_q[10:0];
+      1: PC_next = PC_q + 1;
+      2: PC_next = stack_q;
+    endcase
   end
   //PC
   always_ff @(posedge clk) begin
-    if (rst) PC_q <= #1 0;
-    else if (load_pc) PC_q <= #1 PC_next;
+    if (rst) PC_q <=  0;
+    else if (load_pc) PC_q <=  PC_next;
   end
   //MAR
   always_ff @(posedge clk) begin
-    if (rst) mar_q <= #1 0;
-    else if (load_mar) mar_q <= #1 PC_q;
+    if (rst) mar_q <=  0;
+    else if (load_mar) mar_q <=  PC_q;
   end
   //IR
   always_ff @(posedge clk) begin
-    if (rst) ir_q <= #1 0;
-    else if (load_ir) ir_q <= #1 prog_data;
+    if (rst) ir_q <=  0;
+    else if (load_ir) ir_q <=  prog_data;
   end
   //W
   always_ff @(posedge clk) begin
-    if (rst) w_q <= #1 0;
-    else if (load_w) w_q <= #1 alu_out;
+    if (rst) w_q <=  0;
+    else if (load_w) w_q <=  alu_out;
   end
   //ram mux
   always_comb begin
@@ -335,5 +411,10 @@ module top (
       3'b110: bsf_mux = ram_out | 8'b0100_0000;
       3'b111: bsf_mux = ram_out | 8'b1000_0000;
     endcase
+  end
+  //port_b
+  always_ff @(posedge clk)begin
+    if(rst) port_b_out <=0;
+    else if(load_port_b)port_b_out <= databus;
   end
 endmodule

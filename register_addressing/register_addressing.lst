@@ -1,4 +1,4 @@
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  1
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -18,29 +18,32 @@ Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected process
                       00002 ;
                       00003 
   00000025            00004 temp            equ     0x25
-  00000024            00005 temp1           equ     0x24
-                      00006 ;***************************************
-                      00007 ;           Program start              *
+  00000020            00005 count1          equ h'20'
+  00000021            00006 count2          equ h'21'
+  00000022            00007 count3          equ h'22'
                       00008 ;***************************************
-                      00009                         org     0x00            ; reset vector
-0000   3003           00010                         movlw 03
-0001   00A5           00011                         movwf temp
-0002   3001           00012                         movlw 01
-0003   00A4           00013                         movwf temp1
-                      00014 
-0004   0AA4           00015 loop            incf temp1,1
-0005   0BA5           00016                         decfsz temp,1
-0006   2???           00017                         goto loop
-0007   0824           00018                         movf temp1,0
-0008   1124           00019                         bcf temp1,2
-0009   15A5           00020                         bsf temp,3
-000A   19A5           00021                         btfsc temp,3
-000B   1DA5           00022                         btfss temp,3
-000C   0824           00023                         movf temp1,0
-000D   0825           00024                         movf temp,0
-000E   2???           00025                         goto $
-                      00026                         end
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  2
+                      00009 ;           Program start              *
+                      00010 ;***************************************
+                      00011                         org     0x00            ; reset vector
+                      00012                         
+0000   01A5           00013                         clrf    temp
+0001   0103           00014                         clrw
+0002   3001           00015                         movlw   1
+0003   00A5           00016                         movwf   temp
+0004   008D           00017                         movwf   PORTB
+0005   35A5           00018 loop1           lslf    temp,1
+0006   0825           00019                         movf    temp,0
+0007   008D           00020                         movwf   PORTB
+0008   1FA5           00021                         btfss   temp,7
+0009   2???           00022                         goto    loop1
+000A   36A5           00023 loop2           lsrf    temp,1
+000B   0825           00024                         movf    temp,0
+000C   008D           00025                         movwf   PORTB
+000D   1C25           00026                         btfss   temp,0
+000E   2???           00027                         goto    loop2
+000F   2???           00028                         goto    loop1
+                      00029                         end
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  2
 
 
 SYMBOL TABLE
@@ -99,7 +102,7 @@ BRG16                             00000003
 BRGH                              00000002
 BSR                               00000008
 BSR0                              00000000
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  3
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  3
 
 
 SYMBOL TABLE
@@ -158,7 +161,7 @@ CCPR1H                            00000292
 CCPR1L                            00000291
 CDAFVR0                           00000002
 CDAFVR1                           00000003
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  4
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  4
 
 
 SYMBOL TABLE
@@ -217,7 +220,7 @@ DC1B0                             00000004
 DC1B1                             00000005
 DC_SHAD                           00000001
 DHEN                              00000000
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  5
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  5
 
 
 SYMBOL TABLE
@@ -276,7 +279,7 @@ IOCBF6                            00000006
 IOCBF7                            00000007
 IOCBN                             00000395
 IOCBN0                            00000000
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  6
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  6
 
 
 SYMBOL TABLE
@@ -335,7 +338,7 @@ MDCH3                             00000003
 MDCHODIS                          00000007
 MDCHPOL                           00000006
 MDCHSYNC                          00000005
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  7
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  7
 
 
 SYMBOL TABLE
@@ -394,7 +397,7 @@ PCIE                              00000006
 PCL                               00000002
 PCLATH                            0000000A
 PCLATH_SHAD                       00000FE7
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  8
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  8
 
 
 SYMBOL TABLE
@@ -453,7 +456,7 @@ S                                 00000003
 SBCDE                             00000002
 SBOREN                            00000007
 SCIE                              00000005
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE  9
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE  9
 
 
 SYMBOL TABLE
@@ -512,7 +515,7 @@ SSPM0                             00000000
 SSPM1                             00000001
 SSPM2                             00000002
 SSPM3                             00000003
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE 10
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE 10
 
 
 SYMBOL TABLE
@@ -571,7 +574,7 @@ TMR1GIE                           00000007
 TMR1GIF                           00000007
 TMR1H                             00000017
 TMR1IE                            00000000
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE 11
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE 11
 
 
 SYMBOL TABLE
@@ -630,7 +633,7 @@ WDTPS1                            00000002
 WDTPS2                            00000003
 WDTPS3                            00000004
 WDTPS4                            00000005
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE 12
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE 12
 
 
 SYMBOL TABLE
@@ -655,7 +658,6 @@ WRERR                             00000003
 WUE                               00000001
 Z                                 00000002
 Z_SHAD                            00000002
-_.org_0_000E                      0000000E
 _BOREN_NSLEEP                     0000FDFF
 _BOREN_OFF                        0000F9FF
 _BOREN_ON                         0000FFFF
@@ -689,13 +691,13 @@ _IDLOC3                           00008003
 _IESO_OFF                         0000EFFF
 _IESO_ON                          0000FFFF
 _LVP_OFF                          0000DFFF
-MPASM  5.51           REGISTER_ADDRESSING.ASM   12-4-2023  11:34:44         PAGE 13
+_LVP_ON                           0000FFFF
+MPASM  5.51           REGISTER_ADDRESSING.ASM   12-11-2023  11:38:55         PAGE 13
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-_LVP_ON                           0000FFFF
 _MCLRE_OFF                        0000FFBF
 _MCLRE_ON                         0000FFFF
 _PLLEN_OFF                        0000FEFF
@@ -714,9 +716,12 @@ _WRT_HALF                         0000FFFD
 _WRT_OFF                          0000FFFF
 __16F1826                         00000001
 __DEBUG                           1
-loop                              00000004
+count1                            00000020
+count2                            00000021
+count3                            00000022
+loop1                             00000005
+loop2                             0000000A
 temp                              00000025
-temp1                             00000024
 
 Errors   :     0
 Warnings :     0 reported,     0 suppressed

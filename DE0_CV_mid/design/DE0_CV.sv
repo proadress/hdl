@@ -81,9 +81,9 @@ module DE0_CV (
   //  Structural coding
   //=======================================================
   top top1 (
-      .clk(KEY[0]),
+      .clk(CLOCK_50),
       .rst(~KEY[1]),
-      .w_q(LEDR[7:0])                                                                                               
+      .port_b_out(LEDR[7:0])                                                                                               
   );
 
 endmodule
