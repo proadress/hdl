@@ -27,15 +27,3 @@ loop2		lsrf	temp,1
 			goto	loop2
 			goto	loop1
 			end
-	
-
-
-
-
-
-
-
-
-			
-			
-	

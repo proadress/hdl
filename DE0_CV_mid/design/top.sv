@@ -78,14 +78,7 @@ module top (
       .Rom_data_out(prog_data)
   );
     //stack
-  Stack s (
-      .stack_in (PC_q),
-      .stack_out(stack_q),
-      .pop(pop),
-      .push(push),
-      .clk(clk),
-      .reset(rst)
-  );
+
 
   always_comb begin
     load_ir = 0;
@@ -100,6 +93,8 @@ module top (
     sel_bus = 0;
     sel_RAM_mux = 0;
     load_port_b = 0;
+    push = 0;
+    pop = 0;
     case (ps)
       t0: ns = t1;
       t1: begin
@@ -244,7 +239,14 @@ module top (
           op = 4'hF;
           if(d)ram_en = 1;
           else load_w = 1;
-
+        end else if (CALL) begin
+          sel_pc = 1;
+          load_pc = 1;
+          push = 1;
+        end else if (RETURN) begin
+          sel_pc = 2;
+          load_pc = 1;
+          pop = 1;
         end
       end
       t5: ns = t6;
@@ -271,7 +273,7 @@ module top (
   assign INCF = ir_q[13:8] == 6'b001010;
   assign IORWF = ir_q[13:8] == 6'b000100;
   assign MOVF = ir_q[13:8] == 6'b001000;
-  assign MOVWF = ir_q[13:8] == 6'b000000;
+  assign MOVWF = ir_q[13:7] == 7'b0000001;
   assign SUBWF = ir_q[13:8] == 6'b000010;
   assign XORWF = ir_q[13:8] == 6'b000110;
 
@@ -344,6 +346,15 @@ module top (
       .clk(clk),
       .q(ram_out)
   );
+
+    Stack s (
+      .stack_in (PC_q),
+      .stack_out(stack_q),
+      .pop(pop),
+      .push(push),
+      .clk(clk),
+      .reset(rst)
+  );
   //sel_alu
   always_comb begin
     if (sel_alu) mux1_out = RAM_mux;
@@ -352,8 +363,8 @@ module top (
   //sel_pc
   always_comb begin
     case (sel_pc)
-      0: PC_next = ir_q[10:0];
-      1: PC_next = PC_q + 1;
+      0: PC_next =  PC_q + 1;
+      1: PC_next =ir_q[10:0];
       2: PC_next = stack_q;
     endcase
   end

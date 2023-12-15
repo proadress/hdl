@@ -29,7 +29,7 @@ loop2		lsrf	temp,1
 			goto	loop2
 			goto	loop1
 
-delay		movlw	.30
+delay		movlw	.3
 			movwf	count1
 delay1		clrf	count2
 delay2		clrf	count3
@@ -40,4 +40,17 @@ delay3		decfsz	count3,1
 			decfsz	count1,1
 			goto	delay1
 			return
+
 			end
+
+
+
+
+
+
+
+
+
+			
+			
+	

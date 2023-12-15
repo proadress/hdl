@@ -2,6 +2,7 @@
 ;
 
 temp		equ	0x25
+temp1		equ	0x24
 count1		equ h'20'
 count2		equ h'21'
 count3		equ h'22'
@@ -10,24 +11,27 @@ count3		equ h'22'
 ;***************************************
 			org 	0x00		; reset vector
 			
+start		movlw	.15
+			movwf	temp1
 			clrf	temp
-			clrw
-			movlw	1
-			movwf	temp
-			movwf	PORTB
-loop1		lslf	temp,1
+			clrw	
+loop1		movlw	1
+			addwf	temp,1
 			movf	temp,0
 			movwf	PORTB
 			call	delay
-			btfss	temp,7
-			goto	loop1
-loop2		lsrf	temp,1
+			decfsz	temp1,1
+			goto 	loop1
+			movlw	.15
+			movwf	temp1
+loop2		movlw	1
+			subwf	temp,1
 			movf	temp,0
 			movwf	PORTB
 			call	delay
-			btfss	temp,0
-			goto	loop2
-			goto	loop1
+			decfsz	temp1,1
+			goto 	loop2
+			goto 	start
 
 delay		movlw	.30
 			movwf	count1
@@ -40,4 +44,5 @@ delay3		decfsz	count3,1
 			decfsz	count1,1
 			goto	delay1
 			return
+
 			end
