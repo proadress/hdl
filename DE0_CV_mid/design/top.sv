@@ -11,7 +11,6 @@ module top (
       load_mar,
       load_ir,
       load_w,
-      
       d,
       sel_alu,
       ram_en,
@@ -81,10 +80,10 @@ module top (
     //stack
   Stack s (
       .stack_in (PC_q),
-      .stack_out(stack_q)
-      .pop(pop)
-      .push(push)
-      .clk(clk)
+      .stack_out(stack_q),
+      .pop(pop),
+      .push(push),
+      .clk(clk),
       .reset(rst)
   );
 

@@ -8,7 +8,7 @@ logic [3:0] stk_ptr,stk_index;
 logic [10:0] stack[15:0];
 
 assign stk_index = stk_ptr + 1;
-assign stk_out = stack[stk_ptr];
+assign stack_out = stack[stk_ptr];
 
 always_ff @(posedge clk) begin
     if(reset) stk_ptr <= 4'b1111;

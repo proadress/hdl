@@ -5,8 +5,7 @@ add wave -noupdate -divider cpu
 add wave -noupdate /testbench/clk
 add wave -noupdate /testbench/rst
 add wave -noupdate -radix hexadecimal /testbench/w_q
-add wave -noupdate -radix hexadecimal /testbench/top1/ram/ram\[37\]
-add wave -noupdate -radix hexadecimal /testbench/top1/ram/ram\[36\]
+add wave -noupdate -radix hexadecimal /testbench/top1/port_b_out
 
 
 TreeUpdate [SetDefaultTree]
