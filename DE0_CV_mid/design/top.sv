@@ -1,6 +1,5 @@
 module top (
-    input clk,
-    rst,
+    input clk,rst,
     output logic [7:0] w_q,port_b_out
 );
   logic [7:0] alu_out, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus;
@@ -22,9 +21,7 @@ module top (
       load_port_b,
       addr_port_b,
       push,
-      pop;
-  logic [3:0] op;
-  logic
+      pop,
       GOTO,
       ADDWF,
       ANDWF,
@@ -58,6 +55,7 @@ module top (
       SWAPE,
       CALL,
       RETURN;
+  logic [3:0] op;
   logic [1:0] sel_RAM_mux,sel_pc;
   logic [2:0] sel_bit;
 
