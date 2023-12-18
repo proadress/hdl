@@ -6,14 +6,17 @@ temp		equ	0x25
 ;           Program start              *
 ;***************************************
 			org 	0x00		; reset vector
-			movlw	03
-			clrf	temp
-			brw
-			movwf	temp
-			movlw	01
-			movwf	temp
-loop		movf	temp, w
-			movwf	PORTB
-			decfsz	temp, f
-			bra		loop
+			
+			movlw	.1
+			movlw	.2
+			movlw	.3
+			movlw	.4
+			movlw	.5
+			call	first
+			movlw	.6
+			movlw	.7
+			goto	$
+first		movlw	.8
+			movlw	.9
+			return
 			end

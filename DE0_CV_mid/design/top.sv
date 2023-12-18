@@ -4,11 +4,12 @@ module top (
 );
   logic [7:0] alu_out, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus;
   logic [10:0] PC_q, mar_q, PC_next,stack_q;
-  logic [13:0] prog_data, ir_q;
+  logic [13:0] prog_data, ir_q,w_change,k_change;
   logic
       load_pc,
       load_mar,
       load_ir,
+      reset_ir,
       load_w,
       d,
       sel_alu,
@@ -22,6 +23,7 @@ module top (
       addr_port_b,
       push,
       pop,
+
       GOTO,
       ADDWF,
       ANDWF,
@@ -54,11 +56,74 @@ module top (
       RRF,
       SWAPE,
       CALL,
-      RETURN;
+      RETURN,
+      BRA,
+      BRW,
+      NOP;
   logic [3:0] op;
-  logic [1:0] sel_RAM_mux,sel_pc;
+  logic [1:0] sel_RAM_mux;
+  logic [2:0] sel_pc;
   logic [2:0] sel_bit;
+  
 
+
+  assign MOVLW = ir_q[13:8] == 6'b110000;
+  assign ADDLW = ir_q[13:8] == 6'b111110;
+  assign SUBLW = ir_q[13:8] == 6'b111100;
+  assign ANDLW = ir_q[13:8] == 6'b111001;
+  assign IORLW = ir_q[13:8] == 6'b111000;
+  assign XORLW = ir_q[13:8] == 6'b111010;
+
+  assign GOTO = ir_q[13:11] == 3'b101;
+  assign ADDWF = ir_q[13:8] == 6'b000111;
+  assign ANDWF = ir_q[13:8] == 6'b000101;
+  assign CLRF = ir_q[13:8] == 6'b000001 && ir_q[13:2] != 12'b000001000000;
+  assign CLRW = ir_q[13:2] == 12'b000001000000;
+  assign COMF = ir_q[13:8] == 6'b001001;
+  assign DECF = ir_q[13:8] == 6'b000011;
+  assign d = ir_q[7];
+
+  assign INCF = ir_q[13:8] == 6'b001010;
+  assign IORWF = ir_q[13:8] == 6'b000100;
+  assign MOVF = ir_q[13:8] == 6'b001000;
+  assign MOVWF = ir_q[13:7] == 7'b0000001;
+  assign SUBWF = ir_q[13:8] == 6'b000010;
+  assign XORWF = ir_q[13:8] == 6'b000110;
+
+  assign BCF = ir_q[13:10] == 4'b0100;
+  assign BSF = ir_q[13:10] == 4'b0101;
+  assign BTFSC = ir_q[13:10] == 4'b0110;
+  assign BTFSS = ir_q[13:10] == 4'b0111;
+  assign DECFSZ = ir_q[13:8] == 6'b001011;
+  assign INCFSZ = ir_q[13:8] == 6'b001111;
+
+  assign ASRF = ir_q[13:8] == 6'b110111;
+  assign LSLF = ir_q[13:8] == 6'b110101;
+  assign LSRF = ir_q[13:8] == 6'b110110;
+  assign RLF = ir_q[13:8] == 6'b001101;
+  assign RRF = ir_q[13:8] == 6'b001100;
+  assign SWAPF = ir_q[13:8] == 6'b001110;
+
+  assign CALL = ir_q[13:11] == 3'b100;
+  assign RETURN = ir_q == 14'b00000000001000;
+
+  assign BRA = ir_q[13:9] == 5'b11001;
+  assign BRW = ir_q == 14'b00000000001011;
+  assign NOP = ir_q == 14'b00000000000000;
+
+  assign sel_bit = ir_q[9:7];
+  assign btfsc_skip_bit = ram_out[ir_q[9:7]] == 0;
+  assign btfss_skip_bit = ram_out[ir_q[9:7]] == 1;
+  assign btfsc_btfss_skip_bit = (BTFSC & btfsc_skip_bit) | (BTFSS & btfss_skip_bit);
+  assign alu_zero = (alu_out == 0) ? 1'b1 : 1'b0;
+
+  assign addr_port_b = ir_q[6:0] == 7'h0d;
+
+  assign w_change = {3'b0,w_q} -1;
+  assign k_change = {ir_q[8],ir_q[8],ir_q[8:0]} -1;
+
+
+    //stack
   typedef enum {
     t0,
     t1,
@@ -70,14 +135,6 @@ module top (
   } state_s;
   state_s ps, ns;
 
-  //ROM
-  Program_Rom rom (
-      .Rom_addr_in (mar_q),
-      .Rom_data_out(prog_data)
-  );
-    //stack
-
-
   always_comb begin
     load_ir = 0;
     load_mar = 0;
@@ -86,22 +143,22 @@ module top (
     sel_pc = 0;
     op = 0;
     sel_alu = 0;
-    sel_pc = 0;
     ram_en = 0;
     sel_bus = 0;
     sel_RAM_mux = 0;
     load_port_b = 0;
     push = 0;
     pop = 0;
+    reset_ir = 0;
     case (ps)
       t0: ns = t1;
       t1: begin
         ns = t2;
         load_mar = 1;
+        load_pc = 1;
       end
       t2: begin
         ns = t3;
-        load_pc = 1;
       end
       t3: begin
         ns = t4;
@@ -109,6 +166,8 @@ module top (
       end
       t4: begin
         ns = t5;
+        load_mar = 1;
+        load_pc = 1;
         if (MOVLW) begin
           op = 5;
           load_w = 1;
@@ -127,9 +186,6 @@ module top (
         end else if (XORLW) begin
           op = 4;
           load_w = 1;
-        end else if (GOTO) begin
-          sel_pc  = 1;
-          load_pc = 1;
         end else if (ADDWF) begin
           op = 0;
           sel_alu = 1;
@@ -193,20 +249,6 @@ module top (
           sel_RAM_mux = 2;
           op[3:0] = 5;
           ram_en = 1;
-        end else if (BTFSC | BTFSS) begin
-          if (btfsc_btfss_skip_bit) load_pc = 1;
-        end else if (DECFSZ) begin
-          sel_alu = 1;
-          op[3:0] = 7;
-          if (alu_zero) load_pc = 1;
-          if (d) ram_en = 1;
-          else load_w = 1;
-        end else if (INCFSZ) begin
-          sel_alu = 1;
-          op[3:0] = 6;
-          if (alu_zero) load_pc = 1;
-          if (d) ram_en = 1;
-          else load_w = 1;
         end else if (ASRF) begin
           sel_alu = 1;
           op = 4'hA;
@@ -237,6 +279,13 @@ module top (
           op = 4'hF;
           if(d)ram_en = 1;
           else load_w = 1;
+        end else if (NOP);
+      end
+      t5: begin
+        ns = t6;
+        if (GOTO) begin
+          sel_pc  = 1;
+          load_pc = 1;
         end else if (CALL) begin
           sel_pc = 1;
           load_pc = 1;
@@ -245,70 +294,49 @@ module top (
           sel_pc = 2;
           load_pc = 1;
           pop = 1;
+        end else if (BRA) begin
+          load_pc = 1;
+          sel_pc = 3;
+        end else if (BRW) begin
+          load_pc = 1;
+          sel_pc = 4;
         end
       end
-      t5: ns = t6;
-      t6: ns = t1;
+      t6: begin
+        ns = t4;
+        load_ir = 1;
+        if (GOTO | CALL | RETURN | BRA | BRW) begin
+          reset_ir = 1;
+        end else if (DECFSZ) begin
+          sel_alu = 1;
+          op[3:0] = 7;
+          if (alu_zero) load_pc = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
+          if(alu_zero)reset_ir = 1;
+        end else if (INCFSZ) begin
+          sel_alu = 1;
+          op[3:0] = 6;
+          if (alu_zero) load_pc = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
+          if(alu_zero)reset_ir = 1;
+        end else if (BTFSC | BTFSS) begin
+          if (btfsc_btfss_skip_bit) reset_ir = 1;
+        end
+      end
     endcase
   end
-
-  assign MOVLW = ir_q[13:8] == 6'b110000;
-  assign ADDLW = ir_q[13:8] == 6'b111110;
-  assign SUBLW = ir_q[13:8] == 6'b111100;
-  assign ANDLW = ir_q[13:8] == 6'b111001;
-  assign IORLW = ir_q[13:8] == 6'b111000;
-  assign XORLW = ir_q[13:8] == 6'b111010;
-
-  assign GOTO = ir_q[13:11] == 3'b101;
-  assign ADDWF = ir_q[13:8] == 6'b000111;
-  assign ANDWF = ir_q[13:8] == 6'b000101;
-  assign CLRF = ir_q[13:8] == 6'b000001 && ir_q[13:2] != 12'b000001000000;
-  assign CLRW = ir_q[13:2] == 12'b000001000000;
-  assign COMF = ir_q[13:8] == 6'b001001;
-  assign DECF = ir_q[13:8] == 6'b000011;
-  assign d = ir_q[7];
-
-  assign INCF = ir_q[13:8] == 6'b001010;
-  assign IORWF = ir_q[13:8] == 6'b000100;
-  assign MOVF = ir_q[13:8] == 6'b001000;
-  assign MOVWF = ir_q[13:7] == 7'b0000001;
-  assign SUBWF = ir_q[13:8] == 6'b000010;
-  assign XORWF = ir_q[13:8] == 6'b000110;
-
-  assign BCF = ir_q[13:10] == 4'b0100;
-  assign BSF = ir_q[13:10] == 4'b0101;
-  assign BTFSC = ir_q[13:10] == 4'b0110;
-  assign BTFSS = ir_q[13:10] == 4'b0111;
-  assign DECFSZ = ir_q[13:8] == 6'b001011;
-  assign INCFSZ = ir_q[13:8] == 6'b001111;
-
-  assign ASRF = ir_q[13:8] == 6'b110111;
-  assign LSLF = ir_q[13:8] == 6'b110101;
-  assign LSRF = ir_q[13:8] == 6'b110110;
-  assign RLF = ir_q[13:8] == 6'b001101;
-  assign RRF = ir_q[13:8] == 6'b001100;
-  assign SWAPF = ir_q[13:8] == 6'b001110;
-
-  assign CALL = ir_q[13:11] == 3'b100;
-  assign RETURN = ir_q == 14'b00000000001000;
-
-
-
-
-
-  assign sel_bit = ir_q[9:7];
-  assign btfsc_skip_bit = ram_out[ir_q[9:7]] == 0;
-  assign btfss_skip_bit = ram_out[ir_q[9:7]] == 1;
-  assign btfsc_btfss_skip_bit = (BTFSC & btfsc_skip_bit) | (BTFSS & btfss_skip_bit);
-  assign alu_zero = (alu_out == 0) ? 1'b1 : 1'b0;
-
-  assign addr_port_b = ir_q[6:0] == 7'h0d;
-
   //clk
   always_ff @(posedge clk) begin
     if (rst) ps <=  t0;
     else ps <=  ns;
   end
+  //ROM
+  Program_Rom rom (
+      .Rom_addr_in (mar_q),
+      .Rom_data_out(prog_data)
+  );
   //alu_out
   always_comb begin
     case (op)
@@ -345,7 +373,7 @@ module top (
       .q(ram_out)
   );
 
-    Stack s (
+  Stack s (
       .stack_in (PC_q),
       .stack_out(stack_q),
       .pop(pop),
@@ -364,6 +392,8 @@ module top (
       0: PC_next =  PC_q + 1;
       1: PC_next =ir_q[10:0];
       2: PC_next = stack_q;
+      3: PC_next = PC_q + k_change;
+      4: PC_next = PC_q + w_change;
     endcase
   end
   //PC
@@ -378,7 +408,7 @@ module top (
   end
   //IR
   always_ff @(posedge clk) begin
-    if (rst) ir_q <=  0;
+    if (reset_ir) ir_q <=  0;
     else if (load_ir) ir_q <=  prog_data;
   end
   //W
