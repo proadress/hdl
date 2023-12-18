@@ -1,6 +1,6 @@
 module top (
     input clk,rst,
-    output logic [7:0] w_q,port_b_out
+    output logic [7:0] w_q,port_b_out-
 );
   logic [7:0] alu_out, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus;
   logic [10:0] PC_q, mar_q, PC_next,stack_q;
@@ -279,6 +279,8 @@ module top (
           op = 4'hF;
           if(d)ram_en = 1;
           else load_w = 1;
+        end else if (CALL) begin
+          push = 1;          
         end else if (NOP);
       end
       t5: begin
@@ -289,7 +291,6 @@ module top (
         end else if (CALL) begin
           sel_pc = 1;
           load_pc = 1;
-          push = 1;
         end else if (RETURN) begin
           sel_pc = 2;
           load_pc = 1;
