@@ -1,142 +1,90 @@
 -- top.vhd --
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;
-use IEEE.std_logic_arith.all;
-use work.commonConstants.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+USE IEEE.std_logic_arith.ALL;
+USE work.commonConstants.ALL;
 
-entity CPU_ON_DE0 is port(
-    clk, reset: in STD_LOGIC;
-	 mem_mux_sw:in std_LOGIC;
-	 ex_mem_addr:in std_logic_vector(5 downto 0);	 
-	 HEX0:out std_logic_vector(6 downto 0);
-	 HEX1:out std_logic_vector(6 downto 0);
-	 HEX2:out std_logic_vector(6 downto 0);
-	 HEX3:out std_logic_vector(6 downto 0);	 
-	 led:out std_logic_vector(9 downto 0) 
- 
-	 );
-end CPU_ON_DE0;
+ENTITY CPU_ON_DE0 IS PORT (
+	clk, reset : IN STD_LOGIC;
+	mem_mux_sw : IN STD_LOGIC;
+	ex_mem_addr : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	led : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
 
-architecture CPU_ON_DE0 of CPU_ON_DE0 is
+);
+END CPU_ON_DE0;
 
-
-		component ram1 port (
-			 reset, en, r_w: in STD_LOGIC;
-			 aBus: in STD_LOGIC_VECTOR(adrLength-1 downto 0);
-			 dBus: inout STD_LOGIC_VECTOR(wordSize-1 downto 0)
+ARCHITECTURE CPU_ON_DE0 OF CPU_ON_DE0 IS
+	COMPONENT ram1 PORT (
+		reset, en, r_w : IN STD_LOGIC;
+		aBus : IN STD_LOGIC_VECTOR(adrLength - 1 DOWNTO 0);
+		dBus : INOUT STD_LOGIC_VECTOR(wordSize - 1 DOWNTO 0)
 		);
-		end component;
+	END COMPONENT;
 
-		component cpu port (
-			 clk, reset:    in  STD_LOGIC;
-			 m_en, m_rw: out STD_LOGIC;        
-			 aBus:    out STD_LOGIC_VECTOR(adrLength-1 downto 0);
-			 dBus:    inout STD_LOGIC_VECTOR(wordSize-1 downto 0);
-			 ledBus:    inout STD_LOGIC_VECTOR(wordSize-1 downto 0)
+	COMPONENT cpu PORT (
+		clk, reset : IN STD_LOGIC;
+		m_en, m_rw : OUT STD_LOGIC;
+		aBus : OUT STD_LOGIC_VECTOR(adrLength - 1 DOWNTO 0);
+		dBus : INOUT STD_LOGIC_VECTOR(wordSize - 1 DOWNTO 0);
+		ledBus : OUT STD_LOGIC_VECTOR(wordSize - 1 DOWNTO 0);
+		swin : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
 		);
-		end component;
+	END COMPONENT;
 
+	COMPONENT display PORT (
+		tick : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+		toseg : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		seg0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		seg1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		seg2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		seg3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		led : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		);
+	END COMPONENT;
 
-		signal 	 mem_en,mem_en_cpu, mem_rw,mem_rw_cpu: STD_LOGIC;
-		signal    abus,abus_cpu: STD_LOGIC_VECTOR(adrLength-1 downto 0);
-		signal    dbus_cpu: STD_LOGIC_VECTOR(wordSize-1 downto 0);
-		signal    led_cpu: STD_LOGIC_VECTOR(wordSize-1 downto 0);
+	SIGNAL mem_en, mem_en_cpu, mem_rw, mem_rw_cpu : STD_LOGIC;
+	SIGNAL abus, abus_cpu : STD_LOGIC_VECTOR(adrLength - 1 DOWNTO 0);
+	SIGNAL dbus_cpu : STD_LOGIC_VECTOR(wordSize - 1 DOWNTO 0);
+	SIGNAL tmp_reg : STD_LOGIC_VECTOR(wordSize - 1 DOWNTO 0);
 
-		signal    tmp_reg: STD_LOGIC_VECTOR(wordSize-1 downto 0);
+BEGIN
 
-begin
-	
+	abus <= abus_cpu WHEN mem_mux_sw = '0' ELSE
+		"0000000000" & ex_mem_addr;
+	-- tmp_reg <= dbus_cpu;
+	mem_en <= mem_en_cpu WHEN mem_mux_sw = '0' ELSE
+		'1';
+	mem_rw <= mem_rw_cpu WHEN mem_mux_sw = '0' ELSE
+		'1';
 
-	
-	 abus <= abus_cpu when mem_mux_sw = '0' else
-				"0000000000"&ex_mem_addr;
-	 tmp_reg <= dbus_cpu;
-	 mem_en <= mem_en_cpu when mem_mux_sw = '0' else
-				'1';				
-	 mem_rw <= mem_rw_cpu when mem_mux_sw = '0' else
-				'1';	
-	led <= led_cpu(9 downto 0) when tmp_reg(15 downto 12) = x"b" else tmp_reg(9 downto 0);
+	ramC : ram1 PORT MAP(reset, mem_en, mem_rw, abus, dbus_cpu);
+	cpuC : cpu PORT MAP(clk, reset, mem_en_cpu, mem_rw_cpu, abus_cpu, dbus_cpu, tmp_reg, ex_mem_addr);
 
- ramC: ram1 port map(reset, mem_en, mem_rw, abus, dbus_cpu);
- cpuC: cpu port map(clk, reset, mem_en_cpu, mem_rw_cpu, abus_cpu, dbus_cpu,led_cpu);
-				
+	led <= "0000" & ex_mem_addr;
+	-- displayC : display PORT MAP(tmp_reg(2 DOWNTO 0), tmp_reg(15 DOWNTO 0), HEX0, HEX1, HEX2, HEX3, led);
+	HEX0 <= "1111110" WHEN tmp_reg(3 DOWNTO 0) = x"0" ELSE
+		"1111101" WHEN tmp_reg(3 DOWNTO 0) = x"1" ELSE
+		"1111011" WHEN tmp_reg(3 DOWNTO 0) = x"2" ELSE
+		"1110111" WHEN tmp_reg(3 DOWNTO 0) = x"3" ELSE
+		"1111111";
+	HEX1 <=
+		"1110111" WHEN tmp_reg(3 DOWNTO 0) = x"4" ELSE
+		"1111110" WHEN tmp_reg(3 DOWNTO 0) = x"b" ELSE
+		"1111111";
 
- 
-	 	HEX0 <=	"1000000" when tmp_reg(3 downto 0) = x"0" else
-					"1111001" when tmp_reg(3 downto 0) = x"1" else
-					"0100100" when tmp_reg(3 downto 0) = x"2" else
-					"0110000" when tmp_reg(3 downto 0) = x"3" else
-					"0011001" when tmp_reg(3 downto 0) = x"4" else
-					"0010010" when tmp_reg(3 downto 0) = x"5" else
-					"0000010" when tmp_reg(3 downto 0) = x"6" else
-					"1111000" when tmp_reg(3 downto 0) = x"7" else
-					"0000000" when tmp_reg(3 downto 0) = x"8" else
-					"0010000" when tmp_reg(3 downto 0) = x"9" else
-					"0001000" when tmp_reg(3 downto 0) = x"a" else
-					"0000011" when tmp_reg(3 downto 0) = x"b" else
-					"1000110" when tmp_reg(3 downto 0) = x"c" else
-					"0100001" when tmp_reg(3 downto 0) = x"d" else
-					"0000110" when tmp_reg(3 downto 0) = x"e" else			
-					"0001110" when tmp_reg(3 downto 0) = x"f" else
-					"1111111";
-					
-					
-	 	HEX1 <=	"1000000" when tmp_reg(7 downto 4) = x"0" else
-					"1111001" when tmp_reg(7 downto 4) = x"1" else
-					"0100100" when tmp_reg(7 downto 4) = x"2" else
-					"0110000" when tmp_reg(7 downto 4) = x"3" else
-					"0011001" when tmp_reg(7 downto 4) = x"4" else
-					"0010010" when tmp_reg(7 downto 4) = x"5" else
-					"0000010" when tmp_reg(7 downto 4) = x"6" else
-					"1111000" when tmp_reg(7 downto 4) = x"7" else
-					"0000000" when tmp_reg(7 downto 4) = x"8" else
-					"0010000" when tmp_reg(7 downto 4) = x"9" else
-					"0001000" when tmp_reg(7 downto 4) = x"a" else
-					"0000011" when tmp_reg(7 downto 4) = x"b" else
-					"1000110" when tmp_reg(7 downto 4) = x"c" else
-					"0100001" when tmp_reg(7 downto 4) = x"d" else
-					"0000110" when tmp_reg(7 downto 4) = x"e" else			
-					"0001110" when tmp_reg(7 downto 4) = x"f" else
-					"1111111";
-					
-	 	HEX2 <=	"1000000" when tmp_reg(11 downto 8) = x"0" else
-					"1111001" when tmp_reg(11 downto 8) = x"1" else
-					"0100100" when tmp_reg(11 downto 8) = x"2" else
-					"0110000" when tmp_reg(11 downto 8) = x"3" else
-					"0011001" when tmp_reg(11 downto 8) = x"4" else
-					"0010010" when tmp_reg(11 downto 8) = x"5" else
-					"0000010" when tmp_reg(11 downto 8) = x"6" else
-					"1111000" when tmp_reg(11 downto 8) = x"7" else
-					"0000000" when tmp_reg(11 downto 8) = x"8" else
-					"0010000" when tmp_reg(11 downto 8) = x"9" else
-					"0001000" when tmp_reg(11 downto 8) = x"a" else
-					"0000011" when tmp_reg(11 downto 8) = x"b" else
-					"1000110" when tmp_reg(11 downto 8) = x"c" else
-					"0100001" when tmp_reg(11 downto 8) = x"d" else
-					"0000110" when tmp_reg(11 downto 8) = x"e" else			
-					"0001110" when tmp_reg(11 downto 8) = x"f" else
-					"1111111";
+	HEX2 <=
+		"1110111" WHEN tmp_reg(3 DOWNTO 0) = x"5" ELSE
+		"1111110" WHEN tmp_reg(3 DOWNTO 0) = x"a" ELSE
+		"1111111";
 
-	 	HEX3 <=	"1000000" when tmp_reg(15 downto 12) = x"0" else
-					"1111001" when tmp_reg(15 downto 12) = x"1" else
-					"0100100" when tmp_reg(15 downto 12) = x"2" else
-					"0110000" when tmp_reg(15 downto 12) = x"3" else
-					"0011001" when tmp_reg(15 downto 12) = x"4" else
-					"0010010" when tmp_reg(15 downto 12) = x"5" else
-					"0000010" when tmp_reg(15 downto 12) = x"6" else
-					"1111000" when tmp_reg(15 downto 12) = x"7" else
-					"0000000" when tmp_reg(15 downto 12) = x"8" else
-					"0010000" when tmp_reg(15 downto 12) = x"9" else
-					"0001000" when tmp_reg(15 downto 12) = x"a" else
-					"0000011" when tmp_reg(15 downto 12) = x"b" else
-					"1000110" when tmp_reg(15 downto 12) = x"c" else
-					"0100001" when tmp_reg(15 downto 12) = x"d" else
-					"0000110" when tmp_reg(15 downto 12) = x"e" else			
-					"0001110" when tmp_reg(15 downto 12) = x"f" else
-					"1111111";					
-					
-
-	 
-
-end CPU_ON_DE0;
+	HEX3 <= "1110111" WHEN tmp_reg(3 DOWNTO 0) = x"6" ELSE
+		"1101111" WHEN tmp_reg(3 DOWNTO 0) = x"7" ELSE
+		"1011111" WHEN tmp_reg(3 DOWNTO 0) = x"8" ELSE
+		"1111110" WHEN tmp_reg(3 DOWNTO 0) = x"9" ELSE
+		"1111111";
+END CPU_ON_DE0;

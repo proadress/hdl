@@ -10,14 +10,15 @@ entity cpu is port (
     m_en, m_rw    : out std_logic;        
     aBus        : out std_logic_vector(adrLength-1 downto 0);
     dBus        : inout std_logic_vector(wordSize-1 downto 0);
-	ledBus        : out std_logic_vector(wordSize-1 downto 0)
+	ledBus        : out std_logic_vector(wordSize-1 downto 0);
+	swin        : in std_logic_vector(5 downto 0)
 		 );
 end cpu;
 
 architecture cpuArch of cpu is
 type state_type is (
     reset_state, fetch, halt, negate, mload, dload, iload,
-    dstore, istore, branch, brZero, brPos, brNeg, add,outp
+    dstore, istore, branch, brZero, brPos, brNeg, add,outp,sw
 );
 signal state: state_type;
 
@@ -68,6 +69,7 @@ begin
 				  when x"9" =>     state <= brNeg;
 				  when x"a" =>     state <= add;
 				  when x"b" =>     state <= outp;
+				  when x"c" =>     state <= sw;
 				  when others => state <= halt;
 				  end case;
 			 end procedure decode;
@@ -86,66 +88,72 @@ begin
               else
                 tick <= nextTick(tick) ; -- advance time by default
                 case state is
-						 when reset_state => state <= fetch; tick <= t0;
+						when reset_state => state <= fetch; tick <= t0;
 
-						 when fetch =>     if tick = t1 then iReg <= dBus; end if;
-													if tick = t2 then 
-														 decode; pc <= pc + '1'; tick <= t0;
-													end if;
-						 when halt => tick <= t0; -- do nothing
+						when fetch =>     if tick = t1 then iReg <= dBus; end if;
+												if tick = t2 then 
+														decode; pc <= pc + '1'; tick <= t0;
+												end if;
+						when halt => tick <= t0; -- do nothing
 
-						 when negate => acc <= alu;    wrapup;
+						when negate => acc <= alu;    wrapup;
 
-						 -- load instructions
-						 when mload => 
-							  if iReg(11) = '0' then -- sign extension
-									acc <= x"0" & ireg(11 downto 0); 
-							  else
-									acc <= x"f" & ireg(11 downto 0);
-							  end if;
-							  wrapup;
+						-- load instructions
+						when mload => 
+							if iReg(11) = '0' then -- sign extension
+								acc <= x"0" & ireg(11 downto 0); 
+							else
+								acc <= x"f" & ireg(11 downto 0);
+							end if;
+							wrapup;
 
-						 when dload =>
-							  if tick = t1 then acc <= dBus; end if;
-							  if tick = t2 then wrapup; end if;
+						when dload =>
+							if tick = t1 then acc <= dBus; end if;
+							if tick = t2 then wrapup; end if;
 
-						 when iload =>
-							  if tick = t1 then iar <= dBus; end if;
-							  if tick = t4 then acc <= dBus; end if;
-							  if tick = t5 then wrapup; end if;
+						when iload =>
+							if tick = t1 then iar <= dBus; end if;
+							if tick = t4 then acc <= dBus; end if;
+							if tick = t5 then wrapup; end if;
 
-						 -- store instructions                  
-						 when dstore =>
-							  if tick = t4 then wrapup; end if;
+						-- store instructions                  
+						when dstore =>
+							if tick = t4 then wrapup; end if;
 
-						 when istore =>
-							  if tick = t1 then iar <= dBus; end if;
-							  if tick = t7 then wrapup; end if;
+						when istore =>
+							if tick = t1 then iar <= dBus; end if;
+							if tick = t7 then wrapup; end if;
 
-						 -- branch instructions
-						 when branch => 
-							  pc <= x"0" & iReg(11 downto 0);
-							  wrapup;
-						 when brZero => 
-							  if acc = x"0000" then pc <= x"0" & iReg(11 downto 0);    end if;
-							  wrapup;
-						 when brPos => 
-							  if acc(15) = '0' and acc /= x"0000" then 
-									pc <= x"0" & iReg(11 downto 0);
-							  end if;
-							  wrapup;
-						 when brNeg => 
-							  if acc(15) = '1' then pc <= x"0" & iReg(11 downto 0);    end if;
-							  wrapup;
+						-- branch instructions
+						when branch => 
+							pc <= x"0" & iReg(11 downto 0);
+							wrapup;
+						when brZero => 
+							if acc = x"0000" then pc <= x"0" & iReg(11 downto 0);    end if;
+							wrapup;
+						when brPos => 
+							if acc(15) = '0' and acc /= x"0000" then 
+								pc <= x"0" & iReg(11 downto 0);
+							end if;
+							wrapup;
+						when brNeg => 
+							if acc(15) = '1' then pc <= x"0" & iReg(11 downto 0);    end if;
+							wrapup;
 
-						 -- arithmetic instructions
-						 when add =>
-							  if tick = t1 then acc <= alu; end if;
-							  if tick = t2 then wrapup; end if;
+						-- arithmetic instructions
+						when add =>
+							if tick = t1 then acc <= alu; end if;
+							if tick = t2 then wrapup; end if;
+						
 						when outp =>
-							  if tick = t2 then ledBus <= acc; end if;
-							  wrapup;
-						 when others => state <= halt;
+							if tick = t1 then ledBus <= dBus; end if;
+							if tick = t2 then wrapup; end if;
+
+						when sw => 
+							acc <= "00000000" & swin & "01"; 
+							wrapup;
+						 
+						when others => state <= halt;
                 end case;
             end if;
           end if;
@@ -159,44 +167,48 @@ begin
             else
                 case state is
 
-						 when fetch =>
-							  if tick = t0 then m_en <= '1'; aBus <= pc; end if;
-							  if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
+						when fetch =>
+							if tick = t0 then m_en <= '1'; aBus <= pc; end if;
+							if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
 
-							when dload =>
-							  if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
-							  if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
+						when dload =>
+							if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
+							if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
 
-							when iload =>
-							  if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
-							  if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
-							  if tick = t3 then m_en <= '1'; aBus <= iar; end if;
-							  if tick = t5 then m_en <= '0'; aBus <= (abus'range => '0'); end if;
+						when iload =>
+							if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
+							if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
+							if tick = t3 then m_en <= '1'; aBus <= iar; end if;
+							if tick = t5 then m_en <= '0'; aBus <= (abus'range => '0'); end if;
 
-							when dstore =>
-							  if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
-							  if tick = t1 then m_rw <= '0'; dBus <= acc; end if;
-							  if tick = t3 then m_rw <= '1'; end if;
-							  if tick = t4 then 
-									m_en <= '0'; aBus <= (abus'range => '0'); dBus <= (dBus'range => 'Z'); 
-							  end if;
+						when dstore =>
+							if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
+							if tick = t1 then m_rw <= '0'; dBus <= acc; end if;
+							if tick = t3 then m_rw <= '1'; end if;
+							if tick = t4 then 
+								m_en <= '0'; aBus <= (abus'range => '0'); dBus <= (dBus'range => 'Z'); 
+							end if;
 
-						 when istore =>
-							  if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
-							  if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
-							  if tick = t3 then m_en <= '1'; aBus <= iar; end if;
-							  if tick = t4 then m_rw <= '0'; dBus <= acc; end if;
-							  if tick = t6 then m_rw <= '1'; end if;
-							  if tick = t7 then 
-									m_en <= '0'; aBus <= (abus'range => '0'); dBus <= (dBus'range => 'Z'); 
-							  end if;
+						when istore =>
+							if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
+							if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
+							if tick = t3 then m_en <= '1'; aBus <= iar; end if;
+							if tick = t4 then m_rw <= '0'; dBus <= acc; end if;
+							if tick = t6 then m_rw <= '1'; end if;
+							if tick = t7 then 
+								m_en <= '0'; aBus <= (abus'range => '0'); dBus <= (dBus'range => 'Z'); 
+							end if;
 
-						 when add =>
-							  if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
-							  if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
+						when add =>
+							if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
+							if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
+						
+						when outp =>
+							if tick = t0 then m_en <= '1'; aBus <= x"0" & iReg(11 downto 0); end if;
+							if tick = t2 then m_en <= '0'; aBus <= (aBus'range => '0'); end if;
 
 
-						 when others => -- do nothing
+						when others => -- do nothing
 					end case;
             end if;    
         end if;                    

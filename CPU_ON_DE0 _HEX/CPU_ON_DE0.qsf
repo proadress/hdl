@@ -41,16 +41,12 @@ set_global_assignment -name DEVICE EP3C16F484C6
 set_global_assignment -name TOP_LEVEL_ENTITY CPU_ON_DE0
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:39:01  AUGUST 08, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name VHDL_FILE ram1.vhd
-set_global_assignment -name VHDL_FILE CPU_ON_DE0.vhd
-set_global_assignment -name VHDL_FILE cpu.vhd
-set_global_assignment -name VHDL_FILE commonConstant.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -136,7 +132,6 @@ set_location_assignment PIN_G5 -to ex_mem_addr[4]
 set_location_assignment PIN_J7 -to ex_mem_addr[5]
 set_location_assignment PIN_D2 -to mem_mux_sw
 set_location_assignment PIN_H2 -to reset
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/A610/Downloads/CPU_ON_DE0 _HEX/Waveform3.vwf"
 set_location_assignment PIN_J1 -to led[0]
 set_location_assignment PIN_J2 -to led[1]
@@ -148,4 +143,11 @@ set_location_assignment PIN_C1 -to led[6]
 set_location_assignment PIN_C2 -to led[7]
 set_location_assignment PIN_B2 -to led[8]
 set_location_assignment PIN_B1 -to led[9]
+set_global_assignment -name VHDL_FILE seg_decoder.vhd
+set_global_assignment -name VHDL_FILE display.vhd
+set_global_assignment -name VHDL_FILE ram1.vhd
+set_global_assignment -name VHDL_FILE CPU_ON_DE0.vhd
+set_global_assignment -name VHDL_FILE cpu.vhd
+set_global_assignment -name VHDL_FILE commonConstant.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

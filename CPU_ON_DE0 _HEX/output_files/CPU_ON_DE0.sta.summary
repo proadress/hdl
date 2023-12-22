@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -11.868
-TNS   : -657.375
+Slack : -11.578
+TNS   : -698.490
 
 Type  : Slow 1200mV 85C Model Setup 'ex_mem_addr[0]'
-Slack : -9.503
-TNS   : -7316.135
+Slack : -9.210
+TNS   : -6751.899
 
 Type  : Slow 1200mV 85C Model Hold 'ex_mem_addr[0]'
-Slack : -4.558
-TNS   : -1154.018
+Slack : -3.738
+TNS   : -1151.483
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.343
+Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -119.000
+TNS   : -115.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ex_mem_addr[0]'
 Slack : -3.000
-TNS   : -5.547
+TNS   : -3.169
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -10.657
-TNS   : -584.662
+Slack : -10.295
+TNS   : -619.029
 
 Type  : Slow 1200mV 0C Model Setup 'ex_mem_addr[0]'
-Slack : -8.529
-TNS   : -6516.726
+Slack : -8.184
+TNS   : -5977.659
 
 Type  : Slow 1200mV 0C Model Hold 'ex_mem_addr[0]'
-Slack : -4.118
-TNS   : -1021.126
+Slack : -3.316
+TNS   : -1015.163
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.298
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -119.000
+TNS   : -115.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ex_mem_addr[0]'
 Slack : -3.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -7.141
-TNS   : -353.701
+Slack : -7.018
+TNS   : -381.486
 
 Type  : Fast 1200mV 0C Model Setup 'ex_mem_addr[0]'
-Slack : -6.112
-TNS   : -4184.737
+Slack : -5.826
+TNS   : -3756.454
 
 Type  : Fast 1200mV 0C Model Hold 'ex_mem_addr[0]'
-Slack : -2.926
-TNS   : -583.907
+Slack : -2.340
+TNS   : -620.773
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.179
+Slack : 0.050
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ex_mem_addr[0]'
 Slack : -3.000
-TNS   : -596.804
+TNS   : -497.111
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -155.486
+TNS   : -150.304
 
 ------------------------------------------------------------

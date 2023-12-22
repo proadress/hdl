@@ -11,19 +11,20 @@ tick.t6 0 1 0 0 0 0 0 1
 tick.t7 1 0 0 0 0 0 0 1 
 
 State Machine - |CPU_ON_DE0|cpu:cpuC|state
-Name state.outp state.add state.brNeg state.brPos state.brZero state.branch state.istore state.dstore state.iload state.dload state.mload state.negate state.halt state.fetch state.reset_state 
-state.reset_state 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-state.fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-state.halt 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-state.negate 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-state.mload 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-state.dload 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-state.iload 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-state.dstore 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-state.istore 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-state.branch 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-state.brZero 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-state.brPos 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-state.brNeg 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-state.add 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.outp 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name state.sw state.outp state.add state.brNeg state.brPos state.brZero state.branch state.istore state.dstore state.iload state.dload state.mload state.negate state.halt state.fetch state.reset_state 
+state.reset_state 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.halt 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.negate 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.mload 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.dload 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.iload 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.dstore 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.istore 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.branch 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.brZero 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.brPos 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.brNeg 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.add 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.outp 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.sw 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
