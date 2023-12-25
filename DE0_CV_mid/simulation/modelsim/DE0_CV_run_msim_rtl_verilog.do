@@ -5,9 +5,9 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/Stack.sv}
-vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv}
-vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/top.sv}
-vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/Program_Rom.sv}
-vlog -sv -work work +incdir+C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design {C:/Users/A610/Documents/GitHub/hdl/DE0_CV_mid/design/DE0_CV.sv}
+vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/Stack.sv}
+vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/single_port_ram_128x8.sv}
+vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/top.sv}
+vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/Program_Rom.sv}
+vlog -sv -work work +incdir+C:/Users/A610/Desktop/hdl/DE0_CV_mid/design {C:/Users/A610/Desktop/hdl/DE0_CV_mid/design/DE0_CV.sv}
 

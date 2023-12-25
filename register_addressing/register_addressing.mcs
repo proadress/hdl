@@ -2,7 +2,7 @@
 MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
 Version=1.0
 [File000]
-Location=C:\Users\A610\Documents\GitHub\hdl\register_addressing\register_addressing.o
+Location=D:\code\hdl\register_addressing\register_addressing.o
 Folder=Intermediary
 DeviceName=PIC16F1826
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
@@ -15,7 +15,7 @@ ToolArgsString=
 TraceCmdString=
 DebugOptions=/d__DEBUG=1
 [File001]
-Location=C:\Users\A610\Documents\GitHub\hdl\register_addressing\register_addressing.err
+Location=D:\code\hdl\register_addressing\register_addressing.err
 Folder=Intermediary
 DeviceName=PIC16F1826
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
@@ -28,7 +28,7 @@ ToolArgsString=
 TraceCmdString=
 DebugOptions=/d__DEBUG=1
 [File002]
-Location=C:\Users\A610\Documents\GitHub\hdl\register_addressing\register_addressing.lst
+Location=D:\code\hdl\register_addressing\register_addressing.lst
 Folder=Output
 DeviceName=PIC16F1826
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
@@ -41,7 +41,7 @@ ToolArgsString=
 TraceCmdString=
 DebugOptions=/d__DEBUG=1
 [File003]
-Location=C:\Users\A610\Documents\GitHub\hdl\register_addressing\register_addressing.cof
+Location=D:\code\hdl\register_addressing\register_addressing.cof
 Folder=Output
 DeviceName=PIC16F1826
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}
@@ -54,7 +54,7 @@ ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /
 TraceCmdString=
 DebugOptions=/z__MPLAB_DEBUG=1
 [File004]
-Location=C:\Users\A610\Documents\GitHub\hdl\register_addressing\register_addressing.hex
+Location=D:\code\hdl\register_addressing\register_addressing.hex
 Folder=Output
 DeviceName=PIC16F1826
 LanguageToolSuiteID={6B3DAA78-59C1-46DD-B6AA-DBDAE4E06484}

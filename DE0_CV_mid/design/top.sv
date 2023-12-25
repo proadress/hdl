@@ -1,8 +1,8 @@
 module top (
     input clk,rst,
-    output logic [7:0] w_q,port_b_out-
+    output logic [7:0] w_q,port_b_out
 );
-  logic [7:0] alu_out, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus;
+  logic [7:0] alu_out, mux1_out, ram_out, RAM_mux, bcf_mux, bsf_mux, databus,databustemp;
   logic [10:0] PC_q, mar_q, PC_next,stack_q;
   logic [13:0] prog_data, ir_q,w_change,k_change;
   logic
@@ -23,6 +23,8 @@ module top (
       addr_port_b,
       push,
       pop,
+      sel_ram,
+      set_databustemp,
 
       GOTO,
       ADDWF,
@@ -59,10 +61,12 @@ module top (
       RETURN,
       BRA,
       BRW,
-      NOP;
+      NOP,
+      ADDIF,
+      BEQWFS;
   logic [3:0] op;
   logic [1:0] sel_RAM_mux;
-  logic [2:0] sel_pc;
+  logic [3:0] sel_pc;
   logic [2:0] sel_bit;
   
 
@@ -111,6 +115,9 @@ module top (
   assign BRW = ir_q == 14'b00000000001011;
   assign NOP = ir_q == 14'b00000000000000;
 
+  assign ADDIF = ir_q[13:8] == 6'b110001;
+  assign BEQWFS = ir_q[13:7] == 7'b1111010;
+
   assign sel_bit = ir_q[9:7];
   assign btfsc_skip_bit = ram_out[ir_q[9:7]] == 0;
   assign btfss_skip_bit = ram_out[ir_q[9:7]] == 1;
@@ -150,6 +157,8 @@ module top (
     push = 0;
     pop = 0;
     reset_ir = 0;
+    sel_ram = 0;
+    set_databustemp = 0;
     case (ps)
       t0: ns = t1;
       t1: begin
@@ -280,7 +289,13 @@ module top (
           if(d)ram_en = 1;
           else load_w = 1;
         end else if (CALL) begin
-          push = 1;          
+          push = 1;
+        end else if (BEQWFS) begin
+          load_pc = 1;
+        end else if (ADDIF) begin
+          sel_alu = 1;
+          set_databustemp = 1;
+          op = 5;
         end else if (NOP);
       end
       t5: begin
@@ -301,17 +316,23 @@ module top (
         end else if (BRW) begin
           load_pc = 1;
           sel_pc = 4;
+        end else if (ADDIF) begin
+          op = 0;
+          sel_alu = 1;
+          sel_ram = 1;
+          if (d) ram_en = 1;
+          else load_w = 1;
         end
       end
       t6: begin
         ns = t4;
         load_ir = 1;
-        if (GOTO | CALL | RETURN | BRA | BRW) begin
+        if (GOTO | CALL | RETURN | BRA | BRW|BEQWFS) begin
           reset_ir = 1;
         end else if (DECFSZ) begin
           sel_alu = 1;
           op[3:0] = 7;
-          if (alu_zero) load_pc = 1;
+          // if (alu_zero) load_pc = 1;
           if (d) ram_en = 1;
           else load_w = 1;
           if(alu_zero)reset_ir = 1;
@@ -324,6 +345,7 @@ module top (
           if(alu_zero)reset_ir = 1;
         end else if (BTFSC | BTFSS) begin
           if (btfsc_btfss_skip_bit) reset_ir = 1;
+        
         end
       end
     endcase
@@ -360,6 +382,10 @@ module top (
       default alu_out = mux1_out[7:0] + w_q;
     endcase
   end
+   //databustemp
+  always_comb begin
+    if (set_databustemp) databustemp = databus;
+  end
   //sel_bus
   always_comb begin
     if (sel_bus) databus = w_q;
@@ -368,7 +394,7 @@ module top (
   //RAM
   single_port_ram_128x8 ram (
       .data(databus),
-      .addr(ir_q[6:0]),
+      .addr(sel_ram?(databustemp):ir_q[6:0]),
       .ram_en(ram_en),
       .clk(clk),
       .q(ram_out)
@@ -390,11 +416,12 @@ module top (
   //sel_pc
   always_comb begin
     case (sel_pc)
-      0: PC_next =  PC_q + 1;
-      1: PC_next =ir_q[10:0];
+      0: PC_next = PC_q + 1;
+      1: PC_next = ir_q[10:0];
       2: PC_next = stack_q;
       3: PC_next = PC_q + k_change;
       4: PC_next = PC_q + w_change;
+      5: PC_next = PC_q + 3;
     endcase
   end
   //PC

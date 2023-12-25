@@ -1,14 +1,25 @@
+<<<<<<< Updated upstream
 Fitter Status : Successful - Fri Dec 22 17:38:25 2023
+=======
+Fitter Status : Successful - Thu Dec 21 15:17:00 2023
+>>>>>>> Stashed changes
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : CPU_ON_DE0
 Top-level Entity Name : CPU_ON_DE0
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
+<<<<<<< Updated upstream
 Total logic elements : 2,034 / 15,408 ( 13 % )
     Total combinational functions : 2,027 / 15,408 ( 13 % )
     Dedicated logic registers : 112 / 15,408 ( < 1 % )
 Total registers : 112
+=======
+Total logic elements : 2,086 / 15,408 ( 14 % )
+    Total combinational functions : 2,060 / 15,408 ( 13 % )
+    Dedicated logic registers : 116 / 15,408 ( < 1 % )
+Total registers : 116
+>>>>>>> Stashed changes
 Total pins : 47 / 347 ( 14 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )

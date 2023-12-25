@@ -1,5 +1,9 @@
 Flow report for CPU_ON_DE0
+<<<<<<< Updated upstream
 Fri Dec 22 17:38:31 2023
+=======
+Thu Dec 21 15:17:11 2023
+>>>>>>> Stashed changes
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +44,28 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
+<<<<<<< Updated upstream
 ; Flow Status                        ; Successful - Fri Dec 22 17:38:31 2023           ;
+=======
+; Flow Status                        ; Successful - Thu Dec 21 15:17:11 2023           ;
+>>>>>>> Stashed changes
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU_ON_DE0                                      ;
 ; Top-level Entity Name              ; CPU_ON_DE0                                      ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
+<<<<<<< Updated upstream
 ; Total logic elements               ; 2,034 / 15,408 ( 13 % )                         ;
 ;     Total combinational functions  ; 2,027 / 15,408 ( 13 % )                         ;
 ;     Dedicated logic registers      ; 112 / 15,408 ( < 1 % )                          ;
 ; Total registers                    ; 112                                             ;
+=======
+; Total logic elements               ; 2,086 / 15,408 ( 14 % )                         ;
+;     Total combinational functions  ; 2,060 / 15,408 ( 13 % )                         ;
+;     Dedicated logic registers      ; 116 / 15,408 ( < 1 % )                          ;
+; Total registers                    ; 116                                             ;
+>>>>>>> Stashed changes
 ; Total pins                         ; 47 / 347 ( 14 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
@@ -64,7 +79,11 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< Updated upstream
 ; Start date & time ; 12/22/2023 17:37:59 ;
+=======
+; Start date & time ; 12/21/2023 15:15:59 ;
+>>>>>>> Stashed changes
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPU_ON_DE0          ;
 +-------------------+---------------------+
@@ -75,7 +94,11 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                             ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------------------+---------------+-------------+----------------+
+<<<<<<< Updated upstream
 ; COMPILER_SIGNATURE_ID               ; 136714583859836.170323787911312                   ; --            ; --          ; --             ;
+=======
+; COMPILER_SIGNATURE_ID               ; 39908811424968.170314295917228                    ; --            ; --          ; --             ;
+>>>>>>> Stashed changes
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/SHIN/Dropbox/CPU_ON_DE0/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                       ; --            ; --          ; eda_simulation ;
@@ -97,12 +120,21 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4642 MB             ; 00:00:03                           ;
 ; Fitter                    ; 00:00:23     ; 1.0                     ; 4937 MB             ; 00:00:23                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4622 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4532 MB             ; 00:00:00                           ;
 ; Total                     ; 00:00:29     ; --                      ; --                  ; 00:00:29                           ;
+=======
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4630 MB             ; 00:00:05                           ;
+; Fitter                    ; 00:00:54     ; 1.0                     ; 4932 MB             ; 00:00:44                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4544 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4620 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4521 MB             ; 00:00:00                           ;
+; Total                     ; 00:01:08     ; --                      ; --                  ; 00:00:54                           ;
+>>>>>>> Stashed changes
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +143,19 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis      ; A610-10          ; Windows 7 ; 6.2        ; x86_64         ;
 ; Fitter                    ; A610-10          ; Windows 7 ; 6.2        ; x86_64         ;
 ; Assembler                 ; A610-10          ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; A610-10          ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; A610-10          ; Windows 7 ; 6.2        ; x86_64         ;
+=======
+; Analysis & Synthesis      ; cloud            ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; cloud            ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; cloud            ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; cloud            ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; cloud            ; Windows 7 ; 6.2        ; x86_64         ;
+>>>>>>> Stashed changes
 +---------------------------+------------------+-----------+------------+----------------+
 
 

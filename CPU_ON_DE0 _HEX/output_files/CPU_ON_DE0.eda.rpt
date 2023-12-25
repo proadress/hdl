@@ -1,5 +1,9 @@
 EDA Netlist Writer report for CPU_ON_DE0
+<<<<<<< Updated upstream
 Fri Dec 22 17:38:31 2023
+=======
+Thu Dec 21 15:17:11 2023
+>>>>>>> Stashed changes
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -35,7 +39,11 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
+<<<<<<< Updated upstream
 ; EDA Netlist Writer Status ; Successful - Fri Dec 22 17:38:31 2023 ;
+=======
+; EDA Netlist Writer Status ; Successful - Thu Dec 21 15:17:11 2023 ;
+>>>>>>> Stashed changes
 ; Revision Name             ; CPU_ON_DE0                            ;
 ; Top-level Entity Name     ; CPU_ON_DE0                            ;
 ; Family                    ; Cyclone III                           ;
@@ -70,12 +78,21 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+<<<<<<< Updated upstream
     Info: Processing started: Fri Dec 22 17:38:31 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off CPU_ON_DE0 -c CPU_ON_DE0
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4543 megabytes
     Info: Processing ended: Fri Dec 22 17:38:31 2023
     Info: Elapsed time: 00:00:00
+=======
+    Info: Processing started: Thu Dec 21 15:17:10 2023
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off CPU_ON_DE0 -c CPU_ON_DE0
+Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4533 megabytes
+    Info: Processing ended: Thu Dec 21 15:17:11 2023
+    Info: Elapsed time: 00:00:01
+>>>>>>> Stashed changes
     Info: Total CPU time (on all processors): 00:00:00
 
 

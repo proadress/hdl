@@ -10,20 +10,25 @@ count3		equ h'22'
 ;***************************************
 			org 	0x00		; reset vector
 			
+loop		clrw
 			clrf	temp
-			clrw
-			movlw	1
+			movlw	.1
+			addlw	.2
+			sublw	.3
+			movlw	.10
 			movwf	temp
-			movwf	PORTB
-loop1		lslf	temp,1
-			movf	temp,0
-			movwf	PORTB
-			btfss	temp,7
-			goto	loop1
-loop2		lsrf	temp,1
-			movf	temp,0
-			movwf	PORTB
-			btfss	temp,0
-			goto	loop2
-			goto	loop1
+			incf	temp, 1
+			subwf	temp, 0
+			bcf		temp, 3
+			btfsc	temp, 3
+			btfsc	temp, 1
+			brw
+			nop
+			lslf	temp, 1
+			lsrf	temp, 0
+			goto 	loop
+
+
 			end
+			
+			

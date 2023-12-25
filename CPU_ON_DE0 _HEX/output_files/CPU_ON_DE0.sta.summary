@@ -3,6 +3,7 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
+<<<<<<< Updated upstream
 Slack : -11.578
 TNS   : -698.490
 
@@ -16,6 +17,21 @@ TNS   : -1151.483
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
 Slack : 0.358
+=======
+Slack : -10.798
+TNS   : -678.357
+
+Type  : Slow 1200mV 85C Model Setup 'ex_mem_addr[0]'
+Slack : -8.738
+TNS   : -6523.982
+
+Type  : Slow 1200mV 85C Model Hold 'ex_mem_addr[0]'
+Slack : -3.567
+TNS   : -725.439
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.345
+>>>>>>> Stashed changes
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -24,6 +40,7 @@ TNS   : -115.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ex_mem_addr[0]'
 Slack : -3.000
+<<<<<<< Updated upstream
 TNS   : -3.169
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
@@ -40,6 +57,24 @@ TNS   : -1015.163
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
 Slack : 0.312
+=======
+TNS   : -3.635
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -9.653
+TNS   : -603.672
+
+Type  : Slow 1200mV 0C Model Setup 'ex_mem_addr[0]'
+Slack : -7.733
+TNS   : -5782.559
+
+Type  : Slow 1200mV 0C Model Hold 'ex_mem_addr[0]'
+Slack : -3.165
+TNS   : -629.207
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.300
+>>>>>>> Stashed changes
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -51,6 +86,7 @@ Slack : -3.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
+<<<<<<< Updated upstream
 Slack : -7.018
 TNS   : -381.486
 
@@ -64,14 +100,37 @@ TNS   : -620.773
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
 Slack : 0.050
+=======
+Slack : -6.490
+TNS   : -365.481
+
+Type  : Fast 1200mV 0C Model Setup 'ex_mem_addr[0]'
+Slack : -5.506
+TNS   : -3587.115
+
+Type  : Fast 1200mV 0C Model Hold 'ex_mem_addr[0]'
+Slack : -2.184
+TNS   : -426.849
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.180
+>>>>>>> Stashed changes
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ex_mem_addr[0]'
 Slack : -3.000
+<<<<<<< Updated upstream
 TNS   : -497.111
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -150.304
+=======
+TNS   : -470.033
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -155.874
+>>>>>>> Stashed changes
 
 ------------------------------------------------------------

@@ -15,7 +15,7 @@ module testbench;
   initial begin
     clk = 0;
     rst = 1;
-    #20 rst = 0;
-    #1000 $stop;
+    #10 rst = 0;
+    #1500 $stop;
   end
 endmodule

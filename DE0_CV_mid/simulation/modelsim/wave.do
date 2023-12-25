@@ -4,8 +4,19 @@ add wave -noupdate -divider {TOP LEVEL INPUTS}
 add wave -noupdate -divider cpu
 add wave -noupdate /testbench/clk
 add wave -noupdate /testbench/rst
+add wave -noupdate /testbench/top1/ps
 add wave -noupdate -radix hexadecimal /testbench/w_q
 add wave -noupdate -radix hexadecimal /testbench/top1/port_b_out
+add wave -noupdate /testbench/top1/BEQWFS
+add wave -noupdate /testbench/top1/ADDIF
+add wave -noupdate -radix hexadecimal /testbench/top1/ir_q
+add wave -noupdate -radix hexadecimal /testbench/top1/ram/ram\[37\]
+add wave -noupdate -radix hexadecimal /testbench/top1/ram/ram\[48\]
+add wave -noupdate -radix hexadecimal /testbench/top1/ram/ram\[53\]
+add wave -noupdate -radix hexadecimal /testbench/top1/ram/ram\[54\]
+
+
+
 
 
 TreeUpdate [SetDefaultTree]

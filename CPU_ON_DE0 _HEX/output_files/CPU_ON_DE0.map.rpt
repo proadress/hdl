@@ -1,5 +1,9 @@
 Analysis & Synthesis report for CPU_ON_DE0
+<<<<<<< Updated upstream
 Fri Dec 22 17:38:02 2023
+=======
+Thu Dec 21 15:16:06 2023
+>>>>>>> Stashed changes
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,15 +52,26 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status        ; Successful - Fri Dec 22 17:38:01 2023           ;
+=======
+; Analysis & Synthesis Status        ; Successful - Thu Dec 21 15:16:05 2023           ;
+>>>>>>> Stashed changes
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU_ON_DE0                                      ;
 ; Top-level Entity Name              ; CPU_ON_DE0                                      ;
 ; Family                             ; Cyclone III                                     ;
+<<<<<<< Updated upstream
 ; Total logic elements               ; 2,065                                           ;
 ;     Total combinational functions  ; 2,027                                           ;
 ;     Dedicated logic registers      ; 112                                             ;
 ; Total registers                    ; 112                                             ;
+=======
+; Total logic elements               ; 2,107                                           ;
+;     Total combinational functions  ; 2,060                                           ;
+;     Dedicated logic registers      ; 116                                             ;
+; Total registers                    ; 116                                             ;
+>>>>>>> Stashed changes
 ; Total pins                         ; 47                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -158,11 +173,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
+<<<<<<< Updated upstream
 ; Number detected on machine ; 20     ;
+=======
+; Number detected on machine ; 16     ;
+>>>>>>> Stashed changes
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
+<<<<<<< Updated upstream
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                 ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
@@ -173,6 +193,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; cpu.vhd                          ; yes             ; User VHDL File  ; C:/Users/A610/Documents/GitHub/hdl/CPU_ON_DE0 _HEX/cpu.vhd            ;         ;
 ; commonConstant.vhd               ; yes             ; User VHDL File  ; C:/Users/A610/Documents/GitHub/hdl/CPU_ON_DE0 _HEX/commonConstant.vhd ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
+=======
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+; ram1.vhd                         ; yes             ; User VHDL File  ; D:/code/hdl/CPU_ON_DE0 _HEX/ram1.vhd           ;         ;
+; CPU_ON_DE0.vhd                   ; yes             ; User VHDL File  ; D:/code/hdl/CPU_ON_DE0 _HEX/CPU_ON_DE0.vhd     ;         ;
+; cpu.vhd                          ; yes             ; User VHDL File  ; D:/code/hdl/CPU_ON_DE0 _HEX/cpu.vhd            ;         ;
+; commonConstant.vhd               ; yes             ; User VHDL File  ; D:/code/hdl/CPU_ON_DE0 _HEX/commonConstant.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+>>>>>>> Stashed changes
 
 
 +-----------------------------------------------------------+
@@ -437,7 +469,11 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
+<<<<<<< Updated upstream
 ; Top            ; 00:00:02     ;
+=======
+; Top            ; 00:00:04     ;
+>>>>>>> Stashed changes
 +----------------+--------------+
 
 
@@ -447,7 +483,11 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+<<<<<<< Updated upstream
     Info: Processing started: Fri Dec 22 17:37:58 2023
+=======
+    Info: Processing started: Thu Dec 21 15:15:59 2023
+>>>>>>> Stashed changes
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU_ON_DE0 -c CPU_ON_DE0
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file seg_decoder.vhd
@@ -3590,11 +3630,20 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Info (21057): Implemented 2123 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 38 output pins
+<<<<<<< Updated upstream
     Info (21061): Implemented 2076 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2090 warnings
     Info: Peak virtual memory: 4642 megabytes
     Info: Processing ended: Fri Dec 22 17:38:02 2023
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
+=======
+    Info (21061): Implemented 2114 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2070 warnings
+    Info: Peak virtual memory: 4630 megabytes
+    Info: Processing ended: Thu Dec 21 15:16:06 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
+>>>>>>> Stashed changes
 
 
