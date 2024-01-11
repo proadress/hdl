@@ -22,31 +22,32 @@ BEGIN
     IF reset = '0' THEN
       -- basic instruction check
       ram(0) <= x"1000"; -- t = 0
-      ram(1) <= x"4030"; -- M30 = t
+      ram(1) <= x"4030"; -- M30 = t-主要計數器歸零
 
-      -- loop i = 60
+      -- loop i = 60  M[60]記憶體的loop
       ram(2) <= x"100c"; -- i = 12
-      ram(3) <= x"4060"; 
-      -- loop j = 61
+      ram(3) <= x"4060";
+      -- ***延遲區域***
+      -- loop j = 61  M[61]記憶體的loop
       ram(4) <= x"c000"; -- j = sw
       ram(5) <= x"4061";
-      -- loop k = 62
+      -- loop k = 62  M[62]記憶體的loop
       ram(6) <= x"1999"; -- k = 999
       ram(7) <= x"4062";
 
-      ram(8) <= x"1001";
-      ram(9) <= x"0001";
-      ram(10) <= x"a062"; -- k
-      ram(11) <= x"700d"; -- next
-      ram(12) <= x"6007"; -- head
+      ram(8) <= x"1001";-- acc = 1
+      ram(9) <= x"0001";-- acc = -1
+      ram(10) <= x"a062"; -- acc = m62-1
+      ram(11) <= x"700d"; -- 成功出回圈跳next
+      ram(12) <= x"6007"; -- 不成功繼續回到head
 
       ram(13) <= x"1001"; -- 
       ram(14) <= x"0001"; -- 
       ram(15) <= x"a061"; -- j
-      ram(16) <= x"7012"; -- next
-      ram(17) <= x"6005"; -- head
-
-      -- m30+=5
+      ram(16) <= x"7012"; -- 成功出回圈跳next
+      ram(17) <= x"6005"; -- 不成功繼續回到head
+      -- ***延遲區域結束***
+      -- ***主程式*** m30+=5
       ram(18) <= x"b030"; -- print M30	 
       ram(19) <= x"1001"; -- t = 1
       ram(20) <= x"4031"; -- m31 = t
@@ -54,11 +55,11 @@ BEGIN
       ram(22) <= x"a031"; -- t += m31
       ram(23) <= x"4030"; -- m30 = t
 
-      ram(24) <= x"1001"; 
-      ram(25) <= x"0001"; 
+      ram(24) <= x"1001";
+      ram(25) <= x"0001";
       ram(26) <= x"a060"; -- i
-      ram(27) <= x"7000"; -- start
-      ram(28) <= x"6003"; -- head
+      ram(27) <= x"7000"; -- 成功出回圈重複start
+      ram(28) <= x"6003"; -- 不成功繼續回到head
 
       ram(29) <= x"0000"; -- halt
     ELSIF en = '1' AND r_w = '0' THEN

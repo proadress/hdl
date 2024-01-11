@@ -1,37 +1,33 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_arith.all;
-use IEEE.std_logic_unsigned.all;
-use work.commonConstants.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_arith.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+USE work.commonConstants.ALL;
 
-entity seg_decoder is port(
-	segin:in std_logic_vector(3 downto 0);
-	segout:out std_logic_vector(6 downto 0)
-	);
-end seg_decoder;
+ENTITY seg_decoder IS PORT (
+	segin : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	segout : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+);
+END seg_decoder;
 
-architecture seg_decoder of seg_decoder is
-begin
+ARCHITECTURE seg_decoder OF seg_decoder IS
+BEGIN
 
-	segout <= "1000000" when segin = X"0" else
-				 "1111001" when segin = X"1" else
-				 "0100100" when segin = X"2" else
-				 "0110000" when segin = X"3" else
-				 "0011001" when segin = X"4" else
-				 "0010010" when segin = X"5" else
-				 "0000010" when segin = X"6" else
-				 "1111000" when segin = X"7" else
-				 "0000000" when segin = X"8" else
-				 "0010000" when segin = X"9" else
-				 "0001000" when segin = X"a" else
-				 "0000011" when segin = X"b" else
-				 "0100111" when segin = X"c" else
-				 "0100001" when segin = X"d" else
-				 "0000110" when segin = X"e" else
-				 "0001110" when segin = X"f" else
-				 "1111111";
-end seg_decoder;				 
-				 
-				 
-				 
-	
+	segout <= "1000000" WHEN segin = X"0" ELSE
+		"1111001" WHEN segin = X"1" ELSE
+		"0100100" WHEN segin = X"2" ELSE
+		"0110000" WHEN segin = X"3" ELSE
+		"0011001" WHEN segin = X"4" ELSE
+		"0010010" WHEN segin = X"5" ELSE
+		"0000010" WHEN segin = X"6" ELSE
+		"1111000" WHEN segin = X"7" ELSE
+		"0000000" WHEN segin = X"8" ELSE
+		"0010000" WHEN segin = X"9" ELSE
+		"0001000" WHEN segin = X"a" ELSE
+		"0000011" WHEN segin = X"b" ELSE
+		"0100111" WHEN segin = X"c" ELSE
+		"0100001" WHEN segin = X"d" ELSE
+		"0000110" WHEN segin = X"e" ELSE
+		"0001110" WHEN segin = X"f" ELSE
+		"1111111";
+END seg_decoder;
